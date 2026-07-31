@@ -1,10 +1,76 @@
 {
-  "generated_at": "2026-07-31T19:29:43.141335+00:00",
+  "generated_at": "2026-07-31T19:36:53.239939+00:00",
   "engine_version": "0.4.0",
-  "connected_sources": 0,
-  "total_sources": 0,
-  "mapped_sources": [],
+  "connected_sources": 5,
+  "total_sources": 5,
+  "mapped_sources": [
+    "fred",
+    "ecos",
+    "kosis",
+    "opendart",
+    "market_proxy"
+  ],
   "needs_attention": [],
-  "sources": {},
+  "sources": {
+    "fred": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T19:34:59.441266+00:00",
+      "response_time_ms": 5599,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API",
+      "successful_series": 12,
+      "total_series": 12
+    },
+    "ecos": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T19:34:59.439049+00:00",
+      "response_time_ms": 11373,
+      "table_count": 834,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API",
+      "successful_signals": 4,
+      "total_signals": 4
+    },
+    "kosis": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T19:34:59.439958+00:00",
+      "response_time_ms": 13405,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API",
+      "successful_signals": 4,
+      "total_signals": 4
+    },
+    "opendart": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T19:36:52.683671+00:00",
+      "response_time_ms": 99836,
+      "listed_corporations": 3981,
+      "companies_collected": 56,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "refresh_mode": "FULL",
+      "cache_used": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API"
+    },
+    "market_proxy": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T19:36:53.211523+00:00",
+      "response_time_ms": 528,
+      "successful_symbols": 56,
+      "total_symbols": 56,
+      "official": false,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_APPLICABLE"
+    }
+  },
   "renewal_note": "API가 만료일을 제공하지 않으면 갱신일은 UNKNOWN 또는 NOT_EXPOSED_BY_API로 표시합니다."
 }

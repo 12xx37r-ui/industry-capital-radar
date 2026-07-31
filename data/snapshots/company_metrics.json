@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T19:14:58.896450+00:00",
+  "generated_at": "2026-07-31T19:36:53.213849+00:00",
   "companies": [
     {
       "stock_code": "000100",
@@ -13,27 +13,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 372764189868.0,
           "ppe": 638692432969.0,
+          "equity": 2362284335746.0,
+          "assets": 3220925833989.0,
           "capex": 99601135225.0,
           "employees": 2153.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 343155941089.0,
           "ppe": 598147315144.0,
+          "equity": 2150670010559.0,
+          "assets": 2942048836634.0,
           "capex": 117078952653.0,
           "employees": 2117.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 284758946262.0,
           "ppe": 522912726118.0,
+          "equity": 2101732643463.0,
+          "assets": 2814070521926.0,
           "capex": 161479680076.0,
           "employees": 2002.0
         }
+      },
+      "shares": {
+        "issued_shares": 79968437.0,
+        "treasury_shares": 6352656.0,
+        "floating_shares": 73615781.0
       },
       "disclosures": {
         "orders_curr": 4,
@@ -43,8 +57,10 @@
       },
       "market": {
         "return_6m": -0.29389312977099236,
+        "return_12m": -0.3433895297249334,
         "volume_acceleration": 0.02123778909794649,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 74000.0
       }
     },
     {
@@ -59,27 +75,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 14289390000000.0,
           "ppe": 77502704000000.0,
+          "equity": 120666751000000.0,
+          "assets": 176107659000000.0,
           "capex": 27518924000000.0,
           "employees": 34549.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 13313937000000.0,
           "ppe": 60157474000000.0,
+          "equity": 73915704000000.0,
+          "assets": 119855209000000.0,
           "capex": 15945534000000.0,
           "employees": 32390.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 13480659000000.0,
           "ppe": 52704853000000.0,
+          "equity": 53503752000000.0,
+          "assets": 100330165000000.0,
           "capex": 8325138000000.0,
           "employees": 32065.0
         }
+      },
+      "shares": {
+        "issued_shares": 728002365.0,
+        "treasury_shares": 26310845.0,
+        "floating_shares": 701691520.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -89,8 +119,10 @@
       },
       "market": {
         "return_6m": 0.7509933774834436,
+        "return_12m": 3.466216216216216,
         "volume_acceleration": 0.3893630790826539,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 1322000.0
       }
     },
     {
@@ -107,27 +139,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 747044000000.0,
           "ppe": 1225081000000.0,
+          "equity": 10112865000000.0,
+          "assets": 27791708000000.0,
           "capex": 107202000000.0,
           "employees": 6900.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 776511000000.0,
           "ppe": 1289154000000.0,
+          "equity": 9669413000000.0,
+          "assets": 27005385000000.0,
           "capex": 178853000000.0,
           "employees": 7147.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 815625000000.0,
           "ppe": 1204520000000.0,
+          "equity": 562052000000.0,
+          "assets": 23714495000000.0,
           "capex": 222144000000.0,
           "employees": 7204.0
         }
+      },
+      "shares": {
+        "issued_shares": 111355765.0,
+        "treasury_shares": null,
+        "floating_shares": 111355765.0
       },
       "disclosures": {
         "orders_curr": 13,
@@ -137,8 +183,10 @@
       },
       "market": {
         "return_6m": -0.21442307692307694,
+        "return_12m": 0.14908579465541494,
         "volume_acceleration": -0.5772656050920881,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 81700.0
       }
     },
     {
@@ -155,27 +203,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 841132239882.0,
           "ppe": 6252547980171.0,
+          "equity": 4512079082909.0,
+          "assets": 9143896515830.0,
           "capex": 1498908768505.0,
           "employees": 2979.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 768212453686.0,
           "ppe": 5159527849617.0,
+          "equity": 3320505865578.0,
+          "assets": 7932459834018.0,
           "capex": 2041609019528.0,
           "employees": 3045.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 916674470483.0,
           "ppe": 3359487997645.0,
+          "equity": 2611465990083.0,
+          "assets": 6334593297871.0,
           "capex": 1352298459926.0,
           "employees": 2835.0
         }
+      },
+      "shares": {
+        "issued_shares": 88946220.0,
+        "treasury_shares": 35.0,
+        "floating_shares": 88946185.0
       },
       "disclosures": {
         "orders_curr": 8,
@@ -185,8 +247,10 @@
       },
       "market": {
         "return_6m": -0.4,
+        "return_12m": -0.017358490566037776,
         "volume_acceleration": -0.2451321555643221,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 130200.0
       }
     },
     {
@@ -202,27 +266,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 13624432729452.0,
           "ppe": 42292819677397.0,
+          "equity": 62377691037383.0,
+          "assets": 105192437963565.0,
           "capex": 5665150778832.0,
           "employees": 524.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 14143499793793.0,
           "ppe": 39846827836911.0,
+          "equity": 61450367919684.0,
+          "assets": 103404198997805.0,
           "capex": 7669699522275.0,
           "employees": 527.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 13825514288591.0,
           "ppe": 35206248343570.0,
+          "equity": 59663897393468.0,
+          "assets": 100945394185079.0,
           "capex": 6733288526505.0,
           "employees": 530.0
         }
+      },
+      "shares": {
+        "issued_shares": 80932952.0,
+        "treasury_shares": 5312173.0,
+        "floating_shares": 75620779.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -232,8 +310,10 @@
       },
       "market": {
         "return_6m": -0.1641168289290682,
+        "return_12m": -0.016366612111292977,
         "volume_acceleration": -0.2585663180316229,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 300500.0
       }
     },
     {
@@ -249,27 +329,41 @@
         "2025": {
           "revenue": 333605938000000.0,
           "operating_income": 43601051000000.0,
+          "net_income": 45206805000000.0,
           "inventory": 52636828000000.0,
           "ppe": 215304784000000.0,
+          "equity": 436320337000000.0,
+          "assets": 566942110000000.0,
           "capex": 47522179000000.0,
           "employees": 257762.0
         },
         "2024": {
           "revenue": 300870903000000.0,
           "operating_income": 32725961000000.0,
+          "net_income": 34451351000000.0,
           "inventory": 51754865000000.0,
           "ppe": 205945209000000.0,
+          "equity": 402192070000000.0,
+          "assets": 514531948000000.0,
           "capex": 51406355000000.0,
           "employees": 258960.0
         },
         "2023": {
           "revenue": 258935494000000.0,
           "operating_income": 6566976000000.0,
+          "net_income": 15487100000000.0,
           "inventory": 51625874000000.0,
           "ppe": 187256262000000.0,
+          "equity": 363677865000000.0,
+          "assets": 455905980000000.0,
           "capex": 57611292000000.0,
           "employees": 249608.0
         }
+      },
+      "shares": {
+        "issued_shares": 5919637922.0,
+        "treasury_shares": 91828987.0,
+        "floating_shares": 5827808935.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -279,8 +373,10 @@
       },
       "market": {
         "return_6m": 0.3591595535128036,
+        "return_12m": 2.1993817619783615,
         "volume_acceleration": 0.1700715877815322,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 207000.0
       }
     },
     {
@@ -297,27 +393,41 @@
         "2025": {
           "revenue": 12450347000000.0,
           "operating_income": 437809000000.0,
+          "net_income": 93423000000.0,
           "inventory": 1163292000000.0,
           "ppe": 1625949000000.0,
+          "equity": 5523557000000.0,
+          "assets": 18459842000000.0,
           "capex": 225985000000.0,
           "employees": 4996.0
         },
         "2024": {
           "revenue": 12863811468386.0,
           "operating_income": 285954335787.0,
+          "net_income": 263924031753.0,
           "inventory": 1280005616400.0,
           "ppe": 2638612316878.0,
+          "equity": 5087123959443.0,
+          "assets": 17803293924556.0,
           "capex": 416204778001.0,
           "employees": 5483.0
         },
         "2023": {
           "revenue": 13436684904471.0,
           "operating_income": -387945401071.0,
+          "net_income": -419500544880.0,
           "inventory": 1338666208609.0,
           "ppe": 2256205699263.0,
+          "equity": 4885159860812.0,
+          "assets": 17707298538013.0,
           "capex": 476147147758.0,
           "employees": 5256.0
         }
+      },
+      "shares": {
+        "issued_shares": 85581490.0,
+        "treasury_shares": 692595.0,
+        "floating_shares": 84888895.0
       },
       "disclosures": {
         "orders_curr": 26,
@@ -327,8 +437,10 @@
       },
       "market": {
         "return_6m": 0.19366952789699576,
+        "return_12m": 0.08272506082725051,
         "volume_acceleration": 0.4804507032388823,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 22250.0
       }
     },
     {
@@ -343,27 +455,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2936331872805.0,
           "ppe": 19240618782149.0,
+          "equity": 23570113159830.0,
+          "assets": null,
           "capex": 3066850926743.0,
           "employees": 12826.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2879441809212.0,
           "ppe": 17706530246443.0,
+          "equity": 21567237112527.0,
+          "assets": 40597344536357.0,
           "capex": 6271319040013.0,
           "employees": 13341.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 3297368930324.0,
           "ppe": 11893348076900.0,
+          "equity": 19907249977522.0,
+          "assets": 34038860192967.0,
           "capex": 4048246715878.0,
           "employees": 12452.0
         }
+      },
+      "shares": {
+        "issued_shares": 80585530.0,
+        "treasury_shares": 3331391.0,
+        "floating_shares": 77254139.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -373,8 +499,10 @@
       },
       "market": {
         "return_6m": -0.06762028608582571,
+        "return_12m": 1.0357751277683134,
         "volume_acceleration": -0.29286667910822717,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 358500.0
       }
     },
     {
@@ -391,27 +519,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 552890167663.0,
           "ppe": 979436135669.0,
+          "equity": 2141298852376.0,
+          "assets": 4956680318372.0,
           "capex": 200850433496.0,
           "employees": 3482.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 510013227555.0,
           "ppe": 860538950350.0,
+          "equity": 1890092083448.0,
+          "assets": 4485197464384.0,
           "capex": 145243521908.0,
           "employees": 3372.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 527985325318.0,
           "ppe": 682143146102.0,
+          "equity": 1724042303163.0,
+          "assets": null,
           "capex": 112891744498.0,
           "employees": 3204.0
         }
+      },
+      "shares": {
+        "issued_shares": 30000000.0,
+        "treasury_shares": 261509.0,
+        "floating_shares": 29738491.0
       },
       "disclosures": {
         "orders_curr": 4,
@@ -421,8 +563,10 @@
       },
       "market": {
         "return_6m": 0.45357833655706004,
+        "return_12m": 1.6983842010771992,
         "volume_acceleration": -0.03026315097662924,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 150300.0
       }
     },
     {
@@ -438,27 +582,41 @@
         "2025": {
           "revenue": 21896603000000.0,
           "operating_income": 665007000000.0,
+          "net_income": 341262000000.0,
           "inventory": 1788772000000.0,
           "ppe": 3724150000000.0,
+          "equity": 5763054000000.0,
+          "assets": 11930883000000.0,
           "capex": 610988000000.0,
           "employees": 12211.0
         },
         "2024": {
           "revenue": 21200755000000.0,
           "operating_income": 706043000000.0,
+          "net_income": 449274000000.0,
           "inventory": 1575241000000.0,
           "ppe": 4479772000000.0,
+          "equity": 5353865000000.0,
+          "assets": 11378212000000.0,
           "capex": 879043000000.0,
           "employees": 12658.0
         },
         "2023": {
           "revenue": 20605290000000.0,
           "operating_income": 830824000000.0,
+          "net_income": 565201000000.0,
           "inventory": 1572002000000.0,
           "ppe": 4855578000000.0,
+          "equity": 4714575000000.0,
+          "assets": 11204306000000.0,
           "capex": 1799237000000.0,
           "employees": 13812.0
         }
+      },
+      "shares": {
+        "issued_shares": 23667107.0,
+        "treasury_shares": 2600.0,
+        "floating_shares": 23664507.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -468,8 +626,10 @@
       },
       "market": {
         "return_6m": 0.49823321554770317,
+        "return_12m": 1.7532467532467533,
         "volume_acceleration": 0.5595147698430945,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 424000.0
       }
     },
     {
@@ -484,27 +644,41 @@
         "2025": {
           "revenue": 61118127000000.0,
           "operating_income": 3357456000000.0,
+          "net_income": 3664736000000.0,
           "inventory": 6861834000000.0,
           "ppe": 12346592000000.0,
+          "equity": 49212795000000.0,
+          "assets": 70400532000000.0,
           "capex": 1347770000000.0,
           "employees": 12535.0
         },
         "2024": {
           "revenue": 57236995000000.0,
           "operating_income": 3073456000000.0,
+          "net_income": 4055642000000.0,
           "inventory": 6762941000000.0,
           "ppe": 12003452000000.0,
+          "equity": 46118232000000.0,
+          "assets": 66596905000000.0,
           "capex": 2204080000000.0,
           "employees": 12310.0
         },
         "2023": {
           "revenue": 59254361000000.0,
           "operating_income": 2295284000000.0,
+          "net_income": 3423309000000.0,
           "inventory": 5511638000000.0,
           "ppe": 10480920000000.0,
+          "equity": 40655299000000.0,
+          "assets": 58585845000000.0,
           "capex": 1801887000000.0,
           "employees": 12101.0
         }
+      },
+      "shares": {
+        "issued_shares": 90732583.0,
+        "treasury_shares": 1555800.0,
+        "floating_shares": 89176783.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -514,8 +688,10 @@
       },
       "market": {
         "return_6m": -0.018743109151047377,
+        "return_12m": 0.45662847790507355,
         "volume_acceleration": 0.19089948902400722,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 445000.0
       }
     },
     {
@@ -530,27 +706,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 7741657563000.0,
           "ppe": 9524442060000.0,
+          "equity": 16788184672000.0,
+          "assets": 53953669604000.0,
           "capex": 1710503200000.0,
           "employees": 8168.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 6290309306251.0,
           "ppe": 8319912257726.0,
+          "equity": 11364316747310.0,
+          "assets": 43336873685473.0,
           "capex": 578204897971.0,
           "employees": 7659.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2868571514248.0,
           "ppe": 3410331686890.0,
+          "equity": 4684225317909.0,
+          "assets": 19542899925708.0,
           "capex": 453364797879.0,
           "employees": 6816.0
         }
+      },
+      "shares": {
+        "issued_shares": 51563401.0,
+        "treasury_shares": 114613.0,
+        "floating_shares": 51448788.0
       },
       "disclosures": {
         "orders_curr": 6,
@@ -560,8 +750,10 @@
       },
       "market": {
         "return_6m": -0.3289371605896043,
+        "return_12m": 0.012880562060889833,
         "volume_acceleration": -0.016447147444366372,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 865000.0
       }
     },
     {
@@ -577,27 +769,41 @@
         "2025": {
           "revenue": 17099213000000.0,
           "operating_income": 1073215000000.0,
+          "net_income": 375084000000.0,
           "inventory": 167640000000.0,
           "ppe": 11902173000000.0,
+          "equity": 12955292000000.0,
+          "assets": 30107783000000.0,
           "capex": 2206567000000.0,
           "employees": 5316.0
         },
         "2024": {
           "revenue": 17940609000000.0,
           "operating_income": 1823409000000.0,
+          "net_income": 1387095000000.0,
           "inventory": 209783000000.0,
           "ppe": 12617394000000.0,
+          "equity": 11827634000000.0,
+          "assets": 30515255000000.0,
           "capex": 2487360000000.0,
           "employees": 5493.0
         },
         "2023": {
           "revenue": 17608511000000.0,
           "operating_income": 1753204000000.0,
+          "net_income": 52326000000.0,
           "inventory": 179809000000.0,
           "ppe": 13006196000000.0,
+          "equity": 12228399000000.0,
+          "assets": 30119227000000.0,
           "capex": 2973882000000.0,
           "employees": 5579.0
         }
+      },
+      "shares": {
+        "issued_shares": 214790053.0,
+        "treasury_shares": 1807778.0,
+        "floating_shares": 212982275.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -607,8 +813,10 @@
       },
       "market": {
         "return_6m": 0.2674230145867098,
+        "return_12m": 0.3989266547406083,
         "volume_acceleration": 0.19221520332996223,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 78200.0
       }
     },
     {
@@ -625,27 +833,41 @@
         "2025": {
           "revenue": 9028769083650.0,
           "operating_income": 792078846892.0,
+          "net_income": 648307939623.0,
           "inventory": null,
           "ppe": 507485359693.0,
+          "equity": 4446187475181.0,
+          "assets": 10039557572475.0,
           "capex": 53492598716.0,
           "employees": 5249.0
         },
         "2024": {
           "revenue": 1509174642168.0,
           "operating_income": 971611686017.0,
+          "net_income": 638672451980.0,
           "inventory": null,
           "ppe": 443361791659.0,
+          "equity": 3895741786193.0,
+          "assets": 10013337796132.0,
           "capex": 42954114369.0,
           "employees": 5854.0
         },
         "2023": {
           "revenue": 1450761836053.0,
           "operating_income": 993128866188.0,
+          "net_income": 695607943011.0,
           "inventory": null,
           "ppe": 429722103963.0,
+          "equity": 3298338295974.0,
+          "assets": 7801398613122.0,
           "capex": 27984854107.0,
           "employees": 5854.0
         }
+      },
+      "shares": {
+        "issued_shares": 196000000.0,
+        "treasury_shares": null,
+        "floating_shares": 196000000.0
       },
       "disclosures": {
         "orders_curr": 18,
@@ -655,8 +877,10 @@
       },
       "market": {
         "return_6m": 0.6498993963782695,
+        "return_12m": 0.6334661354581674,
         "volume_acceleration": 0.41830816031350326,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 41000.0
       }
     },
     {
@@ -672,27 +896,41 @@
         "2025": {
           "revenue": 28244161000000.0,
           "operating_income": 2469133000000.0,
+          "net_income": 1836770000000.0,
           "inventory": 416135000000.0,
           "ppe": 14258472000000.0,
+          "equity": 19458023000000.0,
+          "assets": 42948573000000.0,
           "capex": null,
           "employees": 14701.0
         },
         "2024": {
           "revenue": 26431204000000.0,
           "operating_income": 809471000000.0,
+          "net_income": 417094000000.0,
           "inventory": 940209000000.0,
           "ppe": 14825814000000.0,
+          "equity": 17996549000000.0,
+          "assets": 41879957000000.0,
           "capex": null,
           "employees": 16927.0
         },
         "2023": {
           "revenue": 26376273000000.0,
           "operating_income": 1649774000000.0,
+          "net_income": 988718000000.0,
           "inventory": 912262000000.0,
           "ppe": 14872079000000.0,
+          "equity": 18561137000000.0,
+          "assets": 42709982000000.0,
           "capex": null,
           "employees": 19737.0
         }
+      },
+      "shares": {
+        "issued_shares": 252021685.0,
+        "treasury_shares": 10926622.0,
+        "floating_shares": 241095063.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -702,8 +940,10 @@
       },
       "market": {
         "return_6m": -0.03825136612021862,
+        "return_12m": -0.08965517241379306,
         "volume_acceleration": -0.1660707404003804,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 52800.0
       }
     },
     {
@@ -718,27 +958,41 @@
         "2025": {
           "revenue": 17057876000000.0,
           "operating_income": 762712000000.0,
+          "net_income": 205163000000.0,
           "inventory": 2544025000000.0,
           "ppe": 5776625000000.0,
+          "equity": 12009370000000.0,
+          "assets": 27513223000000.0,
           "capex": 403095000000.0,
           "employees": 6233.0
         },
         "2024": {
           "revenue": 16233055000000.0,
           "operating_income": 1017600000000.0,
+          "net_income": 394689000000.0,
           "inventory": 2733933000000.0,
           "ppe": 5703049000000.0,
+          "equity": 11661092000000.0,
+          "assets": 26314835000000.0,
           "capex": 461497000000.0,
           "employees": 6174.0
         },
         "2023": {
           "revenue": 17589887709510.0,
           "operating_income": 1467318338124.0,
+          "net_income": 517521903042.0,
           "inventory": 2539004351527.0,
           "ppe": 5225149297141.0,
+          "equity": 10841508936525.0,
+          "assets": 24640833945624.0,
           "capex": 395596062651.0,
           "employees": 5965.0
         }
+      },
+      "shares": {
+        "issued_shares": 640561146.0,
+        "treasury_shares": 95978.0,
+        "floating_shares": 640465168.0
       },
       "disclosures": {
         "orders_curr": 6,
@@ -748,8 +1002,10 @@
       },
       "market": {
         "return_6m": -0.33111111111111113,
+        "return_12m": -0.053459119496855334,
         "volume_acceleration": -0.3771483444852767,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 60200.0
       }
     },
     {
@@ -764,27 +1020,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 59944509109.0,
           "ppe": 325891187527.0,
+          "equity": 590456566398.0,
+          "assets": 887892914256.0,
           "capex": null,
           "employees": 485.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 100631506244.0,
           "ppe": 305672976464.0,
+          "equity": 566590299600.0,
+          "assets": 986824795276.0,
           "capex": null,
           "employees": 521.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 81347141954.0,
           "ppe": 289692065567.0,
+          "equity": 514747817845.0,
+          "assets": 805261391385.0,
           "capex": null,
           "employees": 507.0
         }
+      },
+      "shares": {
+        "issued_shares": 47268321.0,
+        "treasury_shares": 1574399.0,
+        "floating_shares": 45693922.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -794,8 +1064,10 @@
       },
       "market": {
         "return_6m": 2.135566188197767,
+        "return_12m": 2.2335526315789473,
         "volume_acceleration": 0.9000539659383484,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 98300.0
       }
     },
     {
@@ -810,27 +1082,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 115259279438.0,
           "ppe": 150316845920.0,
+          "equity": 687899216493.0,
+          "assets": 777751432327.0,
           "capex": 3906067446.0,
           "employees": 636.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 112465762788.0,
           "ppe": 134118242370.0,
+          "equity": 603031420844.0,
+          "assets": 653015311226.0,
           "capex": 63708398226.0,
           "employees": 634.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 134965817874.0,
           "ppe": 107289088103.0,
+          "equity": 562459514548.0,
+          "assets": 611678998449.0,
           "capex": 4999568208.0,
           "employees": 640.0
         }
+      },
+      "shares": {
+        "issued_shares": 12319550.0,
+        "treasury_shares": null,
+        "floating_shares": 12319550.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -840,8 +1126,10 @@
       },
       "market": {
         "return_6m": -0.19866444073455758,
+        "return_12m": 0.09339407744874717,
         "volume_acceleration": 0.3001791426743443,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 240000.0
       }
     },
     {
@@ -857,27 +1145,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 150384035752.0,
           "ppe": 238136981301.0,
+          "equity": 690327519537.0,
+          "assets": 813331626120.0,
           "capex": 74621166719.0,
           "employees": 737.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 153401207241.0,
           "ppe": 174730996354.0,
+          "equity": 540887863389.0,
+          "assets": 710872366678.0,
           "capex": 53537061092.0,
           "employees": 710.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 95433336170.0,
           "ppe": 126524486344.0,
+          "equity": 571898625127.0,
+          "assets": 723839103741.0,
           "capex": 27531410354.0,
           "employees": 633.0
         }
+      },
+      "shares": {
+        "issued_shares": 95312200.0,
+        "treasury_shares": 459198.0,
+        "floating_shares": 94853002.0
       },
       "disclosures": {
         "orders_curr": 3,
@@ -887,8 +1189,10 @@
       },
       "market": {
         "return_6m": -0.016431924882629123,
+        "return_12m": 0.8397365532381997,
         "volume_acceleration": -0.12939646451125664,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 167600.0
       }
     },
     {
@@ -905,27 +1209,41 @@
         "2025": {
           "revenue": 8054627137857.0,
           "operating_income": -815431279791.0,
+          "net_income": -916079534292.0,
           "inventory": 2427669185668.0,
           "ppe": 451554392609.0,
+          "equity": 3474605615293.0,
+          "assets": 13358502674960.0,
           "capex": 100294505123.0,
           "employees": 5146.0
         },
         "2024": {
           "revenue": 10503609086034.0,
           "operating_income": 403125613881.0,
+          "net_income": 242849735359.0,
           "inventory": 1945322848983.0,
           "ppe": 380193548278.0,
+          "equity": 4334091827571.0,
+          "assets": 12658456266814.0,
           "capex": 37571694873.0,
           "employees": 5503.0
         },
         "2023": {
           "revenue": 11647800864690.0,
           "operating_income": 662517552616.0,
+          "net_income": 521479149761.0,
           "inventory": 1684464167728.0,
           "ppe": 383571497825.0,
+          "equity": 4061915414137.0,
+          "assets": 11243136483407.0,
           "capex": 70336718363.0,
           "employees": 5923.0
         }
+      },
+      "shares": {
+        "issued_shares": 415622638.0,
+        "treasury_shares": 4736918.0,
+        "floating_shares": 410885720.0
       },
       "disclosures": {
         "orders_curr": 28,
@@ -935,8 +1253,10 @@
       },
       "market": {
         "return_6m": 1.2535211267605635,
+        "return_12m": 1.7965043695380776,
         "volume_acceleration": -0.6350485977646328,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 11200.0
       }
     },
     {
@@ -951,27 +1271,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1736165193000.0,
           "ppe": 5070075189000.0,
+          "equity": 7812655175000.0,
+          "assets": null,
           "capex": 674614248000.0,
           "employees": 1738.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2080674440000.0,
           "ppe": 4240600173000.0,
+          "equity": 7349462921000.0,
+          "assets": null,
           "capex": 754426658000.0,
           "employees": 1743.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1958796641000.0,
           "ppe": 3704942807000.0,
+          "equity": 6624761980000.0,
+          "assets": 16617748008000.0,
           "capex": 462382290000.0,
           "employees": 1701.0
         }
+      },
+      "shares": {
+        "issued_shares": 175922788.0,
+        "treasury_shares": 5478301.0,
+        "floating_shares": 170444487.0
       },
       "disclosures": {
         "orders_curr": 1,
@@ -981,8 +1315,10 @@
       },
       "market": {
         "return_6m": -0.18500797448165873,
+        "return_12m": -0.005836575875486361,
         "volume_acceleration": -0.3330283668477316,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 51100.0
       }
     },
     {
@@ -998,27 +1334,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 3637049615737.0,
           "ppe": 993845621517.0,
+          "equity": 1897346862036.0,
+          "assets": 10370256890187.0,
           "capex": 128568507493.0,
           "employees": 5241.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2359034707814.0,
           "ppe": 912525958117.0,
+          "equity": 1727176882121.0,
+          "assets": 8025538409393.0,
           "capex": 161281037390.0,
           "employees": 5093.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1736483586736.0,
           "ppe": 814609733679.0,
+          "equity": 1619940517277.0,
+          "assets": 7139576928721.0,
           "capex": 77875235056.0,
           "employees": 5098.0
         }
+      },
+      "shares": {
+        "issued_shares": 97475107.0,
+        "treasury_shares": null,
+        "floating_shares": 97475107.0
       },
       "disclosures": {
         "orders_curr": 22,
@@ -1028,8 +1378,10 @@
       },
       "market": {
         "return_6m": -0.27157513578756787,
+        "return_12m": 0.3684807256235827,
         "volume_acceleration": -0.3533398669855755,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 120700.0
       }
     },
     {
@@ -1044,27 +1396,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 24622353332.0,
           "ppe": 472069158607.0,
+          "equity": 1345856312213.0,
+          "assets": 1703560488139.0,
           "capex": 61806035794.0,
           "employees": 6485.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 24715493535.0,
           "ppe": 457917797648.0,
+          "equity": 1328473540425.0,
+          "assets": 1690214811558.0,
           "capex": 49568617741.0,
           "employees": 6579.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 25262010153.0,
           "ppe": 449193020440.0,
+          "equity": 1272596407940.0,
+          "assets": 1597333550834.0,
           "capex": 41228991285.0,
           "employees": 6560.0
         }
+      },
+      "shares": {
+        "issued_shares": 45000000.0,
+        "treasury_shares": null,
+        "floating_shares": 45000000.0
       },
       "disclosures": {
         "orders_curr": 5,
@@ -1074,8 +1440,10 @@
       },
       "market": {
         "return_6m": -0.2482698961937716,
+        "return_12m": -0.17395437262357416,
         "volume_acceleration": -0.41816169296194705,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 43450.0
       }
     },
     {
@@ -1090,27 +1458,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": null,
           "ppe": 227299458121.0,
+          "equity": 624966182864.0,
+          "assets": 885545457188.0,
           "capex": 4574307794.0,
           "employees": 2466.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": null,
           "ppe": 237582843428.0,
+          "equity": 577473652879.0,
+          "assets": 946846882988.0,
           "capex": 4556748314.0,
           "employees": 2407.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": null,
           "ppe": 247422258638.0,
+          "equity": 547308411738.0,
+          "assets": 855008772803.0,
           "capex": 2846609882.0,
           "employees": 2356.0
         }
+      },
+      "shares": {
+        "issued_shares": 38220000.0,
+        "treasury_shares": 176495.0,
+        "floating_shares": 38043505.0
       },
       "disclosures": {
         "orders_curr": 11,
@@ -1120,8 +1502,10 @@
       },
       "market": {
         "return_6m": -0.415508412582297,
+        "return_12m": -0.11712707182320437,
         "volume_acceleration": -0.512679205136408,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 79900.0
       }
     },
     {
@@ -1136,27 +1520,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 3359307307.0,
           "ppe": 72686405715.0,
+          "equity": 123894640646.0,
+          "assets": 387675478988.0,
           "capex": 5527395614.0,
           "employees": 217.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1096250090.0,
           "ppe": 68922410547.0,
+          "equity": 185948142869.0,
+          "assets": 415744580233.0,
           "capex": 1942225448.0,
           "employees": 202.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2551758453.0,
           "ppe": 68399834892.0,
+          "equity": 169498257363.0,
+          "assets": 396459542336.0,
           "capex": 5544441626.0,
           "employees": 174.0
         }
+      },
+      "shares": {
+        "issued_shares": 12999807.0,
+        "treasury_shares": 41311.0,
+        "floating_shares": 12958496.0
       },
       "disclosures": {
         "orders_curr": 2,
@@ -1166,8 +1564,10 @@
       },
       "market": {
         "return_6m": -0.4343598055105349,
+        "return_12m": -0.4438247011952191,
         "volume_acceleration": -0.4836595500788079,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 6980.0
       }
     },
     {
@@ -1182,27 +1582,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 6084894385.0,
           "ppe": 56822173696.0,
+          "equity": 376267704694.0,
+          "assets": 487574291112.0,
           "capex": 3257328876.0,
           "employees": 1257.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 5918769338.0,
           "ppe": 58757300109.0,
+          "equity": 368769582836.0,
+          "assets": 464664131084.0,
           "capex": 4869041878.0,
           "employees": 1266.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 6195444023.0,
           "ppe": 59039758140.0,
+          "equity": 284716086934.0,
+          "assets": 375384295785.0,
           "capex": 6574279312.0,
           "employees": 1295.0
         }
+      },
+      "shares": {
+        "issued_shares": 11126506.0,
+        "treasury_shares": 2138159.0,
+        "floating_shares": 8988347.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1212,8 +1626,10 @@
       },
       "market": {
         "return_6m": -0.10792580101180438,
+        "return_12m": -0.20570570570570568,
         "volume_acceleration": -0.10732996992335309,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 52900.0
       }
     },
     {
@@ -1229,27 +1645,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": null,
           "ppe": null,
+          "equity": null,
+          "assets": null,
           "capex": null,
           "employees": 735.0
         },
         "2024": {
           "revenue": 2045361581270.0,
           "operating_income": -48399084010.0,
+          "net_income": -32117410210.0,
           "inventory": 457910192155.0,
           "ppe": 667583388542.0,
+          "equity": 1522364024097.0,
+          "assets": 2479557559440.0,
           "capex": 94616428631.0,
           "employees": 762.0
         },
         "2023": {
           "revenue": 1881198625677.0,
           "operating_income": 85475264988.0,
+          "net_income": 47617527226.0,
           "inventory": 551724832736.0,
           "ppe": 634224215596.0,
+          "equity": 1617782494656.0,
+          "assets": 2825338248816.0,
           "capex": 46202594318.0,
           "employees": 738.0
         }
+      },
+      "shares": {
+        "issued_shares": 35908760.0,
+        "treasury_shares": 8009848.0,
+        "floating_shares": 27898912.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1259,8 +1689,10 @@
       },
       "market": {
         "return_6m": -0.31825095057034225,
+        "return_12m": -0.27261663286004056,
         "volume_acceleration": -0.16275855135841566,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 17930.0
       }
     },
     {
@@ -1275,27 +1707,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 15514548353.0,
           "ppe": 228009789079.0,
+          "equity": 731218952370.0,
+          "assets": 791928165325.0,
           "capex": 59954233830.0,
           "employees": 677.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 12959312526.0,
           "ppe": 181362679776.0,
+          "equity": 622629112163.0,
+          "assets": 657443780756.0,
           "capex": 11640547813.0,
           "employees": 636.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 14252453441.0,
           "ppe": 183060515910.0,
+          "equity": 557074198066.0,
+          "assets": 582869465294.0,
           "capex": 68500491718.0,
           "employees": 639.0
         }
+      },
+      "shares": {
+        "issued_shares": 76211850.0,
+        "treasury_shares": 316250.0,
+        "floating_shares": 75895600.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1305,8 +1751,10 @@
       },
       "market": {
         "return_6m": -0.15981735159817356,
+        "return_12m": 0.04150943396226414,
         "volume_acceleration": 0.2896438467228921,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 55200.0
       }
     },
     {
@@ -1321,27 +1769,41 @@
         "2025": {
           "revenue": 4162495108881.0,
           "operating_income": 1168471345595.0,
+          "net_income": 1031483789240.0,
           "inventory": 2803460062651.0,
           "ppe": 1702609857338.0,
+          "equity": 17352529819114.0,
+          "assets": 22334900189800.0,
           "capex": 108223875636.0,
           "employees": 3153.0
         },
         "2024": {
           "revenue": 3557303554371.0,
           "operating_income": 492015534847.0,
+          "net_income": 418883310404.0,
           "inventory": 2765942959864.0,
           "ppe": 1244567343881.0,
+          "equity": 17580062368691.0,
+          "assets": 21055222437706.0,
           "capex": 135058628780.0,
           "employees": 2901.0
         },
         "2023": {
           "revenue": 2176431531380.0,
           "operating_income": 651481422157.0,
+          "net_income": 539706505110.0,
           "inventory": 3041452920081.0,
           "ppe": 1214588075464.0,
+          "equity": 17125794307235.0,
+          "assets": 19917534297169.0,
           "capex": 210046189698.0,
           "employees": 2529.0
         }
+      },
+      "shares": {
+        "issued_shares": 230960969.0,
+        "treasury_shares": 12347845.0,
+        "floating_shares": 218613124.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1351,8 +1813,10 @@
       },
       "market": {
         "return_6m": -0.040865366602790054,
+        "return_12m": 0.1283936601721858,
         "volume_acceleration": -0.026475229796165678,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 190000.0
       }
     },
     {
@@ -1367,27 +1831,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 593084124214.0,
           "ppe": 1532907968664.0,
+          "equity": 1476107505166.0,
+          "assets": 8064772884180.0,
           "capex": 169779461301.0,
           "employees": 5382.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 363527737579.0,
           "ppe": 1371400306134.0,
+          "equity": 1237435235062.0,
+          "assets": 6125264653217.0,
           "capex": 496962990115.0,
           "employees": 4789.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 228919620086.0,
           "ppe": 893734048660.0,
+          "equity": 1052359009288.0,
+          "assets": 3815758833285.0,
           "capex": 59411480889.0,
           "employees": 4277.0
         }
+      },
+      "shares": {
+        "issued_shares": 22000000.0,
+        "treasury_shares": 154750.0,
+        "floating_shares": 21845250.0
       },
       "disclosures": {
         "orders_curr": 23,
@@ -1397,8 +1875,10 @@
       },
       "market": {
         "return_6m": 0.2117202268431002,
+        "return_12m": 0.04909983633387882,
         "volume_acceleration": -0.26210686583939413,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 641000.0
       }
     },
     {
@@ -1413,27 +1893,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 54589007564.0,
           "ppe": 85782330159.0,
+          "equity": 304655503580.0,
+          "assets": 386310986387.0,
           "capex": 12756209017.0,
           "employees": 757.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 41617282876.0,
           "ppe": 76749071437.0,
+          "equity": 268293551495.0,
+          "assets": 334828453070.0,
           "capex": 18932407792.0,
           "employees": 718.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 43593556872.0,
           "ppe": 69214498031.0,
+          "equity": 233100798715.0,
+          "assets": 279780462641.0,
           "capex": 20488476236.0,
           "employees": 725.0
         }
+      },
+      "shares": {
+        "issued_shares": 18430000.0,
+        "treasury_shares": 543065.0,
+        "floating_shares": 17886935.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1443,8 +1937,10 @@
       },
       "market": {
         "return_6m": 0.3961165048543689,
+        "return_12m": 0.813824419778002,
         "volume_acceleration": -0.4340787374697367,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 35950.0
       }
     },
     {
@@ -1459,27 +1955,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 43065458053.0,
           "ppe": 199540507322.0,
+          "equity": 454285916603.0,
+          "assets": 581756982355.0,
           "capex": 15660765015.0,
           "employees": 753.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 64259184000.0,
           "ppe": 200270142000.0,
+          "equity": 470784826000.0,
+          "assets": 615162819000.0,
           "capex": 8725950000.0,
           "employees": 776.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 59617915487.0,
           "ppe": 203537853592.0,
+          "equity": 474482206410.0,
+          "assets": 611622721401.0,
           "capex": 7659592872.0,
           "employees": 737.0
         }
+      },
+      "shares": {
+        "issued_shares": 7739132.0,
+        "treasury_shares": 743316.0,
+        "floating_shares": 6995816.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1489,8 +1999,10 @@
       },
       "market": {
         "return_6m": -0.41000000000000003,
+        "return_12m": -0.5640394088669951,
         "volume_acceleration": -0.09697480080326493,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 70800.0
       }
     },
     {
@@ -1505,27 +2017,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 113305861181.0,
           "ppe": 252183391737.0,
+          "equity": 212119683580.0,
+          "assets": 633699354109.0,
           "capex": 27349177047.0,
           "employees": 589.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 79265623368.0,
           "ppe": 232023074952.0,
+          "equity": 188303434692.0,
+          "assets": 506220625653.0,
           "capex": 52217702300.0,
           "employees": 594.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 81331310562.0,
           "ppe": 270618683389.0,
+          "equity": 215586935429.0,
+          "assets": 485887420673.0,
           "capex": 44069515328.0,
           "employees": 559.0
         }
+      },
+      "shares": {
+        "issued_shares": 37053645.0,
+        "treasury_shares": 1313171.0,
+        "floating_shares": 35740474.0
       },
       "disclosures": {
         "orders_curr": 4,
@@ -1535,8 +2061,10 @@
       },
       "market": {
         "return_6m": -0.14247311827956988,
+        "return_12m": 0.08135593220338988,
         "volume_acceleration": 0.488295098054083,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 31900.0
       }
     },
     {
@@ -1551,27 +2079,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 21753253612.0,
           "ppe": 19450044697.0,
+          "equity": 86810119833.0,
+          "assets": 109142421219.0,
           "capex": 328402000.0,
           "employees": 204.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 21635125452.0,
           "ppe": 20015659073.0,
+          "equity": 91989903584.0,
+          "assets": 112596177645.0,
           "capex": 101640000.0,
           "employees": 184.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 28071092749.0,
           "ppe": 20952296289.0,
+          "equity": 89949938518.0,
+          "assets": 115930937615.0,
           "capex": 825630881.0,
           "employees": 185.0
         }
+      },
+      "shares": {
+        "issued_shares": 9750000.0,
+        "treasury_shares": null,
+        "floating_shares": 9750000.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1581,8 +2123,10 @@
       },
       "market": {
         "return_6m": -0.39953271028037385,
+        "return_12m": 0.794066317626527,
         "volume_acceleration": 0.1044720077099266,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 51400.0
       }
     },
     {
@@ -1597,27 +2141,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 25011166037.0,
           "ppe": 91002025205.0,
+          "equity": 537260669443.0,
+          "assets": 622420256911.0,
           "capex": 5671292473.0,
           "employees": 407.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 15439669473.0,
           "ppe": 92193724607.0,
+          "equity": 523141601304.0,
+          "assets": 582882970486.0,
           "capex": 11378896511.0,
           "employees": 217.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 15434848370.0,
           "ppe": 92783927417.0,
+          "equity": 473452647667.0,
+          "assets": 541813159701.0,
           "capex": 14523673745.0,
           "employees": 218.0
         }
+      },
+      "shares": {
+        "issued_shares": 21197058.0,
+        "treasury_shares": 732866.0,
+        "floating_shares": 20464192.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1627,8 +2185,10 @@
       },
       "market": {
         "return_6m": 0.0018814675446847673,
+        "return_12m": 0.6511627906976745,
         "volume_acceleration": 0.22531241773386812,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 106500.0
       }
     },
     {
@@ -1643,27 +2203,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 41636093618.0,
           "ppe": 121230632380.0,
+          "equity": 237002942111.0,
+          "assets": 411001934412.0,
           "capex": 22959389589.0,
           "employees": 513.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 27919003147.0,
           "ppe": 97010999405.0,
+          "equity": 224021721955.0,
+          "assets": 446984592737.0,
           "capex": 14866684533.0,
           "employees": 484.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 18326139338.0,
           "ppe": 86732655485.0,
+          "equity": 218255795490.0,
+          "assets": 313827961191.0,
           "capex": 46240834494.0,
           "employees": 400.0
         }
+      },
+      "shares": {
+        "issued_shares": 10951278.0,
+        "treasury_shares": null,
+        "floating_shares": 10951278.0
       },
       "disclosures": {
         "orders_curr": 9,
@@ -1673,8 +2247,10 @@
       },
       "market": {
         "return_6m": -0.5885714285714285,
+        "return_12m": 0.2659340659340659,
         "volume_acceleration": -0.6720820220396002,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 57600.0
       }
     },
     {
@@ -1689,27 +2265,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 69265588638.0,
           "ppe": 134619377878.0,
+          "equity": 248673569961.0,
+          "assets": 351892269253.0,
           "capex": 28960380559.0,
           "employees": 486.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 82441673058.0,
           "ppe": 112847418670.0,
+          "equity": 236797033017.0,
+          "assets": 322894937480.0,
           "capex": 28137710134.0,
           "employees": 484.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 88070509309.0,
           "ppe": 84826026829.0,
+          "equity": 215644538127.0,
+          "assets": 292673433497.0,
           "capex": 12983054793.0,
           "employees": 478.0
         }
+      },
+      "shares": {
+        "issued_shares": 9360000.0,
+        "treasury_shares": 388589.0,
+        "floating_shares": 8971411.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1719,8 +2309,10 @@
       },
       "market": {
         "return_6m": 0.009975062344139696,
+        "return_12m": -0.04705882352941182,
         "volume_acceleration": -0.6556620584869914,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 20250.0
       }
     },
     {
@@ -1735,27 +2327,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 335513063000.0,
           "ppe": 441733590000.0,
+          "equity": 588671403000.0,
+          "assets": 1525996520000.0,
           "capex": 24564642000.0,
           "employees": 1091.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 245056781000.0,
           "ppe": 437109267000.0,
+          "equity": 500309704000.0,
+          "assets": 1249038272000.0,
           "capex": 69490206000.0,
           "employees": 1011.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 146070405150.0,
           "ppe": 388609946689.0,
+          "equity": 371142176219.0,
+          "assets": 928888144074.0,
           "capex": 23899823345.0,
           "employees": 897.0
         }
+      },
+      "shares": {
+        "issued_shares": 47685390.0,
+        "treasury_shares": 8121.0,
+        "floating_shares": 47677269.0
       },
       "disclosures": {
         "orders_curr": 6,
@@ -1765,8 +2371,10 @@
       },
       "market": {
         "return_6m": -0.2528641571194763,
+        "return_12m": 0.13840399002493764,
         "volume_acceleration": -0.3068740353533085,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 45650.0
       }
     },
     {
@@ -1781,27 +2389,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 13602015589.0,
           "ppe": 3017307000.0,
+          "equity": 314078968337.0,
+          "assets": 319708080737.0,
           "capex": 2194355547.0,
           "employees": 111.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 13375738835.0,
           "ppe": 27958476172.0,
+          "equity": 96006772289.0,
+          "assets": 100246445003.0,
           "capex": 4262855000.0,
           "employees": 153.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 15399380978.0,
           "ppe": 25725467440.0,
+          "equity": 95840881737.0,
+          "assets": 114995337499.0,
           "capex": 2240565951.0,
           "employees": 146.0
         }
+      },
+      "shares": {
+        "issued_shares": 14570088.0,
+        "treasury_shares": 156646.0,
+        "floating_shares": 14413442.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1811,8 +2433,10 @@
       },
       "market": {
         "return_6m": -0.3547861507128309,
+        "return_12m": 0.7502762430939227,
         "volume_acceleration": -0.42675794847992576,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 158400.0
       }
     },
     {
@@ -1827,27 +2451,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 6983080957.0,
           "ppe": 27448194149.0,
+          "equity": 185190120916.0,
+          "assets": 209972293944.0,
           "capex": 638721410.0,
           "employees": 497.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 7341383210.0,
           "ppe": 29120082311.0,
+          "equity": 180725651588.0,
+          "assets": 203862689224.0,
           "capex": 2747474790.0,
           "employees": 496.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 10011263096.0,
           "ppe": 28136638222.0,
+          "equity": 191280702788.0,
+          "assets": 220825842909.0,
           "capex": 3313421456.0,
           "employees": 470.0
         }
+      },
+      "shares": {
+        "issued_shares": 12279746.0,
+        "treasury_shares": 1534834.0,
+        "floating_shares": 10744912.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1857,8 +2495,10 @@
       },
       "market": {
         "return_6m": -0.10089285714285712,
+        "return_12m": -0.22953328232593728,
         "volume_acceleration": -0.12474468006090544,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 10070.0
       }
     },
     {
@@ -1874,27 +2514,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 20616036022.0,
           "ppe": 276858605981.0,
+          "equity": 149933736062.0,
+          "assets": 571181917000.0,
           "capex": 7748021293.0,
           "employees": 216.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 12517010174.0,
           "ppe": 273210945231.0,
+          "equity": 147742892486.0,
+          "assets": 536634884685.0,
           "capex": 2152865066.0,
           "employees": 222.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 11799502411.0,
           "ppe": 228545866052.0,
+          "equity": 106612345647.0,
+          "assets": 405940375912.0,
           "capex": 1710357580.0,
           "employees": 215.0
         }
+      },
+      "shares": {
+        "issued_shares": 95632844.0,
+        "treasury_shares": null,
+        "floating_shares": 95632844.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1904,8 +2558,10 @@
       },
       "market": {
         "return_6m": -0.02264150943396226,
+        "return_12m": -0.18638743455497386,
         "volume_acceleration": 1.4544058403777167,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 1554.0
       }
     },
     {
@@ -1920,27 +2576,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 804499429134.0,
           "ppe": 2560158320110.0,
+          "equity": 2875816804068.0,
+          "assets": 7136602919112.0,
           "capex": 343848197672.0,
           "employees": 3828.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 838420670607.0,
           "ppe": 2410117259210.0,
+          "equity": 2672754766186.0,
+          "assets": 7052043027166.0,
           "capex": 309501838075.0,
           "employees": 3918.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 733896015997.0,
           "ppe": 2175537354346.0,
+          "equity": 2356155155918.0,
+          "assets": 6286700392151.0,
           "capex": 337519132083.0,
           "employees": 3982.0
         }
+      },
+      "shares": {
+        "issued_shares": 46957120.0,
+        "treasury_shares": null,
+        "floating_shares": 46957120.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -1950,8 +2620,10 @@
       },
       "market": {
         "return_6m": -0.414580265095729,
+        "return_12m": 0.14884393063583823,
         "volume_acceleration": 0.09717110074916979,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 39750.0
       }
     },
     {
@@ -1966,27 +2638,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2128164162722.0,
           "ppe": 6028651127383.0,
+          "equity": 7451110647985.0,
+          "assets": 11060741976837.0,
           "capex": 1391740885639.0,
           "employees": 10910.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2818275774375.0,
           "ppe": 5373953520707.0,
+          "equity": 10904676062018.0,
+          "assets": 17336296349511.0,
           "capex": 1303573257829.0,
           "employees": 10022.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 2641368466083.0,
           "ppe": 3880092158066.0,
+          "equity": 9830492412345.0,
+          "assets": 16046197209196.0,
           "capex": 995070661693.0,
           "employees": 8850.0
         }
+      },
+      "shares": {
+        "issued_shares": 46290951.0,
+        "treasury_shares": 51433.0,
+        "floating_shares": 46239518.0
       },
       "disclosures": {
         "orders_curr": 18,
@@ -1996,8 +2682,10 @@
       },
       "market": {
         "return_6m": -0.14116985376827895,
+        "return_12m": -0.038579364069359245,
         "volume_acceleration": 0.04320715681391518,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 1527000.0
       }
     },
     {
@@ -2012,27 +2700,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 16486278400.0,
           "ppe": 19038880665.0,
+          "equity": 103864391012.0,
+          "assets": 126277188188.0,
           "capex": 251650000.0,
           "employees": 183.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 21103318380.0,
           "ppe": 15920958211.0,
+          "equity": 105220711236.0,
+          "assets": 135157457133.0,
           "capex": 231800750.0,
           "employees": 152.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 25145721055.0,
           "ppe": 12819910998.0,
+          "equity": 95077662865.0,
+          "assets": 144556607670.0,
           "capex": 26800000.0,
           "employees": 144.0
         }
+      },
+      "shares": {
+        "issued_shares": 15082304.0,
+        "treasury_shares": 849143.0,
+        "floating_shares": 14233161.0
       },
       "disclosures": {
         "orders_curr": 9,
@@ -2042,8 +2744,10 @@
       },
       "market": {
         "return_6m": -0.6626768226332971,
+        "return_12m": -0.5091053048297705,
         "volume_acceleration": -0.674694232374788,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 6200.0
       }
     },
     {
@@ -2058,27 +2762,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 30096456975.0,
           "ppe": 199716078377.0,
+          "equity": 551674456160.0,
+          "assets": 704649920208.0,
           "capex": 12868774989.0,
           "employees": 528.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 29999806868.0,
           "ppe": 193172861473.0,
+          "equity": 452643914758.0,
+          "assets": 608378808831.0,
           "capex": 4074794425.0,
           "employees": 527.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 19434327936.0,
           "ppe": 138988714882.0,
+          "equity": 283500499663.0,
+          "assets": 375443021754.0,
           "capex": 4474211858.0,
           "employees": 383.0
         }
+      },
+      "shares": {
+        "issued_shares": 65505659.0,
+        "treasury_shares": 352170.0,
+        "floating_shares": 65153489.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -2088,8 +2806,10 @@
       },
       "market": {
         "return_6m": -0.36570945945945943,
+        "return_12m": -0.37416666666666665,
         "volume_acceleration": 0.01667276774255977,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 37550.0
       }
     },
     {
@@ -2104,27 +2824,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 602832857040.0,
           "ppe": 3153738146936.0,
+          "equity": 2016007934583.0,
+          "assets": 4882022445703.0,
           "capex": 418130148124.0,
           "employees": 1192.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 616323416408.0,
           "ppe": 2793319010818.0,
+          "equity": 1977019769174.0,
+          "assets": 4323660098124.0,
           "capex": 1023789607558.0,
           "employees": 1219.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1108796935094.0,
           "ppe": 1824206859457.0,
+          "equity": 1599392286411.0,
+          "assets": 4361774597751.0,
           "capex": 756168491423.0,
           "employees": 1408.0
         }
+      },
+      "shares": {
+        "issued_shares": 97801344.0,
+        "treasury_shares": 5843.0,
+        "floating_shares": 97795501.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -2134,8 +2868,10 @@
       },
       "market": {
         "return_6m": -0.44025522041763343,
+        "return_12m": -0.060370009737098385,
         "volume_acceleration": -0.09368560658702263,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 96500.0
       }
     },
     {
@@ -2151,27 +2887,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1266517678791.0,
           "ppe": 942724542237.0,
+          "equity": 2032934924019.0,
+          "assets": 4769815393358.0,
           "capex": 233500152700.0,
           "employees": 2209.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 1081391018449.0,
           "ppe": 730080201042.0,
+          "equity": 1507517124598.0,
+          "assets": 3795545096460.0,
           "capex": 121640871886.0,
           "employees": 2184.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 849724918573.0,
           "ppe": 624252694877.0,
+          "equity": 1057030326170.0,
+          "assets": 2910160077690.0,
           "capex": 75377519040.0,
           "employees": 2119.0
         }
+      },
+      "shares": {
+        "issued_shares": 36047135.0,
+        "treasury_shares": 54431.0,
+        "floating_shares": 35992704.0
       },
       "disclosures": {
         "orders_curr": 4,
@@ -2181,8 +2931,10 @@
       },
       "market": {
         "return_6m": -0.34346846846846846,
+        "return_12m": 0.20703933747412018,
         "volume_acceleration": 0.08618052658855047,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 583000.0
       }
     },
     {
@@ -2198,27 +2950,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 810743032914.0,
           "ppe": 822739444404.0,
+          "equity": 5000999101579.0,
+          "assets": 10327265554498.0,
           "capex": 298946996842.0,
           "employees": 4855.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 610096270571.0,
           "ppe": 569952770732.0,
+          "equity": 2416416895456.0,
+          "assets": 5724010115718.0,
           "capex": 239805649946.0,
           "employees": 4751.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 501085247270.0,
           "ppe": 347646334685.0,
+          "equity": 2154126164004.0,
+          "assets": 4483210824746.0,
           "capex": 132316330494.0,
           "employees": 4741.0
         }
+      },
+      "shares": {
+        "issued_shares": 188919389.0,
+        "treasury_shares": 1926128.0,
+        "floating_shares": 186993261.0
       },
       "disclosures": {
         "orders_curr": 13,
@@ -2228,8 +2994,10 @@
       },
       "market": {
         "return_6m": -0.3759909399773499,
+        "return_12m": -0.0018115942028985588,
         "volume_acceleration": -0.43249262112542486,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 55100.0
       }
     },
     {
@@ -2244,27 +3012,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 15524790786.0,
           "ppe": 36312496755.0,
+          "equity": 133830651193.0,
+          "assets": 143305317623.0,
           "capex": 17608673072.0,
           "employees": 161.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 7162416625.0,
           "ppe": 19494281137.0,
+          "equity": 132751303410.0,
+          "assets": 139881005679.0,
           "capex": 11659354938.0,
           "employees": 98.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 6176649071.0,
           "ppe": 6800531634.0,
+          "equity": 130656200153.0,
+          "assets": 132611487315.0,
           "capex": 3226546873.0,
           "employees": 73.0
         }
+      },
+      "shares": {
+        "issued_shares": 19399858.0,
+        "treasury_shares": null,
+        "floating_shares": 19399858.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -2274,8 +3056,10 @@
       },
       "market": {
         "return_6m": -0.2554890219560878,
+        "return_12m": 0.35144927536231885,
         "volume_acceleration": -0.483356972716792,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 373000.0
       }
     },
     {
@@ -2291,27 +3075,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 16806218046.0,
           "ppe": 136958223304.0,
+          "equity": 256094670733.0,
+          "assets": 428236310837.0,
           "capex": 35817386760.0,
           "employees": 263.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 22265293042.0,
           "ppe": 109361825711.0,
+          "equity": 280861843935.0,
+          "assets": 438385883721.0,
           "capex": 20940283455.0,
           "employees": 245.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 20437949264.0,
           "ppe": 91102291959.0,
+          "equity": 276633579861.0,
+          "assets": 466593987882.0,
           "capex": 25616867240.0,
           "employees": 262.0
         }
+      },
+      "shares": {
+        "issued_shares": 11469370.0,
+        "treasury_shares": 233752.0,
+        "floating_shares": 11235618.0
       },
       "disclosures": {
         "orders_curr": 6,
@@ -2321,8 +3119,10 @@
       },
       "market": {
         "return_6m": -0.6054455445544554,
+        "return_12m": -0.3433441023565985,
         "volume_acceleration": -0.5376987369551514,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 7970.0
       }
     },
     {
@@ -2337,27 +3137,41 @@
         "2025": {
           "revenue": 5968511616609.0,
           "operating_income": 746968417289.0,
+          "net_income": 502837667965.0,
           "inventory": 1277633122307.0,
           "ppe": 2307100942537.0,
+          "equity": 2489720957283.0,
+          "assets": 7227883006296.0,
           "capex": 162909245075.0,
           "employees": 7134.0
         },
         "2024": {
           "revenue": 4894979612220.0,
           "operating_income": 362479487133.0,
+          "net_income": 222929444192.0,
           "inventory": 885404450614.0,
           "ppe": 2171715866687.0,
+          "equity": 2055618494514.0,
+          "assets": 6218812921202.0,
           "capex": 83956108784.0,
           "employees": 6790.0
         },
         "2023": {
           "revenue": 637542681885.0,
           "operating_income": 257836947601.0,
+          "net_income": 131922316419.0,
           "inventory": 725845310041.0,
           "ppe": 1280946624546.0,
+          "equity": 1224159409651.0,
+          "assets": 4761300218430.0,
           "capex": 32277364388.0,
           "employees": 6532.0
         }
+      },
+      "shares": {
+        "issued_shares": 9324548.0,
+        "treasury_shares": 12807.0,
+        "floating_shares": 9311741.0
       },
       "disclosures": {
         "orders_curr": 12,
@@ -2367,8 +3181,10 @@
       },
       "market": {
         "return_6m": -0.19369944657300975,
+        "return_12m": 0.7767354596622889,
         "volume_acceleration": -0.13131814123779206,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 1894000.0
       }
     },
     {
@@ -2383,27 +3199,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 189203470222.0,
           "ppe": 1125395181021.0,
+          "equity": 2037454202719.0,
+          "assets": 2955743509068.0,
           "capex": 183090850076.0,
           "employees": 1129.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 211125922530.0,
           "ppe": 972923184089.0,
+          "equity": 2022452177574.0,
+          "assets": 2843596036892.0,
           "capex": 164413439522.0,
           "employees": 1021.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 80649373609.0,
           "ppe": 296287725019.0,
+          "equity": 1703855316376.0,
+          "assets": 1852439180084.0,
           "capex": 43017243309.0,
           "employees": 1095.0
         }
+      },
+      "shares": {
+        "issued_shares": 78434701.0,
+        "treasury_shares": null,
+        "floating_shares": 78434701.0
       },
       "disclosures": {
         "orders_curr": 2,
@@ -2413,8 +3243,10 @@
       },
       "market": {
         "return_6m": -0.3269035532994924,
+        "return_12m": -0.29242262540021347,
         "volume_acceleration": -0.162364397177442,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 33150.0
       }
     },
     {
@@ -2429,27 +3261,41 @@
         "2025": {
           "revenue": 616083220023.0,
           "operating_income": -138394465215.0,
+          "net_income": -138394465215.0,
           "inventory": 225636571323.0,
           "ppe": 1555061984865.0,
+          "equity": 945628850900.0,
+          "assets": 2160516819035.0,
           "capex": 233540778767.0,
           "employees": 198.0
         },
         "2024": {
           "revenue": 570949198601.0,
           "operating_income": -54418745322.0,
+          "net_income": -42689618619.0,
           "inventory": 224390929387.0,
           "ppe": 1367657501421.0,
+          "equity": 1091463651219.0,
+          "assets": 2079395108546.0,
           "capex": 257610732440.0,
           "employees": 208.0
         },
         "2023": {
           "revenue": 17237918506.0,
           "operating_income": -73207987858.0,
+          "net_income": 126771745557.0,
           "inventory": 192560868980.0,
           "ppe": 1025345371631.0,
+          "equity": 1058188198539.0,
+          "assets": 1706722451080.0,
           "capex": 244583578926.0,
           "employees": 200.0
         }
+      },
+      "shares": {
+        "issued_shares": 70217344.0,
+        "treasury_shares": 5046.0,
+        "floating_shares": 70212298.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -2459,8 +3305,10 @@
       },
       "market": {
         "return_6m": -0.2757306226175349,
+        "return_12m": -0.30487804878048785,
         "volume_acceleration": -0.360261496442992,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 5700.0
       }
     },
     {
@@ -2475,27 +3323,41 @@
         "2025": {
           "revenue": 23671759000000.0,
           "operating_income": 1346120000000.0,
+          "net_income": 80803000000.0,
           "inventory": 4350407000000.0,
           "ppe": 40794759000000.0,
+          "equity": 29321676000000.0,
+          "assets": 67147953000000.0,
           "capex": 10833917000000.0,
           "employees": 12922.0
         },
         "2024": {
           "revenue": 25619585000000.0,
           "operating_income": 575387000000.0,
+          "net_income": 338602000000.0,
           "inventory": 4552355000000.0,
           "ppe": 38349552000000.0,
+          "equity": 30966543000000.0,
+          "assets": 60306791000000.0,
           "capex": 12399017000000.0,
           "employees": 12635.0
         },
         "2023": {
           "revenue": 33745470000000.0,
           "operating_income": 400805000000.0,
+          "net_income": 1637985000000.0,
           "inventory": 5396336000000.0,
           "ppe": 23654677000000.0,
+          "equity": 24373509000000.0,
+          "assets": 45437144000000.0,
           "capex": 9923051000000.0,
           "employees": 12166.0
         }
+      },
+      "shares": {
+        "issued_shares": 234000000.0,
+        "treasury_shares": null,
+        "floating_shares": 234000000.0
       },
       "disclosures": {
         "orders_curr": 7,
@@ -2505,8 +3367,10 @@
       },
       "market": {
         "return_6m": -0.23261390887290168,
+        "return_12m": 0.02893890675241151,
         "volume_acceleration": -0.014101582872198426,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 320000.0
       }
     },
     {
@@ -2521,27 +3385,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 15957076752.0,
           "ppe": 48043652365.0,
+          "equity": 308230752232.0,
+          "assets": 369707189477.0,
           "capex": 2329823754.0,
           "employees": 127.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 23116428628.0,
           "ppe": 49298337776.0,
+          "equity": 277910828155.0,
+          "assets": 319896333507.0,
           "capex": 43112610428.0,
           "employees": 115.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 24223776591.0,
           "ppe": 40296201560.0,
+          "equity": 277080288653.0,
+          "assets": 320687606641.0,
           "capex": 24669654491.0,
           "employees": 106.0
         }
+      },
+      "shares": {
+        "issued_shares": 83610568.0,
+        "treasury_shares": 2736250.0,
+        "floating_shares": 80874318.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -2551,8 +3429,10 @@
       },
       "market": {
         "return_6m": -0.14135338345864656,
+        "return_12m": 0.09386973180076619,
         "volume_acceleration": 0.9402932613324881,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 28550.0
       }
     },
     {
@@ -2567,27 +3447,41 @@
         "2025": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 19010264142.0,
           "ppe": 18712401169.0,
+          "equity": 348594990774.0,
+          "assets": 399370499942.0,
           "capex": 13137762569.0,
           "employees": 255.0
         },
         "2024": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 29307431937.0,
           "ppe": 10222753109.0,
+          "equity": 402501180228.0,
+          "assets": 421690971946.0,
           "capex": 3298734340.0,
           "employees": 234.0
         },
         "2023": {
           "revenue": null,
           "operating_income": null,
+          "net_income": null,
           "inventory": 14153603864.0,
           "ppe": 8422466844.0,
+          "equity": 438808093399.0,
+          "assets": 456422079722.0,
           "capex": 3123738619.0,
           "employees": 195.0
         }
+      },
+      "shares": {
+        "issued_shares": 64819980.0,
+        "treasury_shares": null,
+        "floating_shares": 64819980.0
       },
       "disclosures": {
         "orders_curr": 0,
@@ -2597,8 +3491,10 @@
       },
       "market": {
         "return_6m": -0.5199306759098787,
+        "return_12m": -0.10210696920583473,
         "volume_acceleration": 0.4000224834703725,
-        "latest_ts": 1785369600.0
+        "latest_ts": 1785369600.0,
+        "latest_price": 55400.0
       }
     }
   ]
