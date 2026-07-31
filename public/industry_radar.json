@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-31T17:17:41.049903+00:00",
+  "generated_at": "2026-07-31T17:21:01.451732+00:00",
   "engine_version": "0.1.0",
   "model_status": "EXPERIMENTAL_SCORE_NOT_PROBABILITY",
-  "run_mode": "manual",
+  "run_mode": "monthly",
   "status": "NO_DATA",
   "industries": []
 }
