@@ -91,6 +91,7 @@ def score_industry(row: dict[str, Any], cfg: dict) -> dict[str, Any]:
         "market_heat_score": _round(market_heat),
         "underrecognition_score": _round(underrecognition),
         "risk_penalty_score": _round(risk_penalty),
+        "macro_fit_score": _round(row.get("macro_fit") if _valid(row.get("macro_fit")) else None),
         "capital_inflow_6m_score": _round(_blend_available([(capital_flow, 0.65), (evidence_strength, 0.35)])),
         "boom_transition_12m_score": _round(boom_transition),
         "core_industry_shift_24m_score": _round(_blend_available([(boom_transition, 0.60), (structural_support, 0.40)])),

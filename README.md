@@ -1,32 +1,43 @@
-# Industry Capital Radar v0.2
+# Industry Capital Radar V0.3
 
-대중적 관심이 본격화되기 전, 실물자금·설비투자·수주·고용이 가속되는 산업을 탐지하는 GitHub 엔진입니다.
+아직 대중과 시장의 관심은 낮지만 기업의 CAPEX·수주·고용·시장 신호와 거시환경이 먼저 움직이는 산업을 탐지하는 실험 엔진입니다.
 
-## V0.2 실제 연결
+## V0.3 기능
 
-- OpenDART: 상장사 고유번호, 최근 3개 사업연도 전체 재무제표, 직원현황, 최근/직전 1년 수주·시설투자 공시 건수
-- 시장 보조지표: 대표기업 6개월 수익률과 거래량 가속도(비공식 보조 데이터, 실패 시 자동 제외)
-- ECOS/KOSIS: 인증키 연결상태 확인. 산업별 통계표 매핑은 V0.3에서 점수에 반영
+- OpenDART 대표기업 연차 재무·직원·공시 수집
+- 시장가격·거래량 보조 신호
+- FRED 금리·물가·고용·산업생산·유동성 수집 및 산업별 거시 적합도 반영
+- ECOS·KOSIS 연결 상태 검사
+- API 상태·확인시각·갱신상태 JSON 출력
+- DART 캐시 및 병렬수집으로 반복 실행시간 단축
+- 중복 실행 시 이전 실행 자동 취소
+- 결과는 확률이 아닌 실험 점수
 
-## 중요한 제한
+## GitHub Secrets
 
-- 현재는 한국 대표기업 표본 기반 초기 점수다.
-- 산업 전체 모집단을 대표하지 않는다.
-- 0~100 점수이며 백테스트로 보정된 확률이 아니다.
-- 누락 지표를 0점으로 처리하지 않고 사용 가능한 지표끼리 가중치를 재정규화한다.
+- `OPENDART_API_KEY`
+- `ECOS_API_KEY`
+- `KOSIS_API_KEY`
+- `FRED_API_KEY`
 
-## 실행
+## 실행 모드
 
-```bash
-python -m unittest discover -s tests -v
-python -m src.main --mode manual
-```
+- `manual`: 30일 이내 DART 캐시가 있으면 캐시 사용, 시장·FRED 갱신
+- `daily`: DART 캐시 사용, 시장·FRED 갱신
+- `weekly`: DART 공시·시장·FRED 갱신
+- `monthly`: DART 전체 재수집 + 시장·FRED 갱신
 
-결과:
+첫 실행 또는 DART 전체 갱신이 필요하면 `monthly`를 선택합니다.
+
+## 출력
 
 - `public/industry_radar.json`
 - `public/industry_detail.json`
 - `public/engine_status.json`
-- `data/normalized/industry_features.csv`
-- `data/snapshots/company_metrics.json`
-- `data/evidence/industry_evidence.json`
+- `public/api_status.json`
+
+## 한계
+
+- 대표기업 표본 기반입니다.
+- ECOS·KOSIS는 V0.3에서 연결 상태만 확인하며 산업별 세부 통계는 아직 점수에 직접 매핑되지 않습니다.
+- 점수는 워크포워드 백테스트로 보정된 확률이 아닙니다.

@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-07-31T18:35:12.427066+00:00",
+  "engine_version": "0.3.0",
+  "connected_sources": 0,
+  "total_sources": 0,
+  "needs_attention": [],
+  "sources": {},
+  "renewal_note": "API가 만료일을 제공하지 않으면 갱신일은 UNKNOWN 또는 NOT_EXPOSED_BY_API로 표시합니다."
+}

@@ -1,42 +1,18 @@
 {
-  "generated_at": "2026-07-31T18:04:08.376783+00:00",
-  "engine_version": "0.2.0",
+  "generated_at": "2026-07-31T18:35:12.427066+00:00",
+  "engine_version": "0.3.0",
   "run_mode": "manual",
-  "run_status": "PARTIAL_SUCCESS",
-  "rows_loaded": 23,
-  "rows_scored": 23,
-  "acceptable_quality_rows": 23,
+  "run_status": "NO_DATA",
+  "rows_loaded": 0,
+  "rows_scored": 0,
+  "acceptable_quality_rows": 0,
   "unknown_industries": [],
-  "quality_gate_passed": true,
+  "quality_gate_passed": false,
   "collection": {
-    "companies_collected": 56,
-    "industries_normalized": 23,
-    "source_status": {
-      "ecos": {
-        "status": "CONNECTED_NOT_MAPPED",
-        "table_count": 834,
-        "mapped_to_score": false
-      },
-      "kosis": {
-        "status": "CONNECTED_NOT_MAPPED",
-        "root_items": 11,
-        "mapped_to_score": false
-      },
-      "opendart": {
-        "status": "CONNECTED",
-        "listed_corporations": 3981,
-        "mapped_to_score": true
-      },
-      "market_proxy": {
-        "status": "CONNECTED",
-        "successful_symbols": 56,
-        "total_symbols": 56,
-        "official": false,
-        "mapped_to_score": true
-      }
-    },
+    "skipped": true,
     "errors": [],
-    "error_count": 0
+    "error_count": 0,
+    "source_status": {}
   },
-  "message": "한국 대표기업 기반 실데이터 초기 점수 산출"
+  "message": "실데이터 수집 또는 정규화 결과가 없습니다."
 }

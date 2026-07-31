@@ -77,7 +77,8 @@ def _company_period_metrics(company: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def build_industry_features(companies: list[dict[str, Any]], industry_ids: list[str]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+def build_industry_features(companies: list[dict[str, Any]], industry_ids: list[str], macro_scores: dict[str, float | None] | None = None) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    macro_scores = macro_scores or {}
     grouped: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = defaultdict(list)
     for company in companies:
         metrics = _company_period_metrics(company)
@@ -143,7 +144,7 @@ def build_industry_features(companies: list[dict[str, Any]], industry_ids: list[
             "policy_funding_velocity": None,
             "breadth": breadth_score(available_company_signals),
             "persistence": breadth_score(persistence_flags),
-            "macro_fit": None,
+            "macro_fit": macro_scores.get(industry_id),
             "market_attention": growth_score(vol_acc, 1.0),
             "price_momentum": growth_score((return_6m - benchmark_return) if return_6m is not None and benchmark_return is not None else None, 2.0),
             "valuation_heat": None,
@@ -174,7 +175,8 @@ def build_industry_features(companies: list[dict[str, Any]], industry_ids: list[
             "limitations": [
                 "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
                 "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
-                "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 다음 매핑 단계에서 추가됩니다."
+                "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+                "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
             ],
         }
     return rows, evidence

@@ -1,0 +1,36 @@
+{
+  "version": "0.3.0",
+  "default": "balanced",
+  "profiles": {
+    "growth_duration": {"growth": 0.35, "rates": 0.35, "liquidity": 0.20, "inflation": 0.10},
+    "cyclical_capex": {"growth": 0.50, "rates": 0.20, "liquidity": 0.10, "inflation": 0.20},
+    "policy_defensive": {"growth": 0.25, "rates": 0.15, "liquidity": 0.10, "inflation": 0.10, "defensive_base": 0.40},
+    "balanced": {"growth": 0.40, "rates": 0.25, "liquidity": 0.15, "inflation": 0.20}
+  },
+  "industry_profiles": {
+    "AI_COMPUTE": "growth_duration",
+    "AI_DATA_INFRA": "growth_duration",
+    "SEMICONDUCTOR_EQUIPMENT": "cyclical_capex",
+    "ADVANCED_PACKAGING": "cyclical_capex",
+    "DATACENTER_POWER_COOLING": "cyclical_capex",
+    "POWER_GRID": "policy_defensive",
+    "NUCLEAR_SMR": "policy_defensive",
+    "ENERGY_STORAGE": "cyclical_capex",
+    "ROBOTICS": "growth_duration",
+    "INDUSTRIAL_AUTOMATION": "cyclical_capex",
+    "AUTONOMOUS_SENSORS": "growth_duration",
+    "SPACE_SATELLITE": "policy_defensive",
+    "DEFENSE_DRONES": "policy_defensive",
+    "CYBERSECURITY": "growth_duration",
+    "BIO_MANUFACTURING": "growth_duration",
+    "MEDICAL_DEVICES": "growth_duration",
+    "QUANTUM_TECH": "growth_duration",
+    "ADVANCED_MATERIALS": "cyclical_capex",
+    "CRITICAL_MINERALS": "policy_defensive",
+    "WATER_INFRA": "policy_defensive",
+    "CLIMATE_ADAPTATION": "policy_defensive",
+    "AGRITECH": "policy_defensive",
+    "LOGISTICS_AUTOMATION": "cyclical_capex",
+    "CONSTRUCTION_TECH": "cyclical_capex"
+  }
+}
