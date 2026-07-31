@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-07-31T17:02:02.662483+00:00",
+  "engine_version": "0.1.0",
+  "run_mode": "manual",
+  "run_status": "NO_DATA",
+  "rows_loaded": 0,
+  "rows_scored": 0,
+  "unknown_industries": [],
+  "quality_gate_passed": false,
+  "message": "정규화 입력 데이터가 필요합니다."
+}

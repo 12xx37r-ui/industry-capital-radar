@@ -1,0 +1,1 @@
+"""Industry Capital Radar engine."""

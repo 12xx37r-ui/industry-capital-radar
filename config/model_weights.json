@@ -1,0 +1,13 @@
+{
+  "version": "0.1-provisional",
+  "warning": "워크포워드 검증 전 임시 가중치이며 확률이 아니다.",
+  "capital_flow": {"capital_level":0.20,"capital_velocity":0.30,"capital_acceleration":0.50},
+  "demand_validation": {"orders_velocity":0.40,"backlog_acceleration":0.35,"capacity_tightness":0.25},
+  "innovation_talent": {"hiring_velocity":0.55,"innovation_velocity":0.45},
+  "structural_support": {"policy_funding_velocity":0.60,"macro_fit":0.40},
+  "evidence_strength": {"breadth":0.55,"persistence":0.45},
+  "market_heat": {"market_attention":0.35,"price_momentum":0.35,"valuation_heat":0.30},
+  "risk_penalty": {"supply_overbuild_risk":0.60,"policy_dependency_risk":0.40},
+  "boom_transition": {"capital_flow_score":0.30,"demand_validation_score":0.25,"innovation_talent_score":0.15,"structural_support_score":0.10,"evidence_strength_score":0.20},
+  "lead_opportunity": {"boom_transition_score":0.55,"underrecognition_score":0.25,"macro_fit":0.20,"risk_penalty_subtract":0.25}
+}

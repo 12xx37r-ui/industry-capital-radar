@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "scope": ["KR", "US"],
+  "industries": [
+    {"id":"AI_COMPUTE","name_ko":"AI 연산·가속기","parent":"디지털 인프라"},
+    {"id":"AI_DATA_INFRA","name_ko":"AI 데이터·클라우드 인프라","parent":"디지털 인프라"},
+    {"id":"SEMICONDUCTOR_EQUIPMENT","name_ko":"반도체 제조장비","parent":"반도체"},
+    {"id":"ADVANCED_PACKAGING","name_ko":"첨단 패키징·검사","parent":"반도체"},
+    {"id":"DATACENTER_POWER_COOLING","name_ko":"데이터센터 전력·냉각","parent":"전력 인프라"},
+    {"id":"POWER_GRID","name_ko":"송배전망·변압기","parent":"전력 인프라"},
+    {"id":"NUCLEAR_SMR","name_ko":"원자력·SMR","parent":"에너지"},
+    {"id":"ENERGY_STORAGE","name_ko":"에너지저장·전력변환","parent":"에너지"},
+    {"id":"ROBOTICS","name_ko":"로봇","parent":"산업 자동화"},
+    {"id":"INDUSTRIAL_AUTOMATION","name_ko":"산업 자동화·스마트팩토리","parent":"산업 자동화"},
+    {"id":"AUTONOMOUS_SENSORS","name_ko":"자율시스템·센서","parent":"모빌리티"},
+    {"id":"SPACE_SATELLITE","name_ko":"우주·위성","parent":"첨단 제조"},
+    {"id":"DEFENSE_DRONES","name_ko":"방산·드론","parent":"첨단 제조"},
+    {"id":"CYBERSECURITY","name_ko":"사이버보안","parent":"디지털 인프라"},
+    {"id":"BIO_MANUFACTURING","name_ko":"바이오 제조·CDMO","parent":"바이오"},
+    {"id":"MEDICAL_DEVICES","name_ko":"의료기기·진단","parent":"헬스케어"},
+    {"id":"QUANTUM_TECH","name_ko":"양자기술","parent":"딥테크"},
+    {"id":"ADVANCED_MATERIALS","name_ko":"첨단소재","parent":"소재"},
+    {"id":"CRITICAL_MINERALS","name_ko":"핵심광물·희토류","parent":"소재"},
+    {"id":"WATER_INFRA","name_ko":"수처리·물 인프라","parent":"기후 인프라"},
+    {"id":"CLIMATE_ADAPTATION","name_ko":"기후적응 인프라","parent":"기후 인프라"},
+    {"id":"AGRITECH","name_ko":"농업기술·식량생산","parent":"기후 인프라"},
+    {"id":"LOGISTICS_AUTOMATION","name_ko":"물류 자동화","parent":"산업 자동화"},
+    {"id":"CONSTRUCTION_TECH","name_ko":"건설기술·모듈러","parent":"산업 인프라"}
+  ]
+}

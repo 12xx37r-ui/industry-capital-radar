@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <base target="_top">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:Arial,sans-serif;margin:20px;background:#f6f7f9;color:#1f2937}
+    .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:14px}
+    th{background:#f9fafb}
+    .muted{color:#6b7280}
+    .error{color:#b91c1c}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>산업 자본이동 레이더</h2>
+    <div id="status" class="muted">데이터 불러오는 중…</div>
+    <div id="content"></div>
+  </div>
+<script>
+function esc(v){return String(v ?? '').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));}
+function render(data){
+  document.getElementById('status').textContent = `상태: ${data.status} · 생성: ${data.generated_at} · ${data.model_status}`;
+  const rows = data.industries || [];
+  if(!rows.length){document.getElementById('content').innerHTML='<p>아직 정규화 데이터가 없어 예측점수를 표시하지 않습니다.</p>';return;}
+  let html='<table><thead><tr><th>순위</th><th>산업</th><th>단계</th><th>6개월 자본</th><th>12개월 전환</th><th>미반영</th><th>선투자</th><th>품질</th></tr></thead><tbody>';
+  rows.forEach((r,i)=>{html+=`<tr><td>${i+1}</td><td>${esc(r.industry_name_ko)}</td><td>${esc(r.stage)}</td><td>${r.capital_inflow_6m_score}</td><td>${r.boom_transition_12m_score}</td><td>${r.underrecognition_score}</td><td>${r.lead_opportunity_score}</td><td>${esc(r.data_quality)}</td></tr>`;});
+  html+='</tbody></table>';
+  document.getElementById('content').innerHTML=html;
+}
+function fail(err){document.getElementById('status').innerHTML='<span class="error">오류: '+esc(err.message||err)+'</span>';}
+google.script.run.withSuccessHandler(render).withFailureHandler(fail).getRadarData();
+</script>
+</body>
+</html>
