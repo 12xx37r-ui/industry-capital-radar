@@ -1,0 +1,2605 @@
+{
+  "generated_at": "2026-07-31T19:00:56.389812+00:00",
+  "companies": [
+    {
+      "stock_code": "000100",
+      "name": "유한양행",
+      "yahoo_symbol": "000100.KS",
+      "industries": [
+        "BIO_MANUFACTURING"
+      ],
+      "corp_code": "00145109",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 372764189868.0,
+          "ppe": 638692432969.0,
+          "capex": 99601135225.0,
+          "employees": 2153.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 343155941089.0,
+          "ppe": 598147315144.0,
+          "capex": 117078952653.0,
+          "employees": 2117.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 284758946262.0,
+          "ppe": 522912726118.0,
+          "capex": 161479680076.0,
+          "employees": 2002.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 4,
+        "capex_curr": 0,
+        "orders_prev": 2,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.29389312977099236,
+        "volume_acceleration": 0.02123778909794649,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "000660",
+      "name": "SK하이닉스",
+      "yahoo_symbol": "000660.KS",
+      "industries": [
+        "AI_COMPUTE"
+      ],
+      "corp_code": "00164779",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 14289390000000.0,
+          "ppe": 77502704000000.0,
+          "capex": 27518924000000.0,
+          "employees": 34549.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 13313937000000.0,
+          "ppe": 60157474000000.0,
+          "capex": 15945534000000.0,
+          "employees": 32390.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 13480659000000.0,
+          "ppe": 52704853000000.0,
+          "capex": 8325138000000.0,
+          "employees": 32065.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 3,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.7509933774834436,
+        "volume_acceleration": 0.3893630790826539,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "000720",
+      "name": "현대건설",
+      "yahoo_symbol": "000720.KS",
+      "industries": [
+        "NUCLEAR_SMR",
+        "CONSTRUCTION_TECH",
+        "CLIMATE_ADAPTATION"
+      ],
+      "corp_code": "00164478",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 747044000000.0,
+          "ppe": 1225081000000.0,
+          "capex": 107202000000.0,
+          "employees": 6900.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 776511000000.0,
+          "ppe": 1289154000000.0,
+          "capex": 178853000000.0,
+          "employees": 7147.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 815625000000.0,
+          "ppe": 1204520000000.0,
+          "capex": 222144000000.0,
+          "employees": 7204.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 13,
+        "capex_curr": 0,
+        "orders_prev": 7,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.21442307692307694,
+        "volume_acceleration": -0.5772656050920881,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "003670",
+      "name": "포스코퓨처엠",
+      "yahoo_symbol": "003670.KS",
+      "industries": [
+        "ENERGY_STORAGE",
+        "CRITICAL_MINERALS",
+        "ADVANCED_MATERIALS"
+      ],
+      "corp_code": "00155276",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 841132239882.0,
+          "ppe": 6252547980171.0,
+          "capex": 1498908768505.0,
+          "employees": 2979.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 768212453686.0,
+          "ppe": 5159527849617.0,
+          "capex": 2041609019528.0,
+          "employees": 3045.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 916674470483.0,
+          "ppe": 3359487997645.0,
+          "capex": 1352298459926.0,
+          "employees": 2835.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 8,
+        "capex_curr": 1,
+        "orders_prev": 1,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.4,
+        "volume_acceleration": -0.2451321555643221,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "005490",
+      "name": "POSCO홀딩스",
+      "yahoo_symbol": "005490.KS",
+      "industries": [
+        "CRITICAL_MINERALS",
+        "ADVANCED_MATERIALS"
+      ],
+      "corp_code": "00155319",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 13624432729452.0,
+          "ppe": 42292819677397.0,
+          "capex": 5665150778832.0,
+          "employees": 524.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 14143499793793.0,
+          "ppe": 39846827836911.0,
+          "capex": 7669699522275.0,
+          "employees": 527.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 13825514288591.0,
+          "ppe": 35206248343570.0,
+          "capex": 6733288526505.0,
+          "employees": 530.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.1641168289290682,
+        "volume_acceleration": -0.2585663180316229,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "005930",
+      "name": "삼성전자",
+      "yahoo_symbol": "005930.KS",
+      "industries": [
+        "AI_COMPUTE",
+        "AI_DATA_INFRA"
+      ],
+      "corp_code": "00126380",
+      "annual": {
+        "2025": {
+          "revenue": 333605938000000.0,
+          "operating_income": 43601051000000.0,
+          "inventory": 52636828000000.0,
+          "ppe": 215304784000000.0,
+          "capex": 47522179000000.0,
+          "employees": 257762.0
+        },
+        "2024": {
+          "revenue": 300870903000000.0,
+          "operating_income": 32725961000000.0,
+          "inventory": 51754865000000.0,
+          "ppe": 205945209000000.0,
+          "capex": 51406355000000.0,
+          "employees": 258960.0
+        },
+        "2023": {
+          "revenue": 258935494000000.0,
+          "operating_income": 6566976000000.0,
+          "inventory": 51625874000000.0,
+          "ppe": 187256262000000.0,
+          "capex": 57611292000000.0,
+          "employees": 249608.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.3591595535128036,
+        "volume_acceleration": 0.1700715877815322,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "006360",
+      "name": "GS건설",
+      "yahoo_symbol": "006360.KS",
+      "industries": [
+        "WATER_INFRA",
+        "CLIMATE_ADAPTATION",
+        "CONSTRUCTION_TECH"
+      ],
+      "corp_code": "00120030",
+      "annual": {
+        "2025": {
+          "revenue": 12450347000000.0,
+          "operating_income": 437809000000.0,
+          "inventory": 1163292000000.0,
+          "ppe": 1625949000000.0,
+          "capex": 225985000000.0,
+          "employees": 4996.0
+        },
+        "2024": {
+          "revenue": 12863811468386.0,
+          "operating_income": 285954335787.0,
+          "inventory": 1280005616400.0,
+          "ppe": 2638612316878.0,
+          "capex": 416204778001.0,
+          "employees": 5483.0
+        },
+        "2023": {
+          "revenue": 13436684904471.0,
+          "operating_income": -387945401071.0,
+          "inventory": 1338666208609.0,
+          "ppe": 2256205699263.0,
+          "capex": 476147147758.0,
+          "employees": 5256.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 26,
+        "capex_curr": 0,
+        "orders_prev": 20,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.19366952789699576,
+        "volume_acceleration": 0.4804507032388823,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "006400",
+      "name": "삼성SDI",
+      "yahoo_symbol": "006400.KS",
+      "industries": [
+        "ENERGY_STORAGE"
+      ],
+      "corp_code": "00126362",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2936331872805.0,
+          "ppe": 19240618782149.0,
+          "capex": 3066850926743.0,
+          "employees": 12826.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2879441809212.0,
+          "ppe": 17706530246443.0,
+          "capex": 6271319040013.0,
+          "employees": 13341.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 3297368930324.0,
+          "ppe": 11893348076900.0,
+          "capex": 4048246715878.0,
+          "employees": 12452.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 1,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.06762028608582571,
+        "volume_acceleration": -0.29286667910822717,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "010120",
+      "name": "LS ELECTRIC",
+      "yahoo_symbol": "010120.KS",
+      "industries": [
+        "DATACENTER_POWER_COOLING",
+        "POWER_GRID",
+        "INDUSTRIAL_AUTOMATION"
+      ],
+      "corp_code": "00105855",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 552890167663.0,
+          "ppe": 979436135669.0,
+          "capex": 200850433496.0,
+          "employees": 3482.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 510013227555.0,
+          "ppe": 860538950350.0,
+          "capex": 145243521908.0,
+          "employees": 3372.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 527985325318.0,
+          "ppe": 682143146102.0,
+          "capex": 112891744498.0,
+          "employees": 3204.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 4,
+        "capex_curr": 0,
+        "orders_prev": 4,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": 0.45357833655706004,
+        "volume_acceleration": -0.03026315097662924,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "011070",
+      "name": "LG이노텍",
+      "yahoo_symbol": "011070.KS",
+      "industries": [
+        "AUTONOMOUS_SENSORS",
+        "ADVANCED_MATERIALS"
+      ],
+      "corp_code": "00105961",
+      "annual": {
+        "2025": {
+          "revenue": 21896603000000.0,
+          "operating_income": 665007000000.0,
+          "inventory": 1788772000000.0,
+          "ppe": 3724150000000.0,
+          "capex": 610988000000.0,
+          "employees": 12211.0
+        },
+        "2024": {
+          "revenue": 21200755000000.0,
+          "operating_income": 706043000000.0,
+          "inventory": 1575241000000.0,
+          "ppe": 4479772000000.0,
+          "capex": 879043000000.0,
+          "employees": 12658.0
+        },
+        "2023": {
+          "revenue": 20605290000000.0,
+          "operating_income": 830824000000.0,
+          "inventory": 1572002000000.0,
+          "ppe": 4855578000000.0,
+          "capex": 1799237000000.0,
+          "employees": 13812.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 1,
+        "orders_prev": 0,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": 0.49823321554770317,
+        "volume_acceleration": 0.5595147698430945,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "012330",
+      "name": "현대모비스",
+      "yahoo_symbol": "012330.KS",
+      "industries": [
+        "AUTONOMOUS_SENSORS"
+      ],
+      "corp_code": "00164788",
+      "annual": {
+        "2025": {
+          "revenue": 61118127000000.0,
+          "operating_income": 3357456000000.0,
+          "inventory": 6861834000000.0,
+          "ppe": 12346592000000.0,
+          "capex": 1347770000000.0,
+          "employees": 12535.0
+        },
+        "2024": {
+          "revenue": 57236995000000.0,
+          "operating_income": 3073456000000.0,
+          "inventory": 6762941000000.0,
+          "ppe": 12003452000000.0,
+          "capex": 2204080000000.0,
+          "employees": 12310.0
+        },
+        "2023": {
+          "revenue": 59254361000000.0,
+          "operating_income": 2295284000000.0,
+          "inventory": 5511638000000.0,
+          "ppe": 10480920000000.0,
+          "capex": 1801887000000.0,
+          "employees": 12101.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.018743109151047377,
+        "volume_acceleration": 0.19089948902400722,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "012450",
+      "name": "한화에어로스페이스",
+      "yahoo_symbol": "012450.KS",
+      "industries": [
+        "DEFENSE_DRONES"
+      ],
+      "corp_code": "00126566",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 7741657563000.0,
+          "ppe": 9524442060000.0,
+          "capex": 1710503200000.0,
+          "employees": 8168.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 6290309306251.0,
+          "ppe": 8319912257726.0,
+          "capex": 578204897971.0,
+          "employees": 7659.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2868571514248.0,
+          "ppe": 3410331686890.0,
+          "capex": 453364797879.0,
+          "employees": 6816.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 6,
+        "capex_curr": 1,
+        "orders_prev": 1,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.3289371605896043,
+        "volume_acceleration": -0.016447147444366372,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "017670",
+      "name": "SK텔레콤",
+      "yahoo_symbol": "017670.KS",
+      "industries": [
+        "QUANTUM_TECH",
+        "AI_DATA_INFRA"
+      ],
+      "corp_code": "00159023",
+      "annual": {
+        "2025": {
+          "revenue": 17099213000000.0,
+          "operating_income": 1073215000000.0,
+          "inventory": 167640000000.0,
+          "ppe": 11902173000000.0,
+          "capex": 2206567000000.0,
+          "employees": 5316.0
+        },
+        "2024": {
+          "revenue": 17940609000000.0,
+          "operating_income": 1823409000000.0,
+          "inventory": 209783000000.0,
+          "ppe": 12617394000000.0,
+          "capex": 2487360000000.0,
+          "employees": 5493.0
+        },
+        "2023": {
+          "revenue": 17608511000000.0,
+          "operating_income": 1753204000000.0,
+          "inventory": 179809000000.0,
+          "ppe": 13006196000000.0,
+          "capex": 2973882000000.0,
+          "employees": 5579.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.2674230145867098,
+        "volume_acceleration": 0.19221520332996223,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "028050",
+      "name": "삼성E&A",
+      "yahoo_symbol": "028050.KS",
+      "industries": [
+        "WATER_INFRA",
+        "CLIMATE_ADAPTATION",
+        "CONSTRUCTION_TECH"
+      ],
+      "corp_code": "00126308",
+      "annual": {
+        "2025": {
+          "revenue": 9028769083650.0,
+          "operating_income": 792078846892.0,
+          "inventory": null,
+          "ppe": 507485359693.0,
+          "capex": 53492598716.0,
+          "employees": 5249.0
+        },
+        "2024": {
+          "revenue": 1509174642168.0,
+          "operating_income": 971611686017.0,
+          "inventory": null,
+          "ppe": 443361791659.0,
+          "capex": 42954114369.0,
+          "employees": 5854.0
+        },
+        "2023": {
+          "revenue": 1450761836053.0,
+          "operating_income": 993128866188.0,
+          "inventory": null,
+          "ppe": 429722103963.0,
+          "capex": 27984854107.0,
+          "employees": 5854.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 18,
+        "capex_curr": 0,
+        "orders_prev": 12,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.6498993963782695,
+        "volume_acceleration": 0.41830816031350326,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "030200",
+      "name": "KT",
+      "yahoo_symbol": "030200.KS",
+      "industries": [
+        "QUANTUM_TECH",
+        "AI_DATA_INFRA"
+      ],
+      "corp_code": "00190321",
+      "annual": {
+        "2025": {
+          "revenue": 28244161000000.0,
+          "operating_income": 2469133000000.0,
+          "inventory": 416135000000.0,
+          "ppe": 14258472000000.0,
+          "capex": null,
+          "employees": 14701.0
+        },
+        "2024": {
+          "revenue": 26431204000000.0,
+          "operating_income": 809471000000.0,
+          "inventory": 940209000000.0,
+          "ppe": 14825814000000.0,
+          "capex": null,
+          "employees": 16927.0
+        },
+        "2023": {
+          "revenue": 26376273000000.0,
+          "operating_income": 1649774000000.0,
+          "inventory": 912262000000.0,
+          "ppe": 14872079000000.0,
+          "capex": null,
+          "employees": 19737.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.03825136612021862,
+        "volume_acceleration": -0.1660707404003804,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "034020",
+      "name": "두산에너빌리티",
+      "yahoo_symbol": "034020.KS",
+      "industries": [
+        "NUCLEAR_SMR"
+      ],
+      "corp_code": "00159616",
+      "annual": {
+        "2025": {
+          "revenue": 17057876000000.0,
+          "operating_income": 762712000000.0,
+          "inventory": 2544025000000.0,
+          "ppe": 5776625000000.0,
+          "capex": 403095000000.0,
+          "employees": 6233.0
+        },
+        "2024": {
+          "revenue": 16233055000000.0,
+          "operating_income": 1017600000000.0,
+          "inventory": 2733933000000.0,
+          "ppe": 5703049000000.0,
+          "capex": 461497000000.0,
+          "employees": 6174.0
+        },
+        "2023": {
+          "revenue": 17589887709510.0,
+          "operating_income": 1467318338124.0,
+          "inventory": 2539004351527.0,
+          "ppe": 5225149297141.0,
+          "capex": 395596062651.0,
+          "employees": 5965.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 6,
+        "capex_curr": 0,
+        "orders_prev": 4,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.33111111111111113,
+        "volume_acceleration": -0.3771483444852767,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "036930",
+      "name": "주성엔지니어링",
+      "yahoo_symbol": "036930.KQ",
+      "industries": [
+        "SEMICONDUCTOR_EQUIPMENT"
+      ],
+      "corp_code": "00252135",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 59944509109.0,
+          "ppe": 325891187527.0,
+          "capex": null,
+          "employees": 485.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 100631506244.0,
+          "ppe": 305672976464.0,
+          "capex": null,
+          "employees": 521.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 81347141954.0,
+          "ppe": 289692065567.0,
+          "capex": null,
+          "employees": 507.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 1,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": 2.135566188197767,
+        "volume_acceleration": 0.9000539659383484,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "039030",
+      "name": "이오테크닉스",
+      "yahoo_symbol": "039030.KQ",
+      "industries": [
+        "SEMICONDUCTOR_EQUIPMENT"
+      ],
+      "corp_code": "00246417",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 115259279438.0,
+          "ppe": 150316845920.0,
+          "capex": 3906067446.0,
+          "employees": 636.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 112465762788.0,
+          "ppe": 134118242370.0,
+          "capex": 63708398226.0,
+          "employees": 634.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 134965817874.0,
+          "ppe": 107289088103.0,
+          "capex": 4999568208.0,
+          "employees": 640.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.19866444073455758,
+        "volume_acceleration": 0.3001791426743443,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "042700",
+      "name": "한미반도체",
+      "yahoo_symbol": "042700.KS",
+      "industries": [
+        "AI_COMPUTE",
+        "ADVANCED_PACKAGING"
+      ],
+      "corp_code": "00161383",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 150384035752.0,
+          "ppe": 238136981301.0,
+          "capex": 74621166719.0,
+          "employees": 737.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 153401207241.0,
+          "ppe": 174730996354.0,
+          "capex": 53537061092.0,
+          "employees": 710.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 95433336170.0,
+          "ppe": 126524486344.0,
+          "capex": 27531410354.0,
+          "employees": 633.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 3,
+        "capex_curr": 1,
+        "orders_prev": 3,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.016431924882629123,
+        "volume_acceleration": -0.12939646451125664,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "047040",
+      "name": "대우건설",
+      "yahoo_symbol": "047040.KS",
+      "industries": [
+        "WATER_INFRA",
+        "CLIMATE_ADAPTATION",
+        "CONSTRUCTION_TECH"
+      ],
+      "corp_code": "00124540",
+      "annual": {
+        "2025": {
+          "revenue": 8054627137857.0,
+          "operating_income": -815431279791.0,
+          "inventory": 2427669185668.0,
+          "ppe": 451554392609.0,
+          "capex": 100294505123.0,
+          "employees": 5146.0
+        },
+        "2024": {
+          "revenue": 10503609086034.0,
+          "operating_income": 403125613881.0,
+          "inventory": 1945322848983.0,
+          "ppe": 380193548278.0,
+          "capex": 37571694873.0,
+          "employees": 5503.0
+        },
+        "2023": {
+          "revenue": 11647800864690.0,
+          "operating_income": 662517552616.0,
+          "inventory": 1684464167728.0,
+          "ppe": 383571497825.0,
+          "capex": 70336718363.0,
+          "employees": 5923.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 28,
+        "capex_curr": 0,
+        "orders_prev": 22,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 1.2535211267605635,
+        "volume_acceleration": -0.6350485977646328,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "047050",
+      "name": "포스코인터내셔널",
+      "yahoo_symbol": "047050.KS",
+      "industries": [
+        "CRITICAL_MINERALS"
+      ],
+      "corp_code": "00124504",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1736165193000.0,
+          "ppe": 5070075189000.0,
+          "capex": 674614248000.0,
+          "employees": 1738.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2080674440000.0,
+          "ppe": 4240600173000.0,
+          "capex": 754426658000.0,
+          "employees": 1743.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1958796641000.0,
+          "ppe": 3704942807000.0,
+          "capex": 462382290000.0,
+          "employees": 1701.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 1,
+        "capex_curr": 1,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.18500797448165873,
+        "volume_acceleration": -0.3330283668477316,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "047810",
+      "name": "한국항공우주",
+      "yahoo_symbol": "047810.KS",
+      "industries": [
+        "SPACE_SATELLITE",
+        "DEFENSE_DRONES"
+      ],
+      "corp_code": "00309503",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 3637049615737.0,
+          "ppe": 993845621517.0,
+          "capex": 128568507493.0,
+          "employees": 5241.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2359034707814.0,
+          "ppe": 912525958117.0,
+          "capex": 161281037390.0,
+          "employees": 5093.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1736483586736.0,
+          "ppe": 814609733679.0,
+          "capex": 77875235056.0,
+          "employees": 5098.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 22,
+        "capex_curr": 0,
+        "orders_prev": 11,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.27157513578756787,
+        "volume_acceleration": -0.3533398669855755,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "051600",
+      "name": "한전KPS",
+      "yahoo_symbol": "051600.KS",
+      "industries": [
+        "NUCLEAR_SMR"
+      ],
+      "corp_code": "00159218",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 24622353332.0,
+          "ppe": 472069158607.0,
+          "capex": 61806035794.0,
+          "employees": 6485.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 24715493535.0,
+          "ppe": 457917797648.0,
+          "capex": 49568617741.0,
+          "employees": 6579.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 25262010153.0,
+          "ppe": 449193020440.0,
+          "capex": 41228991285.0,
+          "employees": 6560.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 5,
+        "capex_curr": 0,
+        "orders_prev": 7,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.2482698961937716,
+        "volume_acceleration": -0.41816169296194705,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "052690",
+      "name": "한전기술",
+      "yahoo_symbol": "052690.KS",
+      "industries": [
+        "NUCLEAR_SMR"
+      ],
+      "corp_code": "00159209",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": null,
+          "ppe": 227299458121.0,
+          "capex": 4574307794.0,
+          "employees": 2466.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": null,
+          "ppe": 237582843428.0,
+          "capex": 4556748314.0,
+          "employees": 2407.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": null,
+          "ppe": 247422258638.0,
+          "capex": 2846609882.0,
+          "employees": 2356.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 11,
+        "capex_curr": 0,
+        "orders_prev": 10,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.415508412582297,
+        "volume_acceleration": -0.512679205136408,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "053080",
+      "name": "케이엔솔",
+      "yahoo_symbol": "053080.KQ",
+      "industries": [
+        "DATACENTER_POWER_COOLING"
+      ],
+      "corp_code": "00304076",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 3359307307.0,
+          "ppe": 72686405715.0,
+          "capex": 5527395614.0,
+          "employees": 217.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1096250090.0,
+          "ppe": 68922410547.0,
+          "capex": 1942225448.0,
+          "employees": 202.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2551758453.0,
+          "ppe": 68399834892.0,
+          "capex": 5544441626.0,
+          "employees": 174.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 2,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.4343598055105349,
+        "volume_acceleration": -0.4836595500788079,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "053800",
+      "name": "안랩",
+      "yahoo_symbol": "053800.KQ",
+      "industries": [
+        "CYBERSECURITY"
+      ],
+      "corp_code": "00298270",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 6084894385.0,
+          "ppe": 56822173696.0,
+          "capex": 3257328876.0,
+          "employees": 1257.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 5918769338.0,
+          "ppe": 58757300109.0,
+          "capex": 4869041878.0,
+          "employees": 1266.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 6195444023.0,
+          "ppe": 59039758140.0,
+          "capex": 6574279312.0,
+          "employees": 1295.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.10792580101180438,
+        "volume_acceleration": -0.10732996992335309,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "056190",
+      "name": "에스에프에이",
+      "yahoo_symbol": "056190.KQ",
+      "industries": [
+        "INDUSTRIAL_AUTOMATION",
+        "LOGISTICS_AUTOMATION"
+      ],
+      "corp_code": "00358271",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": null,
+          "ppe": null,
+          "capex": null,
+          "employees": 735.0
+        },
+        "2024": {
+          "revenue": 2045361581270.0,
+          "operating_income": -48399084010.0,
+          "inventory": 457910192155.0,
+          "ppe": 667583388542.0,
+          "capex": 94616428631.0,
+          "employees": 762.0
+        },
+        "2023": {
+          "revenue": 1881198625677.0,
+          "operating_income": 85475264988.0,
+          "inventory": 551724832736.0,
+          "ppe": 634224215596.0,
+          "capex": 46202594318.0,
+          "employees": 738.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 2,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.31825095057034225,
+        "volume_acceleration": -0.16275855135841566,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "058470",
+      "name": "리노공업",
+      "yahoo_symbol": "058470.KQ",
+      "industries": [
+        "ADVANCED_PACKAGING"
+      ],
+      "corp_code": "00369657",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 15514548353.0,
+          "ppe": 228009789079.0,
+          "capex": 59954233830.0,
+          "employees": 677.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 12959312526.0,
+          "ppe": 181362679776.0,
+          "capex": 11640547813.0,
+          "employees": 636.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 14252453441.0,
+          "ppe": 183060515910.0,
+          "capex": 68500491718.0,
+          "employees": 639.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.15981735159817356,
+        "volume_acceleration": 0.2896438467228921,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "068270",
+      "name": "셀트리온",
+      "yahoo_symbol": "068270.KS",
+      "industries": [
+        "BIO_MANUFACTURING"
+      ],
+      "corp_code": "00413046",
+      "annual": {
+        "2025": {
+          "revenue": 4162495108881.0,
+          "operating_income": 1168471345595.0,
+          "inventory": 2803460062651.0,
+          "ppe": 1702609857338.0,
+          "capex": 108223875636.0,
+          "employees": 3153.0
+        },
+        "2024": {
+          "revenue": 3557303554371.0,
+          "operating_income": 492015534847.0,
+          "inventory": 2765942959864.0,
+          "ppe": 1244567343881.0,
+          "capex": 135058628780.0,
+          "employees": 2901.0
+        },
+        "2023": {
+          "revenue": 2176431531380.0,
+          "operating_income": 651481422157.0,
+          "inventory": 3041452920081.0,
+          "ppe": 1214588075464.0,
+          "capex": 210046189698.0,
+          "employees": 2529.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.040865366602790054,
+        "volume_acceleration": -0.026475229796165678,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "079550",
+      "name": "LIG넥스원",
+      "yahoo_symbol": "079550.KS",
+      "industries": [
+        "DEFENSE_DRONES"
+      ],
+      "corp_code": "00503668",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 593084124214.0,
+          "ppe": 1532907968664.0,
+          "capex": 169779461301.0,
+          "employees": 5382.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 363527737579.0,
+          "ppe": 1371400306134.0,
+          "capex": 496962990115.0,
+          "employees": 4789.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 228919620086.0,
+          "ppe": 893734048660.0,
+          "capex": 59411480889.0,
+          "employees": 4277.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 23,
+        "capex_curr": 1,
+        "orders_prev": 13,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.2117202268431002,
+        "volume_acceleration": -0.26210686583939413,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "083450",
+      "name": "GST",
+      "yahoo_symbol": "083450.KQ",
+      "industries": [
+        "DATACENTER_POWER_COOLING"
+      ],
+      "corp_code": "00540863",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 54589007564.0,
+          "ppe": 85782330159.0,
+          "capex": 12756209017.0,
+          "employees": 757.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 41617282876.0,
+          "ppe": 76749071437.0,
+          "capex": 18932407792.0,
+          "employees": 718.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 43593556872.0,
+          "ppe": 69214498031.0,
+          "capex": 20488476236.0,
+          "employees": 725.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.3961165048543689,
+        "volume_acceleration": -0.4340787374697367,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "086900",
+      "name": "메디톡스",
+      "yahoo_symbol": "086900.KQ",
+      "industries": [
+        "MEDICAL_DEVICES"
+      ],
+      "corp_code": "00580199",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 43065458053.0,
+          "ppe": 199540507322.0,
+          "capex": 15660765015.0,
+          "employees": 753.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 64259184000.0,
+          "ppe": 200270142000.0,
+          "capex": 8725950000.0,
+          "employees": 776.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 59617915487.0,
+          "ppe": 203537853592.0,
+          "capex": 7659592872.0,
+          "employees": 737.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.41000000000000003,
+        "volume_acceleration": -0.09697480080326493,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "089030",
+      "name": "테크윙",
+      "yahoo_symbol": "089030.KQ",
+      "industries": [
+        "ADVANCED_PACKAGING"
+      ],
+      "corp_code": "00535676",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 113305861181.0,
+          "ppe": 252183391737.0,
+          "capex": 27349177047.0,
+          "employees": 589.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 79265623368.0,
+          "ppe": 232023074952.0,
+          "capex": 52217702300.0,
+          "employees": 594.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 81331310562.0,
+          "ppe": 270618683389.0,
+          "capex": 44069515328.0,
+          "employees": 559.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 4,
+        "capex_curr": 0,
+        "orders_prev": 1,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.14247311827956988,
+        "volume_acceleration": 0.488295098054083,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "090360",
+      "name": "로보스타",
+      "yahoo_symbol": "090360.KQ",
+      "industries": [
+        "ROBOTICS"
+      ],
+      "corp_code": "00536523",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 21753253612.0,
+          "ppe": 19450044697.0,
+          "capex": 328402000.0,
+          "employees": 204.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 21635125452.0,
+          "ppe": 20015659073.0,
+          "capex": 101640000.0,
+          "employees": 184.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 28071092749.0,
+          "ppe": 20952296289.0,
+          "capex": 825630881.0,
+          "employees": 185.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.39953271028037385,
+        "volume_acceleration": 0.1044720077099266,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "095340",
+      "name": "ISC",
+      "yahoo_symbol": "095340.KQ",
+      "industries": [
+        "ADVANCED_PACKAGING"
+      ],
+      "corp_code": "00572905",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 25011166037.0,
+          "ppe": 91002025205.0,
+          "capex": 5671292473.0,
+          "employees": 407.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 15439669473.0,
+          "ppe": 92193724607.0,
+          "capex": 11378896511.0,
+          "employees": 217.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 15434848370.0,
+          "ppe": 92783927417.0,
+          "capex": 14523673745.0,
+          "employees": 218.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.0018814675446847673,
+        "volume_acceleration": 0.22531241773386812,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "099320",
+      "name": "쎄트렉아이",
+      "yahoo_symbol": "099320.KQ",
+      "industries": [
+        "SPACE_SATELLITE"
+      ],
+      "corp_code": "00449254",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 41636093618.0,
+          "ppe": 121230632380.0,
+          "capex": 22959389589.0,
+          "employees": 513.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 27919003147.0,
+          "ppe": 97010999405.0,
+          "capex": 14866684533.0,
+          "employees": 484.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 18326139338.0,
+          "ppe": 86732655485.0,
+          "capex": 46240834494.0,
+          "employees": 400.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 9,
+        "capex_curr": 0,
+        "orders_prev": 6,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.5885714285714285,
+        "volume_acceleration": -0.6720820220396002,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "100120",
+      "name": "뷰웍스",
+      "yahoo_symbol": "100120.KQ",
+      "industries": [
+        "MEDICAL_DEVICES"
+      ],
+      "corp_code": "00609324",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 69265588638.0,
+          "ppe": 134619377878.0,
+          "capex": 28960380559.0,
+          "employees": 486.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 82441673058.0,
+          "ppe": 112847418670.0,
+          "capex": 28137710134.0,
+          "employees": 484.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 88070509309.0,
+          "ppe": 84826026829.0,
+          "capex": 12983054793.0,
+          "employees": 478.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 1,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": 0.009975062344139696,
+        "volume_acceleration": -0.6556620584869914,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "103590",
+      "name": "일진전기",
+      "yahoo_symbol": "103590.KS",
+      "industries": [
+        "POWER_GRID"
+      ],
+      "corp_code": "00683469",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 335513063000.0,
+          "ppe": 441733590000.0,
+          "capex": 24564642000.0,
+          "employees": 1091.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 245056781000.0,
+          "ppe": 437109267000.0,
+          "capex": 69490206000.0,
+          "employees": 1011.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 146070405150.0,
+          "ppe": 388609946689.0,
+          "capex": 23899823345.0,
+          "employees": 897.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 6,
+        "capex_curr": 0,
+        "orders_prev": 1,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.2528641571194763,
+        "volume_acceleration": -0.3068740353533085,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "108490",
+      "name": "로보티즈",
+      "yahoo_symbol": "108490.KQ",
+      "industries": [
+        "ROBOTICS"
+      ],
+      "corp_code": "00946030",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 13602015589.0,
+          "ppe": 3017307000.0,
+          "capex": 2194355547.0,
+          "employees": 111.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 13375738835.0,
+          "ppe": 27958476172.0,
+          "capex": 4262855000.0,
+          "employees": 153.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 15399380978.0,
+          "ppe": 25725467440.0,
+          "capex": 2240565951.0,
+          "employees": 146.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.3547861507128309,
+        "volume_acceleration": -0.42675794847992576,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "136540",
+      "name": "윈스",
+      "yahoo_symbol": "136540.KQ",
+      "industries": [
+        "CYBERSECURITY"
+      ],
+      "corp_code": "00868705",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 6983080957.0,
+          "ppe": 27448194149.0,
+          "capex": 638721410.0,
+          "employees": 497.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 7341383210.0,
+          "ppe": 29120082311.0,
+          "capex": 2747474790.0,
+          "employees": 496.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 10011263096.0,
+          "ppe": 28136638222.0,
+          "capex": 3313421456.0,
+          "employees": 470.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.10089285714285712,
+        "volume_acceleration": -0.12474468006090544,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "203650",
+      "name": "드림시큐리티",
+      "yahoo_symbol": "203650.KQ",
+      "industries": [
+        "CYBERSECURITY",
+        "QUANTUM_TECH"
+      ],
+      "corp_code": "01038693",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 20616036022.0,
+          "ppe": 276858605981.0,
+          "capex": 7748021293.0,
+          "employees": 216.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 12517010174.0,
+          "ppe": 273210945231.0,
+          "capex": 2152865066.0,
+          "employees": 222.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 11799502411.0,
+          "ppe": 228545866052.0,
+          "capex": 1710357580.0,
+          "employees": 215.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.02264150943396226,
+        "volume_acceleration": 1.4544058403777167,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "204320",
+      "name": "HL만도",
+      "yahoo_symbol": "204320.KS",
+      "industries": [
+        "AUTONOMOUS_SENSORS"
+      ],
+      "corp_code": "01042775",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 804499429134.0,
+          "ppe": 2560158320110.0,
+          "capex": 343848197672.0,
+          "employees": 3828.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 838420670607.0,
+          "ppe": 2410117259210.0,
+          "capex": 309501838075.0,
+          "employees": 3918.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 733896015997.0,
+          "ppe": 2175537354346.0,
+          "capex": 337519132083.0,
+          "employees": 3982.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.414580265095729,
+        "volume_acceleration": 0.09717110074916979,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "207940",
+      "name": "삼성바이오로직스",
+      "yahoo_symbol": "207940.KS",
+      "industries": [
+        "BIO_MANUFACTURING"
+      ],
+      "corp_code": "00877059",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2128164162722.0,
+          "ppe": 6028651127383.0,
+          "capex": 1391740885639.0,
+          "employees": 10910.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2818275774375.0,
+          "ppe": 5373953520707.0,
+          "capex": 1303573257829.0,
+          "employees": 10022.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 2641368466083.0,
+          "ppe": 3880092158066.0,
+          "capex": 995070661693.0,
+          "employees": 8850.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 18,
+        "capex_curr": 0,
+        "orders_prev": 12,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.14116985376827895,
+        "volume_acceleration": 0.04320715681391518,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "211270",
+      "name": "AP위성",
+      "yahoo_symbol": "211270.KQ",
+      "industries": [
+        "SPACE_SATELLITE"
+      ],
+      "corp_code": "00874803",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 16486278400.0,
+          "ppe": 19038880665.0,
+          "capex": 251650000.0,
+          "employees": 183.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 21103318380.0,
+          "ppe": 15920958211.0,
+          "capex": 231800750.0,
+          "employees": 152.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 25145721055.0,
+          "ppe": 12819910998.0,
+          "capex": 26800000.0,
+          "employees": 144.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 9,
+        "capex_curr": 0,
+        "orders_prev": 4,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.6626768226332971,
+        "volume_acceleration": -0.674694232374788,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "214150",
+      "name": "클래시스",
+      "yahoo_symbol": "214150.KQ",
+      "industries": [
+        "MEDICAL_DEVICES"
+      ],
+      "corp_code": "01061327",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 30096456975.0,
+          "ppe": 199716078377.0,
+          "capex": 12868774989.0,
+          "employees": 528.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 29999806868.0,
+          "ppe": 193172861473.0,
+          "capex": 4074794425.0,
+          "employees": 527.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 19434327936.0,
+          "ppe": 138988714882.0,
+          "capex": 4474211858.0,
+          "employees": 383.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.36570945945945943,
+        "volume_acceleration": 0.01667276774255977,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "247540",
+      "name": "에코프로비엠",
+      "yahoo_symbol": "247540.KQ",
+      "industries": [
+        "ENERGY_STORAGE"
+      ],
+      "corp_code": "01160363",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 602832857040.0,
+          "ppe": 3153738146936.0,
+          "capex": 418130148124.0,
+          "employees": 1192.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 616323416408.0,
+          "ppe": 2793319010818.0,
+          "capex": 1023789607558.0,
+          "employees": 1219.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1108796935094.0,
+          "ppe": 1824206859457.0,
+          "capex": 756168491423.0,
+          "employees": 1408.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.44025522041763343,
+        "volume_acceleration": -0.09368560658702263,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "267260",
+      "name": "HD현대일렉트릭",
+      "yahoo_symbol": "267260.KS",
+      "industries": [
+        "DATACENTER_POWER_COOLING",
+        "POWER_GRID"
+      ],
+      "corp_code": "01205851",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1266517678791.0,
+          "ppe": 942724542237.0,
+          "capex": 233500152700.0,
+          "employees": 2209.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 1081391018449.0,
+          "ppe": 730080201042.0,
+          "capex": 121640871886.0,
+          "employees": 2184.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 849724918573.0,
+          "ppe": 624252694877.0,
+          "capex": 75377519040.0,
+          "employees": 2119.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 4,
+        "capex_curr": 0,
+        "orders_prev": 4,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.34346846846846846,
+        "volume_acceleration": 0.08618052658855047,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "272210",
+      "name": "한화시스템",
+      "yahoo_symbol": "272210.KS",
+      "industries": [
+        "SPACE_SATELLITE",
+        "DEFENSE_DRONES"
+      ],
+      "corp_code": "00339391",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 810743032914.0,
+          "ppe": 822739444404.0,
+          "capex": 298946996842.0,
+          "employees": 4855.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 610096270571.0,
+          "ppe": 569952770732.0,
+          "capex": 239805649946.0,
+          "employees": 4751.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 501085247270.0,
+          "ppe": 347646334685.0,
+          "capex": 132316330494.0,
+          "employees": 4741.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 13,
+        "capex_curr": 1,
+        "orders_prev": 14,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.3759909399773499,
+        "volume_acceleration": -0.43249262112542486,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "277810",
+      "name": "레인보우로보틱스",
+      "yahoo_symbol": "277810.KQ",
+      "industries": [
+        "ROBOTICS"
+      ],
+      "corp_code": "01261644",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 15524790786.0,
+          "ppe": 36312496755.0,
+          "capex": 17608673072.0,
+          "employees": 161.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 7162416625.0,
+          "ppe": 19494281137.0,
+          "capex": 11659354938.0,
+          "employees": 98.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 6176649071.0,
+          "ppe": 6800531634.0,
+          "capex": 3226546873.0,
+          "employees": 73.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 1,
+        "orders_prev": 2,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.2554890219560878,
+        "volume_acceleration": -0.483356972716792,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "282880",
+      "name": "코윈테크",
+      "yahoo_symbol": "282880.KQ",
+      "industries": [
+        "INDUSTRIAL_AUTOMATION",
+        "LOGISTICS_AUTOMATION"
+      ],
+      "corp_code": "01211232",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 16806218046.0,
+          "ppe": 136958223304.0,
+          "capex": 35817386760.0,
+          "employees": 263.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 22265293042.0,
+          "ppe": 109361825711.0,
+          "capex": 20940283455.0,
+          "employees": 245.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 20437949264.0,
+          "ppe": 91102291959.0,
+          "capex": 25616867240.0,
+          "employees": 262.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 6,
+        "capex_curr": 0,
+        "orders_prev": 3,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.6054455445544554,
+        "volume_acceleration": -0.5376987369551514,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "298040",
+      "name": "효성중공업",
+      "yahoo_symbol": "298040.KS",
+      "industries": [
+        "POWER_GRID"
+      ],
+      "corp_code": "01316245",
+      "annual": {
+        "2025": {
+          "revenue": 5968511616609.0,
+          "operating_income": 746968417289.0,
+          "inventory": 1277633122307.0,
+          "ppe": 2307100942537.0,
+          "capex": 162909245075.0,
+          "employees": 7134.0
+        },
+        "2024": {
+          "revenue": 4894979612220.0,
+          "operating_income": 362479487133.0,
+          "inventory": 885404450614.0,
+          "ppe": 2171715866687.0,
+          "capex": 83956108784.0,
+          "employees": 6790.0
+        },
+        "2023": {
+          "revenue": 637542681885.0,
+          "operating_income": 257836947601.0,
+          "inventory": 725845310041.0,
+          "ppe": 1280946624546.0,
+          "capex": 32277364388.0,
+          "employees": 6532.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 12,
+        "capex_curr": 0,
+        "orders_prev": 9,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.19369944657300975,
+        "volume_acceleration": -0.13131814123779206,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "302440",
+      "name": "SK바이오사이언스",
+      "yahoo_symbol": "302440.KS",
+      "industries": [
+        "BIO_MANUFACTURING"
+      ],
+      "corp_code": "01319899",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 189203470222.0,
+          "ppe": 1125395181021.0,
+          "capex": 183090850076.0,
+          "employees": 1129.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 211125922530.0,
+          "ppe": 972923184089.0,
+          "capex": 164413439522.0,
+          "employees": 1021.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 80649373609.0,
+          "ppe": 296287725019.0,
+          "capex": 43017243309.0,
+          "employees": 1095.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 2,
+        "capex_curr": 1,
+        "orders_prev": 1,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.3269035532994924,
+        "volume_acceleration": -0.162364397177442,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "336370",
+      "name": "솔루스첨단소재",
+      "yahoo_symbol": "336370.KS",
+      "industries": [
+        "ADVANCED_MATERIALS"
+      ],
+      "corp_code": "01412822",
+      "annual": {
+        "2025": {
+          "revenue": 616083220023.0,
+          "operating_income": -138394465215.0,
+          "inventory": 225636571323.0,
+          "ppe": 1555061984865.0,
+          "capex": 233540778767.0,
+          "employees": 198.0
+        },
+        "2024": {
+          "revenue": 570949198601.0,
+          "operating_income": -54418745322.0,
+          "inventory": 224390929387.0,
+          "ppe": 1367657501421.0,
+          "capex": 257610732440.0,
+          "employees": 208.0
+        },
+        "2023": {
+          "revenue": 17237918506.0,
+          "operating_income": -73207987858.0,
+          "inventory": 192560868980.0,
+          "ppe": 1025345371631.0,
+          "capex": 244583578926.0,
+          "employees": 200.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.2757306226175349,
+        "volume_acceleration": -0.360261496442992,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "373220",
+      "name": "LG에너지솔루션",
+      "yahoo_symbol": "373220.KS",
+      "industries": [
+        "ENERGY_STORAGE"
+      ],
+      "corp_code": "01515323",
+      "annual": {
+        "2025": {
+          "revenue": 23671759000000.0,
+          "operating_income": 1346120000000.0,
+          "inventory": 4350407000000.0,
+          "ppe": 40794759000000.0,
+          "capex": 10833917000000.0,
+          "employees": 12922.0
+        },
+        "2024": {
+          "revenue": 25619585000000.0,
+          "operating_income": 575387000000.0,
+          "inventory": 4552355000000.0,
+          "ppe": 38349552000000.0,
+          "capex": 12399017000000.0,
+          "employees": 12635.0
+        },
+        "2023": {
+          "revenue": 33745470000000.0,
+          "operating_income": 400805000000.0,
+          "inventory": 5396336000000.0,
+          "ppe": 23654677000000.0,
+          "capex": 9923051000000.0,
+          "employees": 12166.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 7,
+        "capex_curr": 0,
+        "orders_prev": 4,
+        "capex_prev": 1
+      },
+      "market": {
+        "return_6m": -0.23261390887290168,
+        "volume_acceleration": -0.014101582872198426,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "403870",
+      "name": "HPSP",
+      "yahoo_symbol": "403870.KQ",
+      "industries": [
+        "SEMICONDUCTOR_EQUIPMENT"
+      ],
+      "corp_code": "01288827",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 15957076752.0,
+          "ppe": 48043652365.0,
+          "capex": 2329823754.0,
+          "employees": 127.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 23116428628.0,
+          "ppe": 49298337776.0,
+          "capex": 43112610428.0,
+          "employees": 115.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 24223776591.0,
+          "ppe": 40296201560.0,
+          "capex": 24669654491.0,
+          "employees": 106.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.14135338345864656,
+        "volume_acceleration": 0.9402932613324881,
+        "latest_ts": 1785369600.0
+      }
+    },
+    {
+      "stock_code": "454910",
+      "name": "두산로보틱스",
+      "yahoo_symbol": "454910.KS",
+      "industries": [
+        "ROBOTICS"
+      ],
+      "corp_code": "01105153",
+      "annual": {
+        "2025": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 19010264142.0,
+          "ppe": 18712401169.0,
+          "capex": 13137762569.0,
+          "employees": 255.0
+        },
+        "2024": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 29307431937.0,
+          "ppe": 10222753109.0,
+          "capex": 3298734340.0,
+          "employees": 234.0
+        },
+        "2023": {
+          "revenue": null,
+          "operating_income": null,
+          "inventory": 14153603864.0,
+          "ppe": 8422466844.0,
+          "capex": 3123738619.0,
+          "employees": 195.0
+        }
+      },
+      "disclosures": {
+        "orders_curr": 0,
+        "capex_curr": 0,
+        "orders_prev": 0,
+        "capex_prev": 0
+      },
+      "market": {
+        "return_6m": -0.5199306759098787,
+        "volume_acceleration": 0.4000224834703725,
+        "latest_ts": 1785369600.0
+      }
+    }
+  ]
+}
