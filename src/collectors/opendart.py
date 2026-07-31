@@ -1,4 +1,4 @@
-"""OpenDART live collector for annual financial statements, employees and disclosure counts."""
+"""OpenDART live collector for financials, employees, shares and disclosure counts."""
 from __future__ import annotations
 
 import io
@@ -82,6 +82,32 @@ def employee_status(corp_code: str, year: int) -> list[dict[str, Any]]:
     return _check(payload, allow_no_data=True).get("list") or []
 
 
+def stock_status(corp_code: str, year: int) -> dict[str, float | None]:
+    payload = get_json(f"{BASE}/stockTotqySttus.json", {
+        "crtfc_key": _key(), "corp_code": corp_code, "bsns_year": str(year),
+        "reprt_code": REPORT_ANNUAL,
+    })
+    rows = _check(payload, allow_no_data=True).get("list") or []
+    if not rows:
+        return {"issued_shares": None, "treasury_shares": None, "floating_shares": None}
+    # Prefer common stock and otherwise use the largest issued-share row.
+    parsed: list[dict[str, float | None]] = []
+    for row in rows:
+        parsed.append({
+            "issued_shares": _number(row.get("istc_totqy")),
+            "treasury_shares": _number(row.get("tesstk_co")),
+            "floating_shares": _number(row.get("distb_stock_co")),
+            "common": 1.0 if "보통" in str(row.get("se", "")) else 0.0,
+        })
+    parsed.sort(key=lambda x: (x.get("common") or 0, x.get("issued_shares") or 0), reverse=True)
+    best = parsed[0]
+    return {
+        "issued_shares": best.get("issued_shares"),
+        "treasury_shares": best.get("treasury_shares"),
+        "floating_shares": best.get("floating_shares"),
+    }
+
+
 def disclosure_list(corp_code: str, begin: date, end: date) -> list[dict[str, Any]]:
     payload = get_json(f"{BASE}/list.json", {
         "crtfc_key": _key(), "corp_code": corp_code,
@@ -105,8 +131,7 @@ def disclosure_signal_counts(corp_code: str, end: date | None = None) -> dict[st
         rows = disclosure_list(corp_code, begin, finish)
         for kind, words in keywords.items():
             out[f"{kind}_{label}"] = sum(
-                1 for row in rows
-                if any(word in str(row.get("report_nm", "")) for word in words)
+                1 for row in rows if any(word in str(row.get("report_nm", "")) for word in words)
             )
     return out
 
@@ -126,8 +151,12 @@ def _number(value: Any) -> float | None:
         return None
 
 
-def _best_account(rows: list[dict[str, Any]], patterns: tuple[str, ...], sj_div: str | None = None,
-                  exclude: tuple[str, ...] = ()) -> float | None:
+def _best_account(
+    rows: list[dict[str, Any]],
+    patterns: tuple[str, ...],
+    sj_div: str | None = None,
+    exclude: tuple[str, ...] = (),
+) -> float | None:
     candidates: list[tuple[int, float]] = []
     for row in rows:
         if sj_div and str(row.get("sj_div")) != sj_div:
@@ -149,8 +178,11 @@ def _best_account(rows: list[dict[str, Any]], patterns: tuple[str, ...], sj_div:
 def extract_metrics(rows: list[dict[str, Any]], employees: list[dict[str, Any]]) -> dict[str, float | None]:
     revenue = _best_account(rows, ("매출액", "영업수익", "수익(매출액)", "매출"), "IS", ("매출원가",))
     op_income = _best_account(rows, ("영업이익", "영업이익(손실)"), "IS")
+    net_income = _best_account(rows, ("당기순이익", "당기순이익(손실)", "연결당기순이익"), "IS")
     inventory = _best_account(rows, ("재고자산",), "BS")
     ppe = _best_account(rows, ("유형자산",), "BS", ("투자부동산",))
+    equity = _best_account(rows, ("자본총계", "자본"), "BS", ("비지배",))
+    assets = _best_account(rows, ("자산총계",), "BS")
     capex = _best_account(rows, ("유형자산의취득", "유형자산취득", "유형자산의증가"), "CF")
     if capex is not None:
         capex = abs(capex)
@@ -167,8 +199,11 @@ def extract_metrics(rows: list[dict[str, Any]], employees: list[dict[str, Any]])
     return {
         "revenue": revenue,
         "operating_income": op_income,
+        "net_income": net_income,
         "inventory": inventory,
         "ppe": ppe,
+        "equity": equity,
+        "assets": assets,
         "capex": capex,
         "employees": employee_total if employee_seen else None,
     }

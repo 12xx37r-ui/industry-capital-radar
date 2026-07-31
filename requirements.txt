@@ -1,1 +1,1 @@
-# v0.1 runtime uses Python standard library only.
+# V0.4.0 runtime uses the Python 3.12 standard library only.

@@ -1,0 +1,51 @@
+{
+  "version": "0.4.0",
+  "ecos": {
+    "signals": {
+      "industrial_activity": {
+        "table_keywords": ["산업생산지수", "광공업생산지수"],
+        "item_keywords": ["광공업", "제조업", "총지수"],
+        "direction": "positive"
+      },
+      "equipment_investment": {
+        "table_keywords": ["설비투자지수", "설비투자"],
+        "item_keywords": ["설비투자지수", "총지수", "설비투자"],
+        "direction": "positive"
+      },
+      "corporate_credit": {
+        "table_keywords": ["산업별 대출금", "기업대출"],
+        "item_keywords": ["제조업", "기업", "산업"],
+        "direction": "positive"
+      },
+      "exports": {
+        "table_keywords": ["수출입", "통관기준 수출입"],
+        "item_keywords": ["수출", "총수출"],
+        "direction": "positive"
+      }
+    }
+  },
+  "kosis": {
+    "signals": {
+      "manufacturing_production": {
+        "search_terms": ["광공업생산지수", "제조업 생산지수"],
+        "series_keywords": ["생산지수", "제조업", "광공업"],
+        "direction": "positive"
+      },
+      "shipments_inventory": {
+        "search_terms": ["제조업 출하 재고", "광공업 출하 재고"],
+        "series_keywords": ["출하지수", "재고지수", "제조업"],
+        "direction": "positive"
+      },
+      "equipment_investment": {
+        "search_terms": ["설비투자지수"],
+        "series_keywords": ["설비투자지수", "총지수"],
+        "direction": "positive"
+      },
+      "industry_employment": {
+        "search_terms": ["산업별 취업자", "산업별 고용"],
+        "series_keywords": ["취업자", "고용", "제조업"],
+        "direction": "positive"
+      }
+    }
+  }
+}

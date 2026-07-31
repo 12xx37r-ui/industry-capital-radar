@@ -1,0 +1,67 @@
+{
+  "version": "0.4.0",
+  "default": "balanced",
+  "profiles": {
+    "growth_tech": {
+      "fred": 0.45,
+      "ecos": 0.25,
+      "kosis": 0.30,
+      "ecos_components": {"industrial_activity": 0.25, "equipment_investment": 0.35, "corporate_credit": 0.25, "exports": 0.15},
+      "kosis_components": {"manufacturing_production": 0.25, "shipments_inventory": 0.15, "equipment_investment": 0.35, "industry_employment": 0.25}
+    },
+    "manufacturing_capex": {
+      "fred": 0.35,
+      "ecos": 0.30,
+      "kosis": 0.35,
+      "ecos_components": {"industrial_activity": 0.35, "equipment_investment": 0.35, "corporate_credit": 0.15, "exports": 0.15},
+      "kosis_components": {"manufacturing_production": 0.35, "shipments_inventory": 0.30, "equipment_investment": 0.25, "industry_employment": 0.10}
+    },
+    "policy_infrastructure": {
+      "fred": 0.30,
+      "ecos": 0.35,
+      "kosis": 0.35,
+      "ecos_components": {"industrial_activity": 0.20, "equipment_investment": 0.25, "corporate_credit": 0.30, "exports": 0.25},
+      "kosis_components": {"manufacturing_production": 0.20, "shipments_inventory": 0.20, "equipment_investment": 0.35, "industry_employment": 0.25}
+    },
+    "resource_cycle": {
+      "fred": 0.35,
+      "ecos": 0.35,
+      "kosis": 0.30,
+      "ecos_components": {"industrial_activity": 0.30, "equipment_investment": 0.15, "corporate_credit": 0.15, "exports": 0.40},
+      "kosis_components": {"manufacturing_production": 0.35, "shipments_inventory": 0.35, "equipment_investment": 0.15, "industry_employment": 0.15}
+    },
+    "balanced": {
+      "fred": 0.40,
+      "ecos": 0.30,
+      "kosis": 0.30,
+      "ecos_components": {"industrial_activity": 0.30, "equipment_investment": 0.25, "corporate_credit": 0.25, "exports": 0.20},
+      "kosis_components": {"manufacturing_production": 0.30, "shipments_inventory": 0.25, "equipment_investment": 0.25, "industry_employment": 0.20}
+    }
+  },
+  "industry_profiles": {
+    "AI_COMPUTE": "growth_tech",
+    "AI_DATA_INFRA": "growth_tech",
+    "SEMICONDUCTOR_EQUIPMENT": "manufacturing_capex",
+    "ADVANCED_PACKAGING": "manufacturing_capex",
+    "DATACENTER_POWER_COOLING": "manufacturing_capex",
+    "POWER_GRID": "policy_infrastructure",
+    "NUCLEAR_SMR": "policy_infrastructure",
+    "ENERGY_STORAGE": "manufacturing_capex",
+    "ROBOTICS": "growth_tech",
+    "INDUSTRIAL_AUTOMATION": "manufacturing_capex",
+    "AUTONOMOUS_SENSORS": "growth_tech",
+    "SPACE_SATELLITE": "policy_infrastructure",
+    "DEFENSE_DRONES": "policy_infrastructure",
+    "CYBERSECURITY": "growth_tech",
+    "BIO_MANUFACTURING": "growth_tech",
+    "MEDICAL_DEVICES": "growth_tech",
+    "QUANTUM_TECH": "growth_tech",
+    "ADVANCED_MATERIALS": "manufacturing_capex",
+    "CRITICAL_MINERALS": "resource_cycle",
+    "WATER_INFRA": "policy_infrastructure",
+    "CLIMATE_ADAPTATION": "policy_infrastructure",
+    "AGRITECH": "policy_infrastructure",
+    "LOGISTICS_AUTOMATION": "manufacturing_capex",
+    "CONSTRUCTION_TECH": "manufacturing_capex"
+  }
+}

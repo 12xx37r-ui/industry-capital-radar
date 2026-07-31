@@ -1,13 +1,27 @@
 {
-  "version": "0.1-provisional",
+  "version": "0.4-provisional",
   "warning": "워크포워드 검증 전 임시 가중치이며 확률이 아니다.",
   "capital_flow": {"capital_level":0.20,"capital_velocity":0.30,"capital_acceleration":0.50},
-  "demand_validation": {"orders_velocity":0.40,"backlog_acceleration":0.35,"capacity_tightness":0.25},
-  "innovation_talent": {"hiring_velocity":0.55,"innovation_velocity":0.45},
-  "structural_support": {"policy_funding_velocity":0.60,"macro_fit":0.40},
+  "demand_validation": {"orders_velocity":0.40,"backlog_acceleration":0.30,"capacity_tightness":0.30},
+  "innovation_talent": {"hiring_velocity":0.60,"innovation_velocity":0.40},
+  "structural_support": {"official_activity":0.55,"macro_fit":0.45},
   "evidence_strength": {"breadth":0.55,"persistence":0.45},
-  "market_heat": {"market_attention":0.35,"price_momentum":0.35,"valuation_heat":0.30},
-  "risk_penalty": {"supply_overbuild_risk":0.60,"policy_dependency_risk":0.40},
-  "boom_transition": {"capital_flow_score":0.30,"demand_validation_score":0.25,"innovation_talent_score":0.15,"structural_support_score":0.10,"evidence_strength_score":0.20},
-  "lead_opportunity": {"boom_transition_score":0.55,"underrecognition_score":0.25,"macro_fit":0.20,"risk_penalty_subtract":0.25}
+  "supply_chain_confirmation": {"supply_chain_spillover":1.00},
+  "market_heat": {"market_attention":0.25,"price_momentum":0.35,"valuation_heat":0.40},
+  "risk_penalty": {"supply_overbuild_risk":0.65,"policy_dependency_risk":0.35},
+  "boom_transition": {
+    "capital_flow_score":0.25,
+    "demand_validation_score":0.20,
+    "innovation_talent_score":0.10,
+    "structural_support_score":0.15,
+    "evidence_strength_score":0.15,
+    "supply_chain_confirmation_score":0.15
+  },
+  "lead_opportunity": {
+    "boom_transition_score":0.45,
+    "underrecognition_score":0.20,
+    "valuation_attractiveness":0.20,
+    "macro_fit":0.15,
+    "risk_penalty_subtract":0.25
+  }
 }

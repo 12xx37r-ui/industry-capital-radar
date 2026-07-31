@@ -13,25 +13,22 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>산업 자본이동 레이더</h2>
-    <div id="status" class="muted">데이터 불러오는 중…</div>
-  </div>
+  <div class="card"><h2>산업 자본이동 레이더</h2><div id="status" class="muted">데이터 불러오는 중…</div></div>
   <div class="card"><h3>API 상태</h3><div id="apis" class="grid"></div></div>
-  <div class="card"><h3>산업 순위</h3><div id="content"></div></div>
+  <div class="card"><h3>선투자 후보 TOP10</h3><div id="top10"></div></div>
+  <div class="card"><h3>전체 산업 순위</h3><div id="content"></div></div>
 <script>
 function esc(v){return String(v ?? '').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));}
-function statusClass(s){s=String(s||'');return s.startsWith('CONNECTED')?'ok':(s==='MISSING_KEY'||s.includes('ERROR'))?'bad':'warn';}
+function statusClass(s){s=String(s||'');return (s.startsWith('CONNECTED')||s==='PARTIAL_SUCCESS')?'ok':(s==='MISSING_KEY'||s.includes('ERROR'))?'bad':'warn';}
 function render(payload){
-  const data=payload.radar||{}; const api=payload.api||{};
+  const data=payload.radar||{}, api=payload.api||{}, top=payload.top10||{};
   document.getElementById('status').textContent=`상태: ${data.status} · 엔진: ${data.engine_version} · 생성: ${data.generated_at}`;
   const sources=api.sources||{};
-  document.getElementById('apis').innerHTML=Object.keys(sources).map(name=>{const x=sources[name]||{};return `<div class="api"><b>${esc(name)}</b><div class="${statusClass(x.status)}">${esc(x.status)}</div><div class="muted">확인: ${esc(x.checked_at||'-')}</div><div class="muted">점수 반영: ${x.mapped_to_score?'예':'아니오'}</div><div class="muted">갱신: ${esc(x.renewal_status||'UNKNOWN')}</div></div>`}).join('');
+  document.getElementById('apis').innerHTML=Object.keys(sources).map(name=>{const x=sources[name]||{};return `<div class="api"><b>${esc(name)}</b><div class="${statusClass(x.status)}">${esc(x.status)}</div><div class="muted">확인: ${esc(x.checked_at||'-')}</div><div class="muted">점수 반영: ${x.mapped_to_score?'예':'아니오'}</div></div>`}).join('');
+  const tops=top.opportunities||[];
+  document.getElementById('top10').innerHTML=tops.length?'<table><thead><tr><th>순위</th><th>산업</th><th>단계</th><th>12개월</th><th>24개월</th><th>미반영</th><th>선투자</th><th>수혜 후보</th></tr></thead><tbody>'+tops.map(x=>`<tr><td>${x.rank}</td><td>${esc(x.industry_name_ko)}</td><td>${esc(x.stage)}</td><td>${x.boom_transition_12m_score??'-'}</td><td>${x.core_industry_shift_24m_score??'-'}</td><td>${x.underrecognition_score??'-'}</td><td>${x.lead_opportunity_score??'-'}</td><td>${(x.beneficiary_companies||[]).slice(0,3).map(c=>esc(c.name)).join(', ')||'-'}</td></tr>`).join('')+'</tbody></table>':'<p>표시할 후보가 없습니다.</p>';
   const rows=data.industries||[];
-  if(!rows.length){document.getElementById('content').innerHTML='<p>표시할 산업 데이터가 없습니다.</p>';return;}
-  let html='<table><thead><tr><th>순위</th><th>산업</th><th>단계</th><th>6개월 자본</th><th>12개월 전환</th><th>거시 적합</th><th>미반영</th><th>선투자</th><th>품질</th></tr></thead><tbody>';
-  rows.forEach((r,i)=>{html+=`<tr><td>${i+1}</td><td>${esc(r.industry_name_ko)}</td><td>${esc(r.stage)}</td><td>${r.capital_inflow_6m_score??'-'}</td><td>${r.boom_transition_12m_score??'-'}</td><td>${r.macro_fit_score??'-'}</td><td>${r.underrecognition_score??'-'}</td><td>${r.lead_opportunity_score??'-'}</td><td>${esc(r.data_quality)}</td></tr>`;});
-  html+='</tbody></table>'; document.getElementById('content').innerHTML=html;
+  document.getElementById('content').innerHTML=rows.length?'<table><thead><tr><th>순위</th><th>산업</th><th>단계</th><th>6개월</th><th>12개월</th><th>공식통계</th><th>공급망</th><th>가치</th><th>선투자</th></tr></thead><tbody>'+rows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.industry_name_ko)}</td><td>${esc(r.stage)}</td><td>${r.capital_inflow_6m_score??'-'}</td><td>${r.boom_transition_12m_score??'-'}</td><td>${r.official_activity_score??'-'}</td><td>${r.supply_chain_spillover_score??'-'}</td><td>${r.valuation_attractiveness_score??'-'}</td><td>${r.lead_opportunity_score??'-'}</td></tr>`).join('')+'</tbody></table>':'<p>표시할 산업 데이터가 없습니다.</p>';
 }
 function fail(err){document.getElementById('status').innerHTML='<span class="error">오류: '+esc(err.message||err)+'</span>';}
 google.script.run.withSuccessHandler(render).withFailureHandler(fail).getDashboardData();

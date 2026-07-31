@@ -21,9 +21,9 @@ function getDashboardData() {
   const radarUrl = props.getProperty('RADAR_JSON_URL');
   if (!radarUrl) throw new Error('Script Property RADAR_JSON_URL이 없습니다.');
   const token = props.getProperty('GITHUB_TOKEN');
-  const apiUrl = props.getProperty('API_STATUS_JSON_URL') || radarUrl.replace('industry_radar.json', 'api_status.json');
   return {
     radar: fetchJson_(radarUrl, token),
-    api: fetchJson_(apiUrl, token)
+    api: fetchJson_(props.getProperty('API_STATUS_JSON_URL') || radarUrl.replace('industry_radar.json', 'api_status.json'), token),
+    top10: fetchJson_(props.getProperty('TOP10_JSON_URL') || radarUrl.replace('industry_radar.json', 'opportunity_top10.json'), token)
   };
 }

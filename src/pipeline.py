@@ -10,6 +10,7 @@ from typing import Any
 from .collectors import ecos, fred, kosis, market, opendart
 from .io_utils import load_json, write_json
 from .normalize import build_industry_features
+from .quality import clamp
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,9 +19,10 @@ def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     headers = [
         "industry_id", "as_of_date", "capital_level", "capital_velocity", "capital_acceleration",
         "orders_velocity", "backlog_acceleration", "capacity_tightness", "hiring_velocity",
-        "innovation_velocity", "policy_funding_velocity", "breadth", "persistence", "macro_fit",
-        "market_attention", "price_momentum", "valuation_heat", "supply_overbuild_risk",
-        "policy_dependency_risk", "source_coverage", "freshness_score", "source_reliability"
+        "innovation_velocity", "official_activity", "breadth", "persistence", "macro_fit",
+        "supply_chain_spillover", "market_attention", "price_momentum", "valuation_heat",
+        "valuation_attractiveness", "supply_overbuild_risk", "policy_dependency_risk",
+        "source_coverage", "freshness_score", "source_reliability"
     ]
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8-sig", newline="") as f:
@@ -71,6 +73,11 @@ def _collect_company_full(entry: dict[str, Any], corp: dict[str, str], years: li
         except Exception as exc:
             errors.append(f"DART {entry['stock_code']} {year}: {exc}")
     try:
+        company["shares"] = opendart.stock_status(corp["corp_code"], years[0])
+    except Exception as exc:
+        company["shares"] = {}
+        errors.append(f"DART shares {entry['stock_code']}: {exc}")
+    try:
         company["disclosures"] = opendart.disclosure_signal_counts(corp["corp_code"])
     except Exception as exc:
         company["disclosures"] = {}
@@ -101,6 +108,73 @@ def _refresh_market(company: dict[str, Any]) -> tuple[dict[str, Any], str | None
         return copied, f"Market {symbol}: {exc}"
 
 
+def _weighted(values: list[tuple[float | None, float]]) -> float | None:
+    pairs = [(float(v), float(w)) for v, w in values if isinstance(v, (int, float)) and w > 0]
+    total = sum(w for _, w in pairs)
+    return None if total <= 0 else round(clamp(sum(v * w for v, w in pairs) / total), 2)
+
+
+def _combine_macro_scores(
+    industry_ids: list[str],
+    fred_scores: dict[str, float | None],
+    ecos_scores: dict[str, float | None],
+    kosis_scores: dict[str, float | None],
+    sensitivity_cfg: dict[str, Any],
+) -> tuple[dict[str, float | None], dict[str, float | None]]:
+    profiles = sensitivity_cfg.get("profiles") or {}
+    assignments = sensitivity_cfg.get("industry_profiles") or {}
+    default_name = sensitivity_cfg.get("default", "balanced")
+    macro: dict[str, float | None] = {}
+    official: dict[str, float | None] = {}
+    for industry_id in industry_ids:
+        profile = profiles.get(assignments.get(industry_id, default_name), profiles.get(default_name, {}))
+        macro[industry_id] = _weighted([
+            (fred_scores.get(industry_id), float(profile.get("fred", 0.0))),
+            (ecos_scores.get(industry_id), float(profile.get("ecos", 0.0))),
+            (kosis_scores.get(industry_id), float(profile.get("kosis", 0.0))),
+        ])
+        official[industry_id] = _weighted([
+            (ecos_scores.get(industry_id), float(profile.get("ecos", 0.0))),
+            (kosis_scores.get(industry_id), float(profile.get("kosis", 0.0))),
+        ])
+    return macro, official
+
+
+def _collect_macro(industry_ids: list[str]) -> tuple[dict[str, Any], dict[str, float | None], dict[str, float | None]]:
+    macro_cfg = load_json(ROOT / "config" / "korean_macro_series.json")
+    sensitivity_cfg = load_json(ROOT / "config" / "korean_industry_sensitivity.json")
+    jobs = {
+        "fred": lambda: fred.collect(
+            load_json(ROOT / "config" / "fred_series.json"),
+            load_json(ROOT / "config" / "industry_macro_sensitivity.json"),
+            industry_ids,
+        ),
+        "ecos": lambda: ecos.collect(macro_cfg, sensitivity_cfg, industry_ids),
+        "kosis": lambda: kosis.collect(macro_cfg, sensitivity_cfg, industry_ids),
+    }
+    results: dict[str, Any] = {}
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        future_map = {executor.submit(fn): name for name, fn in jobs.items()}
+        for future in as_completed(future_map):
+            name = future_map[future]
+            try:
+                results[name] = future.result()
+            except Exception as exc:
+                results[name] = {
+                    "status": "ERROR", "message": str(exc), "mapped_to_score": False,
+                    "needs_attention": True, "checked_at": datetime.now(timezone.utc).isoformat(),
+                    "industry_scores": {}, "industry_macro_scores": {},
+                }
+
+    fred_scores = (results.get("fred") or {}).get("industry_macro_scores") or {}
+    ecos_scores = (results.get("ecos") or {}).get("industry_scores") or {}
+    kosis_scores = (results.get("kosis") or {}).get("industry_scores") or {}
+    macro_scores, official_scores = _combine_macro_scores(
+        industry_ids, fred_scores, ecos_scores, kosis_scores, sensitivity_cfg
+    )
+    return results, macro_scores, official_scores
+
+
 def collect_live(mode: str) -> dict[str, Any]:
     started_total = time.perf_counter()
     universe = load_json(ROOT / "config" / "company_universe.json")["companies"]
@@ -108,29 +182,8 @@ def collect_live(mode: str) -> dict[str, Any]:
     source_status: dict[str, Any] = {}
     errors: list[str] = []
 
-    for name, fn in (("ecos", ecos.health), ("kosis", kosis.health)):
-        try:
-            source_status[name] = fn()
-        except Exception as exc:
-            source_status[name] = {
-                "status": "ERROR", "message": str(exc), "mapped_to_score": False,
-                "needs_attention": True, "checked_at": datetime.now(timezone.utc).isoformat()
-            }
-
-    try:
-        fred_result = fred.collect(
-            load_json(ROOT / "config" / "fred_series.json"),
-            load_json(ROOT / "config" / "industry_macro_sensitivity.json"),
-            industries,
-        )
-    except Exception as exc:
-        fred_result = {
-            "status": "ERROR", "message": str(exc), "mapped_to_score": False,
-            "needs_attention": True, "checked_at": datetime.now(timezone.utc).isoformat(),
-            "industry_macro_scores": {}, "series": {}, "regime": {}
-        }
-    source_status["fred"] = {k: v for k, v in fred_result.items() if k != "industry_macro_scores"}
-    macro_scores = fred_result.get("industry_macro_scores") or {}
+    macro_results, macro_scores, official_scores = _collect_macro(industries)
+    source_status.update(macro_results)
 
     cached_companies, cache_generated_at = _load_cached_companies()
     cache_age = _cache_age_days(cache_generated_at)
@@ -222,15 +275,17 @@ def collect_live(mode: str) -> dict[str, Any]:
         "key_expiry_date": None, "renewal_status": "NOT_APPLICABLE"
     }
 
-    rows, evidence = build_industry_features(companies, industries, macro_scores=macro_scores)
+    rows, evidence = build_industry_features(
+        companies, industries, macro_scores=macro_scores, official_scores=official_scores
+    )
     _write_csv(ROOT / "data" / "normalized" / "industry_features.csv", rows)
-    write_json(ROOT / "data" / "snapshots" / "company_metrics.json", {
-        "generated_at": datetime.now(timezone.utc).isoformat(), "companies": companies,
-    })
-    write_json(ROOT / "data" / "snapshots" / "fred_macro.json", {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "status": source_status.get("fred"),
+    now = datetime.now(timezone.utc).isoformat()
+    write_json(ROOT / "data" / "snapshots" / "company_metrics.json", {"generated_at": now, "companies": companies})
+    write_json(ROOT / "data" / "snapshots" / "macro_sources.json", {
+        "generated_at": now,
+        "sources": source_status,
         "industry_macro_scores": macro_scores,
+        "industry_official_activity_scores": official_scores,
     })
     write_json(ROOT / "data" / "evidence" / "industry_evidence.json", evidence)
     write_json(ROOT / "data" / "snapshots" / "source_status.json", source_status)

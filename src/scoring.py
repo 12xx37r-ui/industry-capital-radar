@@ -55,6 +55,7 @@ def score_industry(row: dict[str, Any], cfg: dict) -> dict[str, Any]:
     innovation_talent = _weighted(row, cfg["innovation_talent"])
     structural_support = _weighted(row, cfg["structural_support"])
     evidence_strength = _weighted(row, cfg["evidence_strength"])
+    supply_chain_confirmation = _weighted(row, cfg["supply_chain_confirmation"])
     market_heat = _weighted(row, cfg["market_heat"])
     risk_penalty = _weighted(row, cfg["risk_penalty"])
 
@@ -65,6 +66,7 @@ def score_industry(row: dict[str, Any], cfg: dict) -> dict[str, Any]:
         "innovation_talent_score": innovation_talent,
         "structural_support_score": structural_support,
         "evidence_strength_score": evidence_strength,
+        "supply_chain_confirmation_score": supply_chain_confirmation,
     })
     boom_transition = _weighted(derived, cfg["boom_transition"])
     underrecognition = clamp(100.0 - market_heat) if market_heat is not None else None
@@ -73,6 +75,7 @@ def score_industry(row: dict[str, Any], cfg: dict) -> dict[str, Any]:
     positive = _blend_available([
         (boom_transition, lead_cfg["boom_transition_score"]),
         (underrecognition, lead_cfg["underrecognition_score"]),
+        (row.get("valuation_attractiveness"), lead_cfg["valuation_attractiveness"]),
         (row.get("macro_fit"), lead_cfg["macro_fit"]),
     ])
     lead_opportunity = None
@@ -87,14 +90,18 @@ def score_industry(row: dict[str, Any], cfg: dict) -> dict[str, Any]:
         "demand_validation_score": _round(demand_validation),
         "innovation_talent_score": _round(innovation_talent),
         "structural_support_score": _round(structural_support),
+        "official_activity_score": _round(row.get("official_activity") if _valid(row.get("official_activity")) else None),
         "evidence_strength_score": _round(evidence_strength),
+        "supply_chain_spillover_score": _round(row.get("supply_chain_spillover") if _valid(row.get("supply_chain_spillover")) else None),
+        "supply_chain_confirmation_score": _round(supply_chain_confirmation),
         "market_heat_score": _round(market_heat),
         "underrecognition_score": _round(underrecognition),
+        "valuation_attractiveness_score": _round(row.get("valuation_attractiveness") if _valid(row.get("valuation_attractiveness")) else None),
         "risk_penalty_score": _round(risk_penalty),
         "macro_fit_score": _round(row.get("macro_fit") if _valid(row.get("macro_fit")) else None),
-        "capital_inflow_6m_score": _round(_blend_available([(capital_flow, 0.65), (evidence_strength, 0.35)])),
+        "capital_inflow_6m_score": _round(_blend_available([(capital_flow, 0.55), (evidence_strength, 0.25), (row.get("official_activity"), 0.20)])),
         "boom_transition_12m_score": _round(boom_transition),
-        "core_industry_shift_24m_score": _round(_blend_available([(boom_transition, 0.60), (structural_support, 0.40)])),
+        "core_industry_shift_24m_score": _round(_blend_available([(boom_transition, 0.50), (structural_support, 0.30), (supply_chain_confirmation, 0.20)])),
         "lead_opportunity_score": _round(lead_opportunity),
         "stage": classify_stage(boom_transition, market_heat, risk_penalty),
         "confidence_score": q_score,

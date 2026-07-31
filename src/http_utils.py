@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import time
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -14,19 +15,28 @@ class HttpError(RuntimeError):
 
 _SENSITIVE_QUERY_KEYS = {
     "apikey", "api_key", "api-key", "key", "token", "access_token",
-    "authorization", "auth", "secret", "client_secret",
+    "authorization", "auth", "secret", "client_secret", "crtfc_key",
 }
 
 
 def redact_url(url: str) -> str:
-    """Return a URL safe for logs by masking credential-like query values."""
+    """Return a URL safe for logs by masking query and path credentials."""
     try:
         parts = urlsplit(url)
         safe_query = []
         for key, value in parse_qsl(parts.query, keep_blank_values=True):
             normalized = key.strip().lower()
             safe_query.append((key, "***" if normalized in _SENSITIVE_QUERY_KEYS else value))
-        return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(safe_query), parts.fragment))
+
+        path = parts.path
+        # ECOS puts the API key in the URL path immediately after the service name.
+        path = re.sub(
+            r"(/api/(?:StatisticTableList|StatisticItemList|StatisticSearch|KeyStatisticList|StatisticMeta|StatisticWord)/)[^/]+",
+            r"\1***",
+            path,
+            flags=re.IGNORECASE,
+        )
+        return urlunsplit((parts.scheme, parts.netloc, path, urlencode(safe_query), parts.fragment))
     except Exception:
         return "<redacted-url>"
 
@@ -42,7 +52,7 @@ def get_bytes(
     if params:
         url = f"{url}?{urlencode(params)}"
     req_headers = {
-        "User-Agent": "industry-capital-radar/0.3.1 contact: github-actions",
+        "User-Agent": "industry-capital-radar/0.4.0 contact: github-actions",
         "Accept": "*/*",
     }
     if headers:
