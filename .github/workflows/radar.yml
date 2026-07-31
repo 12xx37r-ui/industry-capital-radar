@@ -4,7 +4,9 @@ on:
   push:
     paths-ignore:
       - 'public/**'
-
+      - 'data/snapshots/**'
+      - 'data/evidence/**'
+      - 'data/normalized/**'
   workflow_dispatch:
     inputs:
       mode:
@@ -17,7 +19,6 @@ on:
           - daily
           - weekly
           - monthly
-
   schedule:
     - cron: '17 21 * * 1-5'
     - cron: '37 22 * * 0'
@@ -27,22 +28,26 @@ permissions:
   contents: write
 
 concurrency:
-  group: industry-capital-radar
-  cancel-in-progress: false
+  group: industry-capital-radar-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   run:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 35
     env:
+      PYTHONUNBUFFERED: '1'
       OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
       ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
       KOSIS_API_KEY: ${{ secrets.KOSIS_API_KEY }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -63,19 +68,18 @@ jobs:
       - name: Test
         run: python -m unittest discover -s tests -v
 
-      - name: Build JSON
+      - name: Collect and build JSON
         run: python -m src.main --mode "${{ steps.mode.outputs.value }}"
 
-      - name: Commit outputs
+      - name: Commit outputs and snapshots
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/*.json
-
+          git add public/*.json data/normalized/*.csv data/snapshots/*.json data/evidence/*.json
           if git diff --cached --quiet; then
             echo "No output change"
           else
-            git commit -m "chore: refresh radar outputs"
+            git commit -m "chore: refresh industry capital radar v0.3"
             git push
           fi
