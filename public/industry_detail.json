@@ -1,5 +1,1703 @@
 {
-  "generated_at": "2026-07-31T18:35:12.427066+00:00",
+  "generated_at": "2026-07-31T18:40:43.501940+00:00",
   "engine_version": "0.3.0",
-  "industries": {}
+  "industries": {
+    "AI_COMPUTE": {
+      "industry_name_ko": "AI 연산·가속기",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 56.65,
+        "demand_validation_score": 52.63,
+        "innovation_talent_score": 53.8,
+        "structural_support_score": null,
+        "evidence_strength_score": 66.67,
+        "market_heat_score": 74.32,
+        "underrecognition_score": 25.68,
+        "risk_penalty_score": 27.75,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 60.16,
+        "boom_transition_12m_score": 57.28,
+        "core_industry_shift_24m_score": 57.28,
+        "lead_opportunity_score": 40.47,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "SK하이닉스",
+            "stock_code": "000660",
+            "capex_growth": 0.7258076148468906,
+            "revenue_growth": null,
+            "employee_growth": 0.06665637542451375,
+            "return_6m": 0.7509933774834436,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "한미반도체",
+            "stock_code": "042700",
+            "capex_growth": 0.3938226192649672,
+            "revenue_growth": null,
+            "employee_growth": 0.038028169014084456,
+            "return_6m": -0.016431924882629123,
+            "orders_curr": 3,
+            "orders_prev": 3
+          },
+          {
+            "name": "삼성전자",
+            "stock_code": "005930",
+            "capex_growth": -0.07555828457395974,
+            "revenue_growth": 0.10880093313642902,
+            "employee_growth": -0.00462619709607659,
+            "return_6m": 0.3591595535128036,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "AI_DATA_INFRA": {
+      "industry_name_ko": "AI 데이터·클라우드 인프라",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 57.34,
+        "demand_validation_score": 69.18,
+        "innovation_talent_score": 46.78,
+        "structural_support_score": null,
+        "evidence_strength_score": 0.0,
+        "market_heat_score": 72.44,
+        "underrecognition_score": 27.56,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 37.27,
+        "boom_transition_12m_score": 46.13,
+        "core_industry_shift_24m_score": 46.13,
+        "lead_opportunity_score": 40.33,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 75.37,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "삼성전자",
+            "stock_code": "005930",
+            "capex_growth": -0.07555828457395974,
+            "revenue_growth": 0.10880093313642902,
+            "employee_growth": -0.00462619709607659,
+            "return_6m": 0.3591595535128036,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "SK텔레콤",
+            "stock_code": "017670",
+            "capex_growth": -0.11288796153351344,
+            "revenue_growth": -0.046898965358422307,
+            "employee_growth": -0.03222282905516116,
+            "return_6m": 0.2674230145867098,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "KT",
+            "stock_code": "030200",
+            "capex_growth": null,
+            "revenue_growth": 0.06859154051400762,
+            "employee_growth": -0.13150587818278492,
+            "return_6m": -0.03825136612021862,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "SEMICONDUCTOR_EQUIPMENT": {
+      "industry_name_ko": "반도체 제조장비",
+      "stage": "RESEARCH_OBSERVATION",
+      "scores": {
+        "capital_flow_score": 2.1,
+        "demand_validation_score": 26.89,
+        "innovation_talent_score": 50.32,
+        "structural_support_score": null,
+        "evidence_strength_score": 0.0,
+        "market_heat_score": 70.64,
+        "underrecognition_score": 29.36,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 1.36,
+        "boom_transition_12m_score": 16.55,
+        "core_industry_shift_24m_score": 16.55,
+        "lead_opportunity_score": 20.56,
+        "stage": "RESEARCH_OBSERVATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "이오테크닉스",
+            "stock_code": "039030",
+            "capex_growth": -0.9386883432205663,
+            "revenue_growth": null,
+            "employee_growth": 0.003154574132492094,
+            "return_6m": -0.19866444073455758,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "HPSP",
+            "stock_code": "403870",
+            "capex_growth": -0.945959575844035,
+            "revenue_growth": null,
+            "employee_growth": 0.10434782608695659,
+            "return_6m": -0.14135338345864656,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "주성엔지니어링",
+            "stock_code": "036930",
+            "capex_growth": null,
+            "revenue_growth": null,
+            "employee_growth": -0.06909788867562383,
+            "return_6m": 2.135566188197767,
+            "orders_curr": 0,
+            "orders_prev": 1
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "ADVANCED_PACKAGING": {
+      "industry_name_ko": "첨단 패키징·검사",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 27.48,
+        "demand_validation_score": 81.76,
+        "innovation_talent_score": 55.11,
+        "structural_support_score": null,
+        "evidence_strength_score": 38.75,
+        "market_heat_score": 62.03,
+        "underrecognition_score": 37.97,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 31.42,
+        "boom_transition_12m_score": 49.67,
+        "core_industry_shift_24m_score": 49.67,
+        "lead_opportunity_score": 46.01,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "리노공업",
+            "stock_code": "058470",
+            "capex_growth": 4.150464977519697,
+            "revenue_growth": null,
+            "employee_growth": 0.06446540880503138,
+            "return_6m": -0.15981735159817356,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "한미반도체",
+            "stock_code": "042700",
+            "capex_growth": 0.3938226192649672,
+            "revenue_growth": null,
+            "employee_growth": 0.038028169014084456,
+            "return_6m": -0.016431924882629123,
+            "orders_curr": 3,
+            "orders_prev": 3
+          },
+          {
+            "name": "테크윙",
+            "stock_code": "089030",
+            "capex_growth": -0.4762470227074699,
+            "revenue_growth": null,
+            "employee_growth": -0.008417508417508435,
+            "return_6m": -0.14247311827956988,
+            "orders_curr": 4,
+            "orders_prev": 1
+          },
+          {
+            "name": "ISC",
+            "stock_code": "095340",
+            "capex_growth": -0.5015955661853897,
+            "revenue_growth": null,
+            "employee_growth": 0.8755760368663594,
+            "return_6m": 0.0018814675446847673,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "DATACENTER_POWER_COOLING": {
+      "industry_name_ko": "데이터센터 전력·냉각",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 76.02,
+        "demand_validation_score": 50.0,
+        "innovation_talent_score": 54.34,
+        "structural_support_score": null,
+        "evidence_strength_score": 63.75,
+        "market_heat_score": 54.75,
+        "underrecognition_score": 45.25,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 71.73,
+        "boom_transition_12m_score": 62.45,
+        "core_industry_shift_24m_score": 62.45,
+        "lead_opportunity_score": 57.08,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "케이엔솔",
+            "stock_code": "053080",
+            "capex_growth": 1.8459083468872355,
+            "revenue_growth": null,
+            "employee_growth": 0.07425742574257432,
+            "return_6m": -0.4343598055105349,
+            "orders_curr": 2,
+            "orders_prev": 0
+          },
+          {
+            "name": "HD현대일렉트릭",
+            "stock_code": "267260",
+            "capex_growth": 0.9195863123936898,
+            "revenue_growth": null,
+            "employee_growth": 0.011446886446886406,
+            "return_6m": -0.34346846846846846,
+            "orders_curr": 4,
+            "orders_prev": 4
+          },
+          {
+            "name": "LS ELECTRIC",
+            "stock_code": "010120",
+            "capex_growth": 0.38285295521284923,
+            "revenue_growth": null,
+            "employee_growth": 0.03262158956109129,
+            "return_6m": 0.45357833655706004,
+            "orders_curr": 4,
+            "orders_prev": 4
+          },
+          {
+            "name": "GST",
+            "stock_code": "083450",
+            "capex_growth": -0.32622362896756263,
+            "revenue_growth": null,
+            "employee_growth": 0.054317548746518174,
+            "return_6m": 0.3961165048543689,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "POWER_GRID": {
+      "industry_name_ko": "송배전망·변압기",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 44.62,
+        "demand_validation_score": 53.11,
+        "innovation_talent_score": 54.15,
+        "structural_support_score": null,
+        "evidence_strength_score": 75.0,
+        "market_heat_score": 46.63,
+        "underrecognition_score": 53.37,
+        "risk_penalty_score": 44.84,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 55.25,
+        "boom_transition_12m_score": 55.32,
+        "core_industry_shift_24m_score": 55.32,
+        "lead_opportunity_score": 43.5,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "효성중공업",
+            "stock_code": "298040",
+            "capex_growth": 0.9404096668430464,
+            "revenue_growth": 0.21931286530979555,
+            "employee_growth": 0.05066273932253318,
+            "return_6m": -0.19369944657300975,
+            "orders_curr": 12,
+            "orders_prev": 9
+          },
+          {
+            "name": "HD현대일렉트릭",
+            "stock_code": "267260",
+            "capex_growth": 0.9195863123936898,
+            "revenue_growth": null,
+            "employee_growth": 0.011446886446886406,
+            "return_6m": -0.34346846846846846,
+            "orders_curr": 4,
+            "orders_prev": 4
+          },
+          {
+            "name": "LS ELECTRIC",
+            "stock_code": "010120",
+            "capex_growth": 0.38285295521284923,
+            "revenue_growth": null,
+            "employee_growth": 0.03262158956109129,
+            "return_6m": 0.45357833655706004,
+            "orders_curr": 4,
+            "orders_prev": 4
+          },
+          {
+            "name": "일진전기",
+            "stock_code": "103590",
+            "capex_growth": -0.6465020984395988,
+            "revenue_growth": null,
+            "employee_growth": 0.0791295746785361,
+            "return_6m": -0.2528641571194763,
+            "orders_curr": 6,
+            "orders_prev": 1
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "NUCLEAR_SMR": {
+      "industry_name_ko": "원자력·SMR",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 32.84,
+        "demand_validation_score": 59.95,
+        "innovation_talent_score": 49.76,
+        "structural_support_score": null,
+        "evidence_strength_score": 50.0,
+        "market_heat_score": 34.52,
+        "underrecognition_score": 65.48,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 38.84,
+        "boom_transition_12m_score": 47.0,
+        "core_industry_shift_24m_score": 47.0,
+        "lead_opportunity_score": 52.78,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "한전KPS",
+            "stock_code": "051600",
+            "capex_growth": 0.24687833977823415,
+            "revenue_growth": null,
+            "employee_growth": -0.014287885696914415,
+            "return_6m": -0.2482698961937716,
+            "orders_curr": 5,
+            "orders_prev": 7
+          },
+          {
+            "name": "한전기술",
+            "stock_code": "052690",
+            "capex_growth": 0.003853511054374259,
+            "revenue_growth": null,
+            "employee_growth": 0.02451184046530952,
+            "return_6m": -0.415508412582297,
+            "orders_curr": 11,
+            "orders_prev": 10
+          },
+          {
+            "name": "두산에너빌리티",
+            "stock_code": "034020",
+            "capex_growth": -0.12654903498830983,
+            "revenue_growth": 0.05081119974028292,
+            "employee_growth": 0.009556203433754407,
+            "return_6m": -0.33111111111111113,
+            "orders_curr": 6,
+            "orders_prev": 4
+          },
+          {
+            "name": "현대건설",
+            "stock_code": "000720",
+            "capex_growth": -0.4006139119835843,
+            "revenue_growth": null,
+            "employee_growth": -0.034559955225968886,
+            "return_6m": -0.21442307692307694,
+            "orders_curr": 13,
+            "orders_prev": 7
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "ENERGY_STORAGE": {
+      "industry_name_ko": "에너지저장·전력변환",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 28.68,
+        "demand_validation_score": 64.37,
+        "innovation_talent_score": 47.81,
+        "structural_support_score": null,
+        "evidence_strength_score": 0.0,
+        "market_heat_score": 39.91,
+        "underrecognition_score": 60.09,
+        "risk_penalty_score": 7.48,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 18.64,
+        "boom_transition_12m_score": 35.41,
+        "core_industry_shift_24m_score": 35.41,
+        "lead_opportunity_score": 41.25,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "LG에너지솔루션",
+            "stock_code": "373220",
+            "capex_growth": -0.12622774853845264,
+            "revenue_growth": -0.07602878813220437,
+            "employee_growth": 0.022714681440443307,
+            "return_6m": -0.23261390887290168,
+            "orders_curr": 7,
+            "orders_prev": 4
+          },
+          {
+            "name": "포스코퓨처엠",
+            "stock_code": "003670",
+            "capex_growth": -0.265819873360702,
+            "revenue_growth": null,
+            "employee_growth": -0.021674876847290636,
+            "return_6m": -0.4,
+            "orders_curr": 8,
+            "orders_prev": 1
+          },
+          {
+            "name": "삼성SDI",
+            "stock_code": "006400",
+            "capex_growth": -0.5109719490946768,
+            "revenue_growth": null,
+            "employee_growth": -0.03860280338805189,
+            "return_6m": -0.06762028608582571,
+            "orders_curr": 0,
+            "orders_prev": 1
+          },
+          {
+            "name": "에코프로비엠",
+            "stock_code": "247540",
+            "capex_growth": -0.5915858638950757,
+            "revenue_growth": null,
+            "employee_growth": -0.022149302707136997,
+            "return_6m": -0.44025522041763343,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "ROBOTICS": {
+      "industry_name_ko": "로봇",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 96.65,
+        "demand_validation_score": 20.86,
+        "innovation_talent_score": 59.79,
+        "structural_support_score": null,
+        "evidence_strength_score": 63.75,
+        "market_heat_score": 37.33,
+        "underrecognition_score": 62.67,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 85.13,
+        "boom_transition_12m_score": 62.14,
+        "core_industry_shift_24m_score": 62.14,
+        "lead_opportunity_score": 62.31,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "두산로보틱스",
+            "stock_code": "454910",
+            "capex_growth": 2.982667658226761,
+            "revenue_growth": null,
+            "employee_growth": 0.08974358974358965,
+            "return_6m": -0.5199306759098787,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "로보스타",
+            "stock_code": "090360",
+            "capex_growth": 2.2310310901219994,
+            "revenue_growth": null,
+            "employee_growth": 0.10869565217391308,
+            "return_6m": -0.39953271028037385,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "레인보우로보틱스",
+            "stock_code": "277810",
+            "capex_growth": 0.5102613451289719,
+            "revenue_growth": null,
+            "employee_growth": 0.6428571428571428,
+            "return_6m": -0.2554890219560878,
+            "orders_curr": 0,
+            "orders_prev": 2
+          },
+          {
+            "name": "로보티즈",
+            "stock_code": "108490",
+            "capex_growth": -0.48523805125907404,
+            "revenue_growth": null,
+            "employee_growth": -0.27450980392156865,
+            "return_6m": -0.3547861507128309,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "INDUSTRIAL_AUTOMATION": {
+      "industry_name_ko": "산업 자동화·스마트팩토리",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 86.31,
+        "demand_validation_score": 50.0,
+        "innovation_talent_score": 53.26,
+        "structural_support_score": null,
+        "evidence_strength_score": 59.17,
+        "market_heat_score": 39.98,
+        "underrecognition_score": 60.02,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 76.81,
+        "boom_transition_12m_score": 64.68,
+        "core_industry_shift_24m_score": 64.68,
+        "lead_opportunity_score": 63.23,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "코윈테크",
+            "stock_code": "282880",
+            "capex_growth": 0.7104537690222972,
+            "revenue_growth": null,
+            "employee_growth": 0.07346938775510203,
+            "return_6m": -0.6054455445544554,
+            "orders_curr": 6,
+            "orders_prev": 3
+          },
+          {
+            "name": "LS ELECTRIC",
+            "stock_code": "010120",
+            "capex_growth": 0.38285295521284923,
+            "revenue_growth": null,
+            "employee_growth": 0.03262158956109129,
+            "return_6m": 0.45357833655706004,
+            "orders_curr": 4,
+            "orders_prev": 4
+          },
+          {
+            "name": "에스에프에이",
+            "stock_code": "056190",
+            "capex_growth": null,
+            "revenue_growth": null,
+            "employee_growth": -0.03543307086614178,
+            "return_6m": -0.31825095057034225,
+            "orders_curr": 0,
+            "orders_prev": 2
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "AUTONOMOUS_SENSORS": {
+      "industry_name_ko": "자율시스템·센서",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 48.7,
+        "demand_validation_score": 52.67,
+        "innovation_talent_score": 47.7,
+        "structural_support_score": null,
+        "evidence_strength_score": 18.33,
+        "market_heat_score": 63.23,
+        "underrecognition_score": 36.77,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 38.07,
+        "boom_transition_12m_score": 42.89,
+        "core_industry_shift_24m_score": 42.89,
+        "lead_opportunity_score": 40.98,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 75.37,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "HL만도",
+            "stock_code": "204320",
+            "capex_growth": 0.1109730391606818,
+            "revenue_growth": null,
+            "employee_growth": -0.02297090352220521,
+            "return_6m": -0.414580265095729,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "LG이노텍",
+            "stock_code": "011070",
+            "capex_growth": -0.3049395763347186,
+            "revenue_growth": 0.03282184997656934,
+            "employee_growth": -0.035313635645441654,
+            "return_6m": 0.49823321554770317,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "현대모비스",
+            "stock_code": "012330",
+            "capex_growth": -0.38851130630467134,
+            "revenue_growth": 0.06780810208502386,
+            "employee_growth": 0.01827782290820479,
+            "return_6m": -0.018743109151047377,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "SPACE_SATELLITE": {
+      "industry_name_ko": "우주·위성",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 24.87,
+        "demand_validation_score": 79.34,
+        "innovation_talent_score": 54.44,
+        "structural_support_score": null,
+        "evidence_strength_score": 63.75,
+        "market_heat_score": 24.52,
+        "underrecognition_score": 75.48,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 38.48,
+        "boom_transition_12m_score": 53.57,
+        "core_industry_shift_24m_score": 53.57,
+        "lead_opportunity_score": 60.42,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "쎄트렉아이",
+            "stock_code": "099320",
+            "capex_growth": 0.5443517038406509,
+            "revenue_growth": null,
+            "employee_growth": 0.05991735537190079,
+            "return_6m": -0.5885714285714285,
+            "orders_curr": 9,
+            "orders_prev": 6
+          },
+          {
+            "name": "한화시스템",
+            "stock_code": "272210",
+            "capex_growth": 0.2466219912221317,
+            "revenue_growth": null,
+            "employee_growth": 0.021890128394022268,
+            "return_6m": -0.3759909399773499,
+            "orders_curr": 13,
+            "orders_prev": 14
+          },
+          {
+            "name": "AP위성",
+            "stock_code": "211270",
+            "capex_growth": 0.08563065477570708,
+            "revenue_growth": null,
+            "employee_growth": 0.20394736842105265,
+            "return_6m": -0.6626768226332971,
+            "orders_curr": 9,
+            "orders_prev": 4
+          },
+          {
+            "name": "한국항공우주",
+            "stock_code": "047810",
+            "capex_growth": -0.20282936187901957,
+            "revenue_growth": null,
+            "employee_growth": 0.029059493422344485,
+            "return_6m": -0.27157513578756787,
+            "orders_curr": 22,
+            "orders_prev": 11
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "DEFENSE_DRONES": {
+      "industry_name_ko": "방산·드론",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 20.9,
+        "demand_validation_score": 83.63,
+        "innovation_talent_score": 54.76,
+        "structural_support_score": null,
+        "evidence_strength_score": 50.0,
+        "market_heat_score": 37.41,
+        "underrecognition_score": 62.59,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 31.09,
+        "boom_transition_12m_score": 50.44,
+        "core_industry_shift_24m_score": 50.44,
+        "lead_opportunity_score": 54.23,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "한화에어로스페이스",
+            "stock_code": "012450",
+            "capex_growth": 1.958299395253118,
+            "revenue_growth": null,
+            "employee_growth": 0.06645776210993604,
+            "return_6m": -0.3289371605896043,
+            "orders_curr": 6,
+            "orders_prev": 1
+          },
+          {
+            "name": "한화시스템",
+            "stock_code": "272210",
+            "capex_growth": 0.2466219912221317,
+            "revenue_growth": null,
+            "employee_growth": 0.021890128394022268,
+            "return_6m": -0.3759909399773499,
+            "orders_curr": 13,
+            "orders_prev": 14
+          },
+          {
+            "name": "한국항공우주",
+            "stock_code": "047810",
+            "capex_growth": -0.20282936187901957,
+            "revenue_growth": null,
+            "employee_growth": 0.029059493422344485,
+            "return_6m": -0.27157513578756787,
+            "orders_curr": 22,
+            "orders_prev": 11
+          },
+          {
+            "name": "LIG넥스원",
+            "stock_code": "079550",
+            "capex_growth": -0.6583659856406769,
+            "revenue_growth": null,
+            "employee_growth": 0.12382543328461049,
+            "return_6m": 0.2117202268431002,
+            "orders_curr": 23,
+            "orders_prev": 13
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "CYBERSECURITY": {
+      "industry_name_ko": "사이버보안",
+      "stage": "RESEARCH_OBSERVATION",
+      "scores": {
+        "capital_flow_score": 36.94,
+        "demand_validation_score": null,
+        "innovation_talent_score": 49.29,
+        "structural_support_score": null,
+        "evidence_strength_score": 15.0,
+        "market_heat_score": 52.03,
+        "underrecognition_score": 47.97,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 29.26,
+        "boom_transition_12m_score": 33.04,
+        "core_industry_shift_24m_score": 33.04,
+        "lead_opportunity_score": 37.7,
+        "stage": "RESEARCH_OBSERVATION",
+        "confidence_score": 67.43,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "드림시큐리티",
+            "stock_code": "203650",
+            "capex_growth": 2.5989349334353498,
+            "revenue_growth": null,
+            "employee_growth": -0.027027027027026973,
+            "return_6m": -0.02264150943396226,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "안랩",
+            "stock_code": "053800",
+            "capex_growth": -0.33101235158446096,
+            "revenue_growth": null,
+            "employee_growth": -0.007109004739336511,
+            "return_6m": -0.10792580101180438,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "윈스",
+            "stock_code": "136540",
+            "capex_growth": -0.7675241962820704,
+            "revenue_growth": null,
+            "employee_growth": 0.002016129032258007,
+            "return_6m": -0.10089285714285712,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "BIO_MANUFACTURING": {
+      "industry_name_ko": "바이오 제조·CDMO",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 42.16,
+        "demand_validation_score": 70.23,
+        "innovation_talent_score": 58.68,
+        "structural_support_score": null,
+        "evidence_strength_score": 63.75,
+        "market_heat_score": 48.87,
+        "underrecognition_score": 51.13,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 49.72,
+        "boom_transition_12m_score": 57.51,
+        "core_industry_shift_24m_score": 57.51,
+        "lead_opportunity_score": 55.52,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "SK바이오사이언스",
+            "stock_code": "302440",
+            "capex_growth": 0.11360026654938271,
+            "revenue_growth": null,
+            "employee_growth": 0.10577864838393736,
+            "return_6m": -0.3269035532994924,
+            "orders_curr": 2,
+            "orders_prev": 1
+          },
+          {
+            "name": "삼성바이오로직스",
+            "stock_code": "207940",
+            "capex_growth": 0.06763534560139428,
+            "revenue_growth": null,
+            "employee_growth": 0.08860506884853314,
+            "return_6m": -0.14116985376827895,
+            "orders_curr": 18,
+            "orders_prev": 12
+          },
+          {
+            "name": "유한양행",
+            "stock_code": "000100",
+            "capex_growth": -0.14928231788851887,
+            "revenue_growth": null,
+            "employee_growth": 0.017005196032120917,
+            "return_6m": -0.29389312977099236,
+            "orders_curr": 4,
+            "orders_prev": 2
+          },
+          {
+            "name": "셀트리온",
+            "stock_code": "068270",
+            "capex_growth": -0.19868966082657125,
+            "revenue_growth": 0.1701264863287748,
+            "employee_growth": 0.08686659772492233,
+            "return_6m": -0.040865366602790054,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "MEDICAL_DEVICES": {
+      "industry_name_ko": "의료기기·진단",
+      "stage": "EARLY_EXPANSION",
+      "scores": {
+        "capital_flow_score": 92.6,
+        "demand_validation_score": null,
+        "innovation_talent_score": 50.19,
+        "structural_support_score": null,
+        "evidence_strength_score": 66.67,
+        "market_heat_score": 39.42,
+        "underrecognition_score": 60.58,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 83.53,
+        "boom_transition_12m_score": 74.84,
+        "core_industry_shift_24m_score": 74.84,
+        "lead_opportunity_score": 70.38,
+        "stage": "EARLY_EXPANSION",
+        "confidence_score": 67.43,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "클래시스",
+            "stock_code": "214150",
+            "capex_growth": 2.158140913820456,
+            "revenue_growth": null,
+            "employee_growth": 0.00189753320683117,
+            "return_6m": -0.36570945945945943,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "메디톡스",
+            "stock_code": "086900",
+            "capex_growth": 0.7947346724425421,
+            "revenue_growth": null,
+            "employee_growth": -0.029639175257731964,
+            "return_6m": -0.41000000000000003,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "뷰웍스",
+            "stock_code": "100120",
+            "capex_growth": 0.02923729120394669,
+            "revenue_growth": null,
+            "employee_growth": 0.004132231404958775,
+            "return_6m": 0.009975062344139696,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "QUANTUM_TECH": {
+      "industry_name_ko": "양자기술",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 95.86,
+        "demand_validation_score": 65.37,
+        "innovation_talent_score": 46.78,
+        "structural_support_score": null,
+        "evidence_strength_score": 22.5,
+        "market_heat_score": 63.09,
+        "underrecognition_score": 36.91,
+        "risk_penalty_score": 84.32,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 70.18,
+        "boom_transition_12m_score": 62.91,
+        "core_industry_shift_24m_score": 62.91,
+        "lead_opportunity_score": 33.7,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 75.37,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "드림시큐리티",
+            "stock_code": "203650",
+            "capex_growth": 2.5989349334353498,
+            "revenue_growth": null,
+            "employee_growth": -0.027027027027026973,
+            "return_6m": -0.02264150943396226,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "SK텔레콤",
+            "stock_code": "017670",
+            "capex_growth": -0.11288796153351344,
+            "revenue_growth": -0.046898965358422307,
+            "employee_growth": -0.03222282905516116,
+            "return_6m": 0.2674230145867098,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "KT",
+            "stock_code": "030200",
+            "capex_growth": null,
+            "revenue_growth": 0.06859154051400762,
+            "employee_growth": -0.13150587818278492,
+            "return_6m": -0.03825136612021862,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "ADVANCED_MATERIALS": {
+      "industry_name_ko": "첨단소재",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 41.36,
+        "demand_validation_score": 80.88,
+        "innovation_talent_score": 47.15,
+        "structural_support_score": null,
+        "evidence_strength_score": 0.0,
+        "market_heat_score": 42.65,
+        "underrecognition_score": 57.35,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 26.89,
+        "boom_transition_12m_score": 44.11,
+        "core_industry_shift_24m_score": 44.11,
+        "lead_opportunity_score": 48.25,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "솔루스첨단소재",
+            "stock_code": "336370",
+            "capex_growth": -0.09343536833662824,
+            "revenue_growth": 0.07905085344298968,
+            "employee_growth": -0.04807692307692313,
+            "return_6m": -0.2757306226175349,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "POSCO홀딩스",
+            "stock_code": "005490",
+            "capex_growth": -0.26135948841557843,
+            "revenue_growth": null,
+            "employee_growth": -0.005692599620493399,
+            "return_6m": -0.1641168289290682,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "포스코퓨처엠",
+            "stock_code": "003670",
+            "capex_growth": -0.265819873360702,
+            "revenue_growth": null,
+            "employee_growth": -0.021674876847290636,
+            "return_6m": -0.4,
+            "orders_curr": 8,
+            "orders_prev": 1
+          },
+          {
+            "name": "LG이노텍",
+            "stock_code": "011070",
+            "capex_growth": -0.3049395763347186,
+            "revenue_growth": 0.03282184997656934,
+            "employee_growth": -0.035313635645441654,
+            "return_6m": 0.49823321554770317,
+            "orders_curr": 0,
+            "orders_prev": 0
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "CRITICAL_MINERALS": {
+      "industry_name_ko": "핵심광물·희토류",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 14.86,
+        "demand_validation_score": 98.9,
+        "innovation_talent_score": 49.43,
+        "structural_support_score": null,
+        "evidence_strength_score": 0.0,
+        "market_heat_score": 44.24,
+        "underrecognition_score": 55.76,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 9.66,
+        "boom_transition_12m_score": 40.67,
+        "core_industry_shift_24m_score": 40.67,
+        "lead_opportunity_score": 45.38,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "포스코인터내셔널",
+            "stock_code": "047050",
+            "capex_growth": -0.10579213917438213,
+            "revenue_growth": null,
+            "employee_growth": -0.002868617326448608,
+            "return_6m": -0.18500797448165873,
+            "orders_curr": 1,
+            "orders_prev": 0
+          },
+          {
+            "name": "POSCO홀딩스",
+            "stock_code": "005490",
+            "capex_growth": -0.26135948841557843,
+            "revenue_growth": null,
+            "employee_growth": -0.005692599620493399,
+            "return_6m": -0.1641168289290682,
+            "orders_curr": 0,
+            "orders_prev": 0
+          },
+          {
+            "name": "포스코퓨처엠",
+            "stock_code": "003670",
+            "capex_growth": -0.265819873360702,
+            "revenue_growth": null,
+            "employee_growth": -0.021674876847290636,
+            "return_6m": -0.4,
+            "orders_curr": 8,
+            "orders_prev": 1
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "WATER_INFRA": {
+      "industry_name_ko": "수처리·물 인프라",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 36.9,
+        "demand_validation_score": 55.4,
+        "innovation_talent_score": 41.21,
+        "structural_support_score": null,
+        "evidence_strength_score": 33.33,
+        "market_heat_score": 83.25,
+        "underrecognition_score": 16.75,
+        "risk_penalty_score": 36.96,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 35.65,
+        "boom_transition_12m_score": 41.97,
+        "core_industry_shift_24m_score": 41.97,
+        "lead_opportunity_score": 24.85,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 3,
+        "companies": [
+          {
+            "name": "대우건설",
+            "stock_code": "047040",
+            "capex_growth": 1.6694165770805895,
+            "revenue_growth": -0.23315623497767635,
+            "employee_growth": -0.0648737052516809,
+            "return_6m": 1.2535211267605635,
+            "orders_curr": 28,
+            "orders_prev": 22
+          },
+          {
+            "name": "삼성E&A",
+            "stock_code": "028050",
+            "capex_growth": 0.24534283855717498,
+            "revenue_growth": 4.982587323810153,
+            "employee_growth": -0.10334813802528187,
+            "return_6m": 0.6498993963782695,
+            "orders_curr": 18,
+            "orders_prev": 12
+          },
+          {
+            "name": "GS건설",
+            "stock_code": "006360",
+            "capex_growth": -0.45703410449685655,
+            "revenue_growth": -0.03214167662532419,
+            "employee_growth": -0.08881998905708555,
+            "return_6m": 0.19366952789699576,
+            "orders_curr": 26,
+            "orders_prev": 20
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "CLIMATE_ADAPTATION": {
+      "industry_name_ko": "기후적응 인프라",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 31.47,
+        "demand_validation_score": 61.16,
+        "innovation_talent_score": 42.38,
+        "structural_support_score": null,
+        "evidence_strength_score": 25.0,
+        "market_heat_score": 69.12,
+        "underrecognition_score": 30.88,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 29.21,
+        "boom_transition_12m_score": 40.1,
+        "core_industry_shift_24m_score": 40.1,
+        "lead_opportunity_score": 37.22,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "대우건설",
+            "stock_code": "047040",
+            "capex_growth": 1.6694165770805895,
+            "revenue_growth": -0.23315623497767635,
+            "employee_growth": -0.0648737052516809,
+            "return_6m": 1.2535211267605635,
+            "orders_curr": 28,
+            "orders_prev": 22
+          },
+          {
+            "name": "삼성E&A",
+            "stock_code": "028050",
+            "capex_growth": 0.24534283855717498,
+            "revenue_growth": 4.982587323810153,
+            "employee_growth": -0.10334813802528187,
+            "return_6m": 0.6498993963782695,
+            "orders_curr": 18,
+            "orders_prev": 12
+          },
+          {
+            "name": "현대건설",
+            "stock_code": "000720",
+            "capex_growth": -0.4006139119835843,
+            "revenue_growth": null,
+            "employee_growth": -0.034559955225968886,
+            "return_6m": -0.21442307692307694,
+            "orders_curr": 13,
+            "orders_prev": 7
+          },
+          {
+            "name": "GS건설",
+            "stock_code": "006360",
+            "capex_growth": -0.45703410449685655,
+            "revenue_growth": -0.03214167662532419,
+            "employee_growth": -0.08881998905708555,
+            "return_6m": 0.19366952789699576,
+            "orders_curr": 26,
+            "orders_prev": 20
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "LOGISTICS_AUTOMATION": {
+      "industry_name_ko": "물류 자동화",
+      "stage": "CAPITAL_VALIDATION",
+      "scores": {
+        "capital_flow_score": 94.31,
+        "demand_validation_score": 52.08,
+        "innovation_talent_score": 51.9,
+        "structural_support_score": null,
+        "evidence_strength_score": 27.5,
+        "market_heat_score": 29.43,
+        "underrecognition_score": 70.58,
+        "risk_penalty_score": null,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 70.93,
+        "boom_transition_12m_score": 60.67,
+        "core_industry_shift_24m_score": 60.67,
+        "lead_opportunity_score": 63.76,
+        "stage": "CAPITAL_VALIDATION",
+        "confidence_score": 70.08,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 2,
+        "companies": [
+          {
+            "name": "코윈테크",
+            "stock_code": "282880",
+            "capex_growth": 0.7104537690222972,
+            "revenue_growth": null,
+            "employee_growth": 0.07346938775510203,
+            "return_6m": -0.6054455445544554,
+            "orders_curr": 6,
+            "orders_prev": 3
+          },
+          {
+            "name": "에스에프에이",
+            "stock_code": "056190",
+            "capex_growth": null,
+            "revenue_growth": null,
+            "employee_growth": -0.03543307086614178,
+            "return_6m": -0.31825095057034225,
+            "orders_curr": 0,
+            "orders_prev": 2
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    },
+    "CONSTRUCTION_TECH": {
+      "industry_name_ko": "건설기술·모듈러",
+      "stage": "LATENT_ACCUMULATION",
+      "scores": {
+        "capital_flow_score": 31.47,
+        "demand_validation_score": 61.16,
+        "innovation_talent_score": 42.38,
+        "structural_support_score": null,
+        "evidence_strength_score": 25.0,
+        "market_heat_score": 69.12,
+        "underrecognition_score": 30.88,
+        "risk_penalty_score": 0.0,
+        "macro_fit_score": null,
+        "capital_inflow_6m_score": 29.21,
+        "boom_transition_12m_score": 40.1,
+        "core_industry_shift_24m_score": 40.1,
+        "lead_opportunity_score": 37.22,
+        "stage": "LATENT_ACCUMULATION",
+        "confidence_score": 78.02,
+        "data_quality": "ACCEPTABLE",
+        "is_probability": false
+      },
+      "evidence": {
+        "sample_company_count": 4,
+        "companies": [
+          {
+            "name": "대우건설",
+            "stock_code": "047040",
+            "capex_growth": 1.6694165770805895,
+            "revenue_growth": -0.23315623497767635,
+            "employee_growth": -0.0648737052516809,
+            "return_6m": 1.2535211267605635,
+            "orders_curr": 28,
+            "orders_prev": 22
+          },
+          {
+            "name": "삼성E&A",
+            "stock_code": "028050",
+            "capex_growth": 0.24534283855717498,
+            "revenue_growth": 4.982587323810153,
+            "employee_growth": -0.10334813802528187,
+            "return_6m": 0.6498993963782695,
+            "orders_curr": 18,
+            "orders_prev": 12
+          },
+          {
+            "name": "현대건설",
+            "stock_code": "000720",
+            "capex_growth": -0.4006139119835843,
+            "revenue_growth": null,
+            "employee_growth": -0.034559955225968886,
+            "return_6m": -0.21442307692307694,
+            "orders_curr": 13,
+            "orders_prev": 7
+          },
+          {
+            "name": "GS건설",
+            "stock_code": "006360",
+            "capex_growth": -0.45703410449685655,
+            "revenue_growth": -0.03214167662532419,
+            "employee_growth": -0.08881998905708555,
+            "return_6m": 0.19366952789699576,
+            "orders_curr": 26,
+            "orders_prev": 20
+          }
+        ],
+        "limitations": [
+          "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
+          "OpenDART 연차 재무·직원·공시와 보조 시장가격 신호만 반영합니다.",
+          "FRED 거시환경은 산업별 민감도 프로필로 반영됩니다.",
+          "KOSIS·ECOS 산업별 통계, 특허, 정부예산은 후속 매핑 단계에서 추가됩니다."
+        ]
+      },
+      "warnings": [
+        "대표기업 표본 기반 초기 신호이며 산업 전체 모집단을 완전히 대표하지 않습니다.",
+        "점수는 백테스트로 보정된 확률이 아닙니다.",
+        "ECOS·KOSIS 산업별 세부 통계는 아직 점수에 직접 매핑되지 않았습니다."
+      ]
+    }
+  }
 }

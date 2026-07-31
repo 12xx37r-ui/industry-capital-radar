@@ -1,18 +1,82 @@
 {
-  "generated_at": "2026-07-31T18:35:12.427066+00:00",
+  "generated_at": "2026-07-31T18:40:43.501940+00:00",
   "engine_version": "0.3.0",
-  "run_mode": "manual",
-  "run_status": "NO_DATA",
-  "rows_loaded": 0,
-  "rows_scored": 0,
-  "acceptable_quality_rows": 0,
+  "run_mode": "monthly",
+  "run_status": "PARTIAL_SUCCESS",
+  "rows_loaded": 23,
+  "rows_scored": 23,
+  "acceptable_quality_rows": 23,
   "unknown_industries": [],
-  "quality_gate_passed": false,
+  "quality_gate_passed": true,
   "collection": {
-    "skipped": true,
+    "companies_collected": 56,
+    "industries_normalized": 23,
+    "source_status": {
+      "ecos": {
+        "status": "CONNECTED_NOT_MAPPED",
+        "checked_at": "2026-07-31T18:39:21.438918+00:00",
+        "response_time_ms": 590,
+        "table_count": 834,
+        "mapped_to_score": false,
+        "needs_attention": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API"
+      },
+      "kosis": {
+        "status": "CONNECTED_NOT_MAPPED",
+        "checked_at": "2026-07-31T18:39:22.028983+00:00",
+        "response_time_ms": 779,
+        "root_items": 11,
+        "mapped_to_score": false,
+        "needs_attention": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API"
+      },
+      "fred": {
+        "status": "MISSING_KEY",
+        "checked_at": "2026-07-31T18:39:22.808649+00:00",
+        "mapped_to_score": false,
+        "needs_attention": true,
+        "key_expiry_date": null,
+        "renewal_status": "UNKNOWN",
+        "series": {},
+        "regime": {}
+      },
+      "opendart": {
+        "status": "CONNECTED",
+        "checked_at": "2026-07-31T18:40:42.367860+00:00",
+        "response_time_ms": 79559,
+        "listed_corporations": 3981,
+        "companies_collected": 56,
+        "mapped_to_score": true,
+        "needs_attention": false,
+        "refresh_mode": "FULL",
+        "cache_used": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API"
+      },
+      "market_proxy": {
+        "status": "CONNECTED",
+        "checked_at": "2026-07-31T18:40:43.481633+00:00",
+        "response_time_ms": 1114,
+        "successful_symbols": 56,
+        "total_symbols": 56,
+        "official": false,
+        "mapped_to_score": true,
+        "needs_attention": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_APPLICABLE"
+      }
+    },
     "errors": [],
     "error_count": 0,
-    "source_status": {}
+    "elapsed_seconds": 82.05,
+    "cache": {
+      "used": false,
+      "previous_generated_at": null,
+      "previous_age_days": null,
+      "dart_refresh": "FULL"
+    }
   },
-  "message": "실데이터 수집 또는 정규화 결과가 없습니다."
+  "message": "한국 대표기업·시장·FRED 거시환경 기반 실험 점수 산출"
 }

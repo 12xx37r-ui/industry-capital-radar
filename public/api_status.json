@@ -1,9 +1,65 @@
 {
-  "generated_at": "2026-07-31T18:35:12.427066+00:00",
+  "generated_at": "2026-07-31T18:40:43.501940+00:00",
   "engine_version": "0.3.0",
-  "connected_sources": 0,
-  "total_sources": 0,
-  "needs_attention": [],
-  "sources": {},
+  "connected_sources": 4,
+  "total_sources": 5,
+  "needs_attention": [
+    "fred"
+  ],
+  "sources": {
+    "ecos": {
+      "status": "CONNECTED_NOT_MAPPED",
+      "checked_at": "2026-07-31T18:39:21.438918+00:00",
+      "response_time_ms": 590,
+      "table_count": 834,
+      "mapped_to_score": false,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API"
+    },
+    "kosis": {
+      "status": "CONNECTED_NOT_MAPPED",
+      "checked_at": "2026-07-31T18:39:22.028983+00:00",
+      "response_time_ms": 779,
+      "root_items": 11,
+      "mapped_to_score": false,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API"
+    },
+    "fred": {
+      "status": "MISSING_KEY",
+      "checked_at": "2026-07-31T18:39:22.808649+00:00",
+      "mapped_to_score": false,
+      "needs_attention": true,
+      "key_expiry_date": null,
+      "renewal_status": "UNKNOWN"
+    },
+    "opendart": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T18:40:42.367860+00:00",
+      "response_time_ms": 79559,
+      "listed_corporations": 3981,
+      "companies_collected": 56,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "refresh_mode": "FULL",
+      "cache_used": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API"
+    },
+    "market_proxy": {
+      "status": "CONNECTED",
+      "checked_at": "2026-07-31T18:40:43.481633+00:00",
+      "response_time_ms": 1114,
+      "successful_symbols": 56,
+      "total_symbols": 56,
+      "official": false,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_APPLICABLE"
+    }
+  },
   "renewal_note": "API가 만료일을 제공하지 않으면 갱신일은 UNKNOWN 또는 NOT_EXPOSED_BY_API로 표시합니다."
 }
