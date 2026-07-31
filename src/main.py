@@ -11,7 +11,7 @@ from .pipeline import collect_live
 from .scoring import score_industry
 
 ROOT = Path(__file__).resolve().parents[1]
-ENGINE_VERSION = "0.3.0"
+ENGINE_VERSION = "0.3.1"
 
 
 def _to_float(value: str | None) -> float | None:

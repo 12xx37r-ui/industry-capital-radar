@@ -1,66 +1,9 @@
 {
-  "generated_at": "2026-07-31T19:00:56.412490+00:00",
+  "generated_at": "2026-07-31T18:35:12.427066+00:00",
   "engine_version": "0.3.0",
-  "connected_sources": 4,
-  "total_sources": 5,
-  "needs_attention": [
-    "kosis"
-  ],
-  "sources": {
-    "ecos": {
-      "status": "CONNECTED_NOT_MAPPED",
-      "checked_at": "2026-07-31T18:58:30.218035+00:00",
-      "response_time_ms": 536,
-      "table_count": 834,
-      "mapped_to_score": false,
-      "needs_attention": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API"
-    },
-    "kosis": {
-      "status": "ERROR",
-      "message": "GET failed: https://kosis.kr/openapi/statisticsList.do?method=getList&apiKey=MmI0YmZkNGUxMjczNTU5YTMwYjg5ZDBkNjM5M2M1MjA%3D&vwCd=MT_ZTITLE&parentListId=A&format=json&jsonVD=Y: <urlopen error timed out>",
-      "mapped_to_score": false,
-      "needs_attention": true,
-      "checked_at": "2026-07-31T18:59:32.855675+00:00"
-    },
-    "fred": {
-      "status": "CONNECTED",
-      "checked_at": "2026-07-31T18:59:32.856041+00:00",
-      "response_time_ms": 2671,
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API",
-      "successful_series": 12,
-      "total_series": 12,
-      "errors": []
-    },
-    "opendart": {
-      "status": "CONNECTED",
-      "checked_at": "2026-07-31T19:00:55.669499+00:00",
-      "response_time_ms": 80142,
-      "listed_corporations": 3981,
-      "companies_collected": 56,
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "refresh_mode": "FULL",
-      "cache_used": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API"
-    },
-    "market_proxy": {
-      "status": "CONNECTED",
-      "checked_at": "2026-07-31T19:00:56.387741+00:00",
-      "response_time_ms": 718,
-      "successful_symbols": 56,
-      "total_symbols": 56,
-      "official": false,
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_APPLICABLE"
-    }
-  },
+  "connected_sources": 0,
+  "total_sources": 0,
+  "needs_attention": [],
+  "sources": {},
   "renewal_note": "API가 만료일을 제공하지 않으면 갱신일은 UNKNOWN 또는 NOT_EXPOSED_BY_API로 표시합니다."
 }
