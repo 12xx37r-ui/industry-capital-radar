@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-31T19:00:56.393230+00:00",
+  "generated_at": "2026-07-31T19:14:58.899965+00:00",
   "status": {
     "status": "CONNECTED",
-    "checked_at": "2026-07-31T18:59:32.856041+00:00",
-    "response_time_ms": 2671,
+    "checked_at": "2026-07-31T19:13:36.409595+00:00",
+    "response_time_ms": 3173,
     "mapped_to_score": true,
     "needs_attention": false,
     "key_expiry_date": null,
