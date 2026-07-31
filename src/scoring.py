@@ -1,18 +1,35 @@
 from __future__ import annotations
 
-from typing import Mapping
+from typing import Any, Mapping
 
 from .quality import clamp, quality_label, quality_score
 
 
-def _weighted(row: Mapping[str, float], weights: Mapping[str, float]) -> float:
-    total = sum(float(v) for v in weights.values())
+def _valid(value: Any) -> bool:
+    return isinstance(value, (int, float))
+
+
+def _weighted(row: Mapping[str, Any], weights: Mapping[str, float]) -> float | None:
+    pairs = [(float(row[k]), float(w)) for k, w in weights.items() if _valid(row.get(k))]
+    total = sum(w for _, w in pairs)
     if total <= 0:
-        raise ValueError("weight total must be positive")
-    return clamp(sum(clamp(row.get(k, 0.0)) * float(w) for k, w in weights.items()) / total)
+        return None
+    return clamp(sum(clamp(v) * w for v, w in pairs) / total)
 
 
-def classify_stage(boom_transition: float, market_heat: float, risk_penalty: float) -> str:
+def _blend_available(values: list[tuple[float | None, float]]) -> float | None:
+    pairs = [(float(v), float(w)) for v, w in values if _valid(v)]
+    total = sum(w for _, w in pairs)
+    if total <= 0:
+        return None
+    return clamp(sum(v * w for v, w in pairs) / total)
+
+
+def classify_stage(boom_transition: float | None, market_heat: float | None, risk_penalty: float | None) -> str:
+    if boom_transition is None:
+        return "INSUFFICIENT_DATA"
+    market_heat = 50.0 if market_heat is None else market_heat
+    risk_penalty = 0.0 if risk_penalty is None else risk_penalty
     if market_heat >= 85 and risk_penalty >= 60:
         return "OVERHEAT_OR_OVERBUILD"
     if boom_transition < 35:
@@ -28,7 +45,11 @@ def classify_stage(boom_transition: float, market_heat: float, risk_penalty: flo
     return "PUBLIC_BOOM"
 
 
-def score_industry(row: dict[str, float], cfg: dict) -> dict:
+def _round(value: float | None) -> float | None:
+    return round(value, 2) if value is not None else None
+
+
+def score_industry(row: dict[str, Any], cfg: dict) -> dict[str, Any]:
     capital_flow = _weighted(row, cfg["capital_flow"])
     demand_validation = _weighted(row, cfg["demand_validation"])
     innovation_talent = _weighted(row, cfg["innovation_talent"])
@@ -37,7 +58,7 @@ def score_industry(row: dict[str, float], cfg: dict) -> dict:
     market_heat = _weighted(row, cfg["market_heat"])
     risk_penalty = _weighted(row, cfg["risk_penalty"])
 
-    derived = dict(row)
+    derived: dict[str, Any] = dict(row)
     derived.update({
         "capital_flow_score": capital_flow,
         "demand_validation_score": demand_validation,
@@ -46,32 +67,36 @@ def score_industry(row: dict[str, float], cfg: dict) -> dict:
         "evidence_strength_score": evidence_strength,
     })
     boom_transition = _weighted(derived, cfg["boom_transition"])
-    underrecognition = clamp(100.0 - market_heat)
+    underrecognition = clamp(100.0 - market_heat) if market_heat is not None else None
 
     lead_cfg = cfg["lead_opportunity"]
-    lead_opportunity = clamp(
-        boom_transition * lead_cfg["boom_transition_score"]
-        + underrecognition * lead_cfg["underrecognition_score"]
-        + clamp(row.get("macro_fit", 0.0)) * lead_cfg["macro_fit"]
-        - risk_penalty * lead_cfg["risk_penalty_subtract"]
-    )
+    positive = _blend_available([
+        (boom_transition, lead_cfg["boom_transition_score"]),
+        (underrecognition, lead_cfg["underrecognition_score"]),
+        (row.get("macro_fit"), lead_cfg["macro_fit"]),
+    ])
+    lead_opportunity = None
+    if positive is not None:
+        lead_opportunity = positive
+        if risk_penalty is not None:
+            lead_opportunity = clamp(lead_opportunity - risk_penalty * lead_cfg["risk_penalty_subtract"])
 
     q_score = quality_score(row)
     return {
-        "capital_flow_score": round(capital_flow, 2),
-        "demand_validation_score": round(demand_validation, 2),
-        "innovation_talent_score": round(innovation_talent, 2),
-        "structural_support_score": round(structural_support, 2),
-        "evidence_strength_score": round(evidence_strength, 2),
-        "market_heat_score": round(market_heat, 2),
-        "underrecognition_score": round(underrecognition, 2),
-        "risk_penalty_score": round(risk_penalty, 2),
-        "capital_inflow_6m_score": round(0.65 * capital_flow + 0.35 * evidence_strength, 2),
-        "boom_transition_12m_score": round(boom_transition, 2),
-        "core_industry_shift_24m_score": round(0.60 * boom_transition + 0.40 * structural_support, 2),
-        "lead_opportunity_score": round(lead_opportunity, 2),
+        "capital_flow_score": _round(capital_flow),
+        "demand_validation_score": _round(demand_validation),
+        "innovation_talent_score": _round(innovation_talent),
+        "structural_support_score": _round(structural_support),
+        "evidence_strength_score": _round(evidence_strength),
+        "market_heat_score": _round(market_heat),
+        "underrecognition_score": _round(underrecognition),
+        "risk_penalty_score": _round(risk_penalty),
+        "capital_inflow_6m_score": _round(_blend_available([(capital_flow, 0.65), (evidence_strength, 0.35)])),
+        "boom_transition_12m_score": _round(boom_transition),
+        "core_industry_shift_24m_score": _round(_blend_available([(boom_transition, 0.60), (structural_support, 0.40)])),
+        "lead_opportunity_score": _round(lead_opportunity),
         "stage": classify_stage(boom_transition, market_heat, risk_penalty),
         "confidence_score": q_score,
         "data_quality": quality_label(q_score),
-        "is_probability": False
+        "is_probability": False,
     }

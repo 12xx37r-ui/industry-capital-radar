@@ -1,14 +1,19 @@
-# Industry Capital Radar v0.1
+# Industry Capital Radar v0.2
 
-아직 대중적 관심은 낮지만 실물자금·설비투자·수주·R&D·고용·정부예산·공급병목이 지속·가속·확산되는 산업을 조기에 탐지하기 위한 GitHub 엔진 골격입니다.
+대중적 관심이 본격화되기 전, 실물자금·설비투자·수주·고용이 가속되는 산업을 탐지하는 GitHub 엔진입니다.
 
-## 고정 원칙
+## V0.2 실제 연결
 
-- GitHub/Python: 수집, 정규화, 품질검사, 계산, 예측점수, JSON 출력
-- Google Apps Script: JSON 조회와 시각화만 수행
-- 대시보드에서 재계산하거나 임의 보정하지 않음
-- 초기 출력은 `점수`이며 검증되지 않은 수치를 `확률`이라고 부르지 않음
-- 데이터가 없으면 0점으로 채우지 않고 `NO_DATA`로 표시
+- OpenDART: 상장사 고유번호, 최근 3개 사업연도 전체 재무제표, 직원현황, 최근/직전 1년 수주·시설투자 공시 건수
+- 시장 보조지표: 대표기업 6개월 수익률과 거래량 가속도(비공식 보조 데이터, 실패 시 자동 제외)
+- ECOS/KOSIS: 인증키 연결상태 확인. 산업별 통계표 매핑은 V0.3에서 점수에 반영
+
+## 중요한 제한
+
+- 현재는 한국 대표기업 표본 기반 초기 점수다.
+- 산업 전체 모집단을 대표하지 않는다.
+- 0~100 점수이며 백테스트로 보정된 확률이 아니다.
+- 누락 지표를 0점으로 처리하지 않고 사용 가능한 지표끼리 가중치를 재정규화한다.
 
 ## 실행
 
@@ -22,7 +27,6 @@ python -m src.main --mode manual
 - `public/industry_radar.json`
 - `public/industry_detail.json`
 - `public/engine_status.json`
-
-## 현재 상태
-
-v0.1은 전체 구조, 산업 분류, 점수 엔진, 품질게이트, JSON 계약, GAS 표시 골격까지 포함합니다. 실제 예측을 위해서는 공식 데이터 소스별 지표 매핑과 과거 데이터 적재가 필요합니다.
+- `data/normalized/industry_features.csv`
+- `data/snapshots/company_metrics.json`
+- `data/evidence/industry_evidence.json`

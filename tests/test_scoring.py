@@ -44,6 +44,17 @@ class ScoringTests(unittest.TestCase):
         hot = score_industry({**base,"market_attention":95,"price_momentum":95,"valuation_heat":95}, CFG)
         self.assertGreater(cool["lead_opportunity_score"], hot["lead_opportunity_score"])
 
+    def test_missing_features_are_not_zero(self):
+        row = {
+            "capital_velocity":80,"capital_acceleration":70,"orders_velocity":65,
+            "breadth":75,"persistence":70,"market_attention":30,"price_momentum":35,
+            "source_coverage":45,"freshness_score":90,"source_reliability":90,
+        }
+        out = score_industry(row, CFG)
+        self.assertIsNotNone(out["boom_transition_12m_score"])
+        self.assertGreater(out["capital_flow_score"], 70)
+        self.assertIsNone(out["innovation_talent_score"])
+
 
 if __name__ == "__main__":
     unittest.main()

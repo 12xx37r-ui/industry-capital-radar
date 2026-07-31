@@ -1,0 +1,74 @@
+{
+  "version": "0.2",
+  "note": "V0.2 한국 상장 대표기업 기반 초기 표본. 산업 전체 모집단이 아니며 이후 확대한다.",
+  "companies": [
+    {"stock_code":"005930","name":"삼성전자","yahoo_symbol":"005930.KS","industries":["AI_COMPUTE","AI_DATA_INFRA"]},
+    {"stock_code":"000660","name":"SK하이닉스","yahoo_symbol":"000660.KS","industries":["AI_COMPUTE"]},
+    {"stock_code":"042700","name":"한미반도체","yahoo_symbol":"042700.KS","industries":["AI_COMPUTE","ADVANCED_PACKAGING"]},
+
+    {"stock_code":"403870","name":"HPSP","yahoo_symbol":"403870.KQ","industries":["SEMICONDUCTOR_EQUIPMENT"]},
+    {"stock_code":"036930","name":"주성엔지니어링","yahoo_symbol":"036930.KQ","industries":["SEMICONDUCTOR_EQUIPMENT"]},
+    {"stock_code":"039030","name":"이오테크닉스","yahoo_symbol":"039030.KQ","industries":["SEMICONDUCTOR_EQUIPMENT"]},
+    {"stock_code":"089030","name":"테크윙","yahoo_symbol":"089030.KQ","industries":["ADVANCED_PACKAGING"]},
+    {"stock_code":"095340","name":"ISC","yahoo_symbol":"095340.KQ","industries":["ADVANCED_PACKAGING"]},
+    {"stock_code":"058470","name":"리노공업","yahoo_symbol":"058470.KQ","industries":["ADVANCED_PACKAGING"]},
+
+    {"stock_code":"267260","name":"HD현대일렉트릭","yahoo_symbol":"267260.KS","industries":["DATACENTER_POWER_COOLING","POWER_GRID"]},
+    {"stock_code":"010120","name":"LS ELECTRIC","yahoo_symbol":"010120.KS","industries":["DATACENTER_POWER_COOLING","POWER_GRID","INDUSTRIAL_AUTOMATION"]},
+    {"stock_code":"298040","name":"효성중공업","yahoo_symbol":"298040.KS","industries":["POWER_GRID"]},
+    {"stock_code":"103590","name":"일진전기","yahoo_symbol":"103590.KS","industries":["POWER_GRID"]},
+    {"stock_code":"083450","name":"GST","yahoo_symbol":"083450.KQ","industries":["DATACENTER_POWER_COOLING"]},
+    {"stock_code":"053080","name":"케이엔솔","yahoo_symbol":"053080.KQ","industries":["DATACENTER_POWER_COOLING"]},
+
+    {"stock_code":"034020","name":"두산에너빌리티","yahoo_symbol":"034020.KS","industries":["NUCLEAR_SMR"]},
+    {"stock_code":"052690","name":"한전기술","yahoo_symbol":"052690.KS","industries":["NUCLEAR_SMR"]},
+    {"stock_code":"051600","name":"한전KPS","yahoo_symbol":"051600.KS","industries":["NUCLEAR_SMR"]},
+    {"stock_code":"000720","name":"현대건설","yahoo_symbol":"000720.KS","industries":["NUCLEAR_SMR","CONSTRUCTION_TECH","CLIMATE_ADAPTATION"]},
+
+    {"stock_code":"373220","name":"LG에너지솔루션","yahoo_symbol":"373220.KS","industries":["ENERGY_STORAGE"]},
+    {"stock_code":"006400","name":"삼성SDI","yahoo_symbol":"006400.KS","industries":["ENERGY_STORAGE"]},
+    {"stock_code":"247540","name":"에코프로비엠","yahoo_symbol":"247540.KQ","industries":["ENERGY_STORAGE"]},
+    {"stock_code":"003670","name":"포스코퓨처엠","yahoo_symbol":"003670.KS","industries":["ENERGY_STORAGE","CRITICAL_MINERALS","ADVANCED_MATERIALS"]},
+
+    {"stock_code":"277810","name":"레인보우로보틱스","yahoo_symbol":"277810.KQ","industries":["ROBOTICS"]},
+    {"stock_code":"454910","name":"두산로보틱스","yahoo_symbol":"454910.KS","industries":["ROBOTICS"]},
+    {"stock_code":"108490","name":"로보티즈","yahoo_symbol":"108490.KQ","industries":["ROBOTICS"]},
+    {"stock_code":"090360","name":"로보스타","yahoo_symbol":"090360.KQ","industries":["ROBOTICS"]},
+    {"stock_code":"056190","name":"에스에프에이","yahoo_symbol":"056190.KQ","industries":["INDUSTRIAL_AUTOMATION","LOGISTICS_AUTOMATION"]},
+    {"stock_code":"282880","name":"코윈테크","yahoo_symbol":"282880.KQ","industries":["INDUSTRIAL_AUTOMATION","LOGISTICS_AUTOMATION"]},
+
+    {"stock_code":"012330","name":"현대모비스","yahoo_symbol":"012330.KS","industries":["AUTONOMOUS_SENSORS"]},
+    {"stock_code":"204320","name":"HL만도","yahoo_symbol":"204320.KS","industries":["AUTONOMOUS_SENSORS"]},
+    {"stock_code":"011070","name":"LG이노텍","yahoo_symbol":"011070.KS","industries":["AUTONOMOUS_SENSORS","ADVANCED_MATERIALS"]},
+
+    {"stock_code":"047810","name":"한국항공우주","yahoo_symbol":"047810.KS","industries":["SPACE_SATELLITE","DEFENSE_DRONES"]},
+    {"stock_code":"099320","name":"쎄트렉아이","yahoo_symbol":"099320.KQ","industries":["SPACE_SATELLITE"]},
+    {"stock_code":"211270","name":"AP위성","yahoo_symbol":"211270.KQ","industries":["SPACE_SATELLITE"]},
+    {"stock_code":"272210","name":"한화시스템","yahoo_symbol":"272210.KS","industries":["SPACE_SATELLITE","DEFENSE_DRONES"]},
+    {"stock_code":"012450","name":"한화에어로스페이스","yahoo_symbol":"012450.KS","industries":["DEFENSE_DRONES"]},
+    {"stock_code":"079550","name":"LIG넥스원","yahoo_symbol":"079550.KS","industries":["DEFENSE_DRONES"]},
+
+    {"stock_code":"053800","name":"안랩","yahoo_symbol":"053800.KQ","industries":["CYBERSECURITY"]},
+    {"stock_code":"136540","name":"윈스","yahoo_symbol":"136540.KQ","industries":["CYBERSECURITY"]},
+    {"stock_code":"203650","name":"드림시큐리티","yahoo_symbol":"203650.KQ","industries":["CYBERSECURITY","QUANTUM_TECH"]},
+    {"stock_code":"017670","name":"SK텔레콤","yahoo_symbol":"017670.KS","industries":["QUANTUM_TECH","AI_DATA_INFRA"]},
+    {"stock_code":"030200","name":"KT","yahoo_symbol":"030200.KS","industries":["QUANTUM_TECH","AI_DATA_INFRA"]},
+
+    {"stock_code":"207940","name":"삼성바이오로직스","yahoo_symbol":"207940.KS","industries":["BIO_MANUFACTURING"]},
+    {"stock_code":"068270","name":"셀트리온","yahoo_symbol":"068270.KS","industries":["BIO_MANUFACTURING"]},
+    {"stock_code":"302440","name":"SK바이오사이언스","yahoo_symbol":"302440.KS","industries":["BIO_MANUFACTURING"]},
+    {"stock_code":"000100","name":"유한양행","yahoo_symbol":"000100.KS","industries":["BIO_MANUFACTURING"]},
+
+    {"stock_code":"214150","name":"클래시스","yahoo_symbol":"214150.KQ","industries":["MEDICAL_DEVICES"]},
+    {"stock_code":"100120","name":"뷰웍스","yahoo_symbol":"100120.KQ","industries":["MEDICAL_DEVICES"]},
+    {"stock_code":"086900","name":"메디톡스","yahoo_symbol":"086900.KQ","industries":["MEDICAL_DEVICES"]},
+
+    {"stock_code":"005490","name":"POSCO홀딩스","yahoo_symbol":"005490.KS","industries":["CRITICAL_MINERALS","ADVANCED_MATERIALS"]},
+    {"stock_code":"047050","name":"포스코인터내셔널","yahoo_symbol":"047050.KS","industries":["CRITICAL_MINERALS"]},
+    {"stock_code":"336370","name":"솔루스첨단소재","yahoo_symbol":"336370.KS","industries":["ADVANCED_MATERIALS"]},
+
+    {"stock_code":"028050","name":"삼성E&A","yahoo_symbol":"028050.KS","industries":["WATER_INFRA","CLIMATE_ADAPTATION","CONSTRUCTION_TECH"]},
+    {"stock_code":"006360","name":"GS건설","yahoo_symbol":"006360.KS","industries":["WATER_INFRA","CLIMATE_ADAPTATION","CONSTRUCTION_TECH"]},
+    {"stock_code":"047040","name":"대우건설","yahoo_symbol":"047040.KS","industries":["WATER_INFRA","CLIMATE_ADAPTATION","CONSTRUCTION_TECH"]}
+  ]
+}
