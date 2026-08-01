@@ -15,7 +15,7 @@ def history(symbol: str, days: int = 420) -> list[dict[str, float]]:
     payload = get_json(f"{BASE}/{symbol}", {
         "period1": int(start.timestamp()), "period2": int(now.timestamp()),
         "interval": "1d", "events": "history", "includeAdjustedClose": "true",
-    }, headers={"User-Agent": "Mozilla/5.0 industry-capital-radar/0.4.0"}, retries=1)
+    }, headers={"User-Agent": "Mozilla/5.0 industry-capital-radar/0.5.0"}, retries=1)
     result = ((payload.get("chart") or {}).get("result") or [None])[0]
     if not result:
         return []

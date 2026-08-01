@@ -4,6 +4,7 @@ from __future__ import annotations
 import math
 import os
 import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from typing import Any
 
@@ -54,19 +55,62 @@ def item_list(stat_code: str, limit: int = 1000) -> list[dict[str, Any]]:
     return _rows(payload, "StatisticItemList")
 
 
-def observations(stat_code: str, cycle: str, start: str, end: str, item_code: str, limit: int = 1000) -> list[dict[str, Any]]:
-    url = f"{BASE}/StatisticSearch/{_key()}/json/kr/1/{limit}/{stat_code}/{cycle}/{start}/{end}/{item_code}"
-    payload = get_json(url, timeout=45, retries=2)
-    raw = _rows(payload, "StatisticSearch")
-    rows: list[dict[str, Any]] = []
+def _aggregate_duplicate_periods(raw: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    """Collapse multi-dimensional ECOS rows into one observation per period.
+
+    Some ECOS tables return many regional rows for the same TIME when only the
+    first item code is supplied. V0.4 compared adjacent regional rows and could
+    create impossible growth rates. V0.5 prefers an explicit total row; when no
+    total exists it sums the period's components.
+    """
+    grouped: dict[str, list[tuple[float, str]]] = defaultdict(list)
     for item in raw:
         try:
             value = float(str(item.get("DATA_VALUE", "")).replace(",", ""))
         except (TypeError, ValueError):
             continue
-        rows.append({"time": str(item.get("TIME", "")), "value": value})
+        period = str(item.get("TIME", ""))
+        if not period:
+            continue
+        names = " ".join(
+            str(item.get(k, ""))
+            for k in (
+                "ITEM_NAME1", "ITEM_NAME2", "ITEM_NAME3", "ITEM_NAME4",
+                "ITEM_NAME5", "ITEM_NAME6", "ITEM_NAME7", "ITEM_NAME8",
+            )
+        )
+        grouped[period].append((value, names))
+
+    rows: list[dict[str, Any]] = []
+    duplicate_periods = 0
+    total_tokens = ("전국", "총계", "합계", "전체")
+    for period, values in grouped.items():
+        if len(values) > 1:
+            duplicate_periods += 1
+        explicit = [v for v, name in values if any(token in name for token in total_tokens)]
+        if explicit:
+            value = explicit[0]
+        elif len(values) == 1:
+            value = values[0][0]
+        else:
+            value = sum(v for v, _ in values)
+        rows.append({"time": period, "value": value})
     rows.sort(key=lambda x: x["time"])
-    return rows
+    return rows, duplicate_periods
+
+
+def observations(
+    stat_code: str,
+    cycle: str,
+    start: str,
+    end: str,
+    item_code: str,
+    limit: int = 1000,
+) -> tuple[list[dict[str, Any]], int]:
+    url = f"{BASE}/StatisticSearch/{_key()}/json/kr/1/{limit}/{stat_code}/{cycle}/{start}/{end}/{item_code}"
+    payload = get_json(url, timeout=45, retries=2)
+    raw = _rows(payload, "StatisticSearch")
+    return _aggregate_duplicate_periods(raw)
 
 
 def _text_score(text: str, keywords: list[str]) -> int:
@@ -133,19 +177,28 @@ def _pct(current: float, previous: float) -> float | None:
     return current / abs(previous) - 1.0
 
 
+def _robust_change(value: float | None) -> float | None:
+    if value is None:
+        return None
+    # Retain direction but prevent one malformed series from saturating all industries.
+    return max(-2.0, min(2.0, float(value)))
+
+
 def series_signal(rows: list[dict[str, Any]], direction: str = "positive") -> dict[str, Any]:
     if len(rows) < 3:
         return {"score": None, "growth": None, "acceleration": None, "records": len(rows)}
     values = [float(x["value"]) for x in rows]
     horizon = min(6, max(1, len(values) // 3))
     prior_horizon = min(horizon, max(1, len(values) - horizon - 1))
-    growth = _pct(values[-1], values[-1 - horizon])
-    previous_growth = None
+    growth_raw = _pct(values[-1], values[-1 - horizon])
+    previous_growth_raw = None
     if len(values) > horizon + prior_horizon:
-        previous_growth = _pct(values[-1 - horizon], values[-1 - horizon - prior_horizon])
+        previous_growth_raw = _pct(values[-1 - horizon], values[-1 - horizon - prior_horizon])
+    growth = _robust_change(growth_raw)
+    previous_growth = _robust_change(previous_growth_raw)
     acceleration = None if growth is None or previous_growth is None else growth - previous_growth
     sign = -1.0 if direction == "negative" else 1.0
-    parts = []
+    parts: list[tuple[float, float]] = []
     if growth is not None:
         parts.append((50 + 50 * math.tanh(sign * 8.0 * growth), 0.65))
     if acceleration is not None:
@@ -154,11 +207,12 @@ def series_signal(rows: list[dict[str, Any]], direction: str = "positive") -> di
     score = None if not parts else clamp(sum(v * w for v, w in parts) / total)
     return {
         "score": round(score, 2) if score is not None else None,
-        "growth": growth,
-        "acceleration": acceleration,
+        "growth": growth_raw,
+        "acceleration": None if growth_raw is None or previous_growth_raw is None else growth_raw - previous_growth_raw,
         "records": len(rows),
         "latest_time": rows[-1]["time"],
         "latest_value": rows[-1]["value"],
+        "change_winsorized": growth_raw is not None and abs(growth_raw) > 2.0,
     }
 
 
@@ -168,7 +222,11 @@ def _weighted(values: list[tuple[float | None, float]]) -> float | None:
     return None if total <= 0 else round(clamp(sum(v * w for v, w in pairs) / total), 2)
 
 
-def map_industries(component_scores: dict[str, float | None], sensitivity_cfg: dict[str, Any], industry_ids: list[str]) -> dict[str, float | None]:
+def map_industries(
+    component_scores: dict[str, float | None],
+    sensitivity_cfg: dict[str, Any],
+    industry_ids: list[str],
+) -> dict[str, float | None]:
     profiles = sensitivity_cfg.get("profiles") or {}
     assignments = sensitivity_cfg.get("industry_profiles") or {}
     default_name = sensitivity_cfg.get("default", "balanced")
@@ -201,6 +259,7 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
 
     signals: dict[str, Any] = {}
     errors: list[str] = []
+    warnings: list[str] = []
     for signal_id, cfg in ((series_cfg.get("ecos") or {}).get("signals") or {}).items():
         try:
             table = discover_table(tables, list(cfg.get("table_keywords") or []))
@@ -214,8 +273,10 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
             cycle = str(item.get("CYCLE") or table.get("CYCLE") or "M")
             item_code = str(item.get("ITEM_CODE", ""))
             start, end = _date_window(cycle, str(item.get("END_TIME", "")))
-            rows = observations(stat_code, cycle, start, end, item_code)
+            rows, duplicate_periods = observations(stat_code, cycle, start, end, item_code)
             metric = series_signal(rows, str(cfg.get("direction", "positive")))
+            if duplicate_periods:
+                warnings.append(f"{signal_id}: {duplicate_periods}개 기간의 다중 차원을 기간별로 집계")
             signals[signal_id] = {
                 "status": "CONNECTED" if metric.get("score") is not None else "NO_DATA",
                 "table_code": stat_code,
@@ -223,6 +284,7 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
                 "item_code": item_code,
                 "item_name": item.get("ITEM_NAME"),
                 "cycle": cycle,
+                "duplicate_periods_aggregated": duplicate_periods,
                 **metric,
             }
         except Exception as exc:
@@ -247,6 +309,7 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
         "signals": signals,
         "industry_scores": industry_scores,
         "errors": errors,
+        "warnings": warnings,
     }
 
 

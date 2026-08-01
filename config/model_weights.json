@@ -1,27 +1,79 @@
 {
-  "version": "0.4-provisional",
-  "warning": "워크포워드 검증 전 임시 가중치이며 확률이 아니다.",
-  "capital_flow": {"capital_level":0.20,"capital_velocity":0.30,"capital_acceleration":0.50},
-  "demand_validation": {"orders_velocity":0.40,"backlog_acceleration":0.30,"capacity_tightness":0.30},
-  "innovation_talent": {"hiring_velocity":0.60,"innovation_velocity":0.40},
-  "structural_support": {"official_activity":0.55,"macro_fit":0.45},
-  "evidence_strength": {"breadth":0.55,"persistence":0.45},
-  "supply_chain_confirmation": {"supply_chain_spillover":1.00},
-  "market_heat": {"market_attention":0.25,"price_momentum":0.35,"valuation_heat":0.40},
-  "risk_penalty": {"supply_overbuild_risk":0.65,"policy_dependency_risk":0.35},
+  "version": "0.5-provisional",
+  "warning": "워크포워드 검증 전 실험 가중치다. pre_boom_pattern_score는 보정된 확률이 아니다.",
+  "capital_flow": {
+    "capital_level": 0.15,
+    "capital_velocity": 0.30,
+    "capital_acceleration": 0.55
+  },
+  "demand_validation": {
+    "orders_velocity": 0.45,
+    "backlog_acceleration": 0.25,
+    "capacity_tightness": 0.30
+  },
+  "innovation_talent": {
+    "hiring_velocity": 0.60,
+    "innovation_velocity": 0.40
+  },
+  "structural_support": {
+    "official_activity": 0.60,
+    "macro_fit": 0.40
+  },
+  "evidence_strength": {
+    "breadth": 0.55,
+    "persistence": 0.45
+  },
+  "supply_chain_confirmation": {
+    "supply_chain_spillover": 0.75,
+    "supply_chain_breadth": 0.25
+  },
+  "market_heat": {
+    "market_attention": 0.30,
+    "price_momentum": 0.45,
+    "valuation_heat": 0.25
+  },
+  "risk_penalty": {
+    "supply_overbuild_risk": 0.70,
+    "policy_dependency_risk": 0.30
+  },
+  "capital_acceleration": {
+    "capital_acceleration": 0.45,
+    "capital_velocity": 0.25,
+    "orders_velocity": 0.15,
+    "official_activity": 0.15
+  },
+  "real_economy_confirmation": {
+    "demand_validation_score": 0.35,
+    "evidence_strength_score": 0.25,
+    "official_activity_score": 0.20,
+    "supply_chain_confirmation_score": 0.20
+  },
   "boom_transition": {
-    "capital_flow_score":0.25,
-    "demand_validation_score":0.20,
-    "innovation_talent_score":0.10,
-    "structural_support_score":0.15,
-    "evidence_strength_score":0.15,
-    "supply_chain_confirmation_score":0.15
+    "capital_flow_score": 0.22,
+    "capital_acceleration_score": 0.18,
+    "demand_validation_score": 0.18,
+    "innovation_talent_score": 0.08,
+    "structural_support_score": 0.14,
+    "evidence_strength_score": 0.10,
+    "supply_chain_confirmation_score": 0.10
+  },
+  "pre_boom_pattern": {
+    "capital_acceleration_score": 0.28,
+    "real_economy_confirmation_score": 0.22,
+    "attention_gap_score": 0.20,
+    "supply_chain_confirmation_score": 0.12,
+    "structural_support_score": 0.10,
+    "innovation_talent_score": 0.08,
+    "risk_penalty_subtract": 0.18,
+    "market_prepricing_subtract": 0.28,
+    "value_trap_subtract": 0.12,
+    "uncertainty_subtract": 0.10
   },
   "lead_opportunity": {
-    "boom_transition_score":0.45,
-    "underrecognition_score":0.20,
-    "valuation_attractiveness":0.20,
-    "macro_fit":0.15,
-    "risk_penalty_subtract":0.25
+    "pre_boom_pattern_score": 0.65,
+    "valuation_attractiveness": 0.15,
+    "core_industry_shift_24m_score": 0.20,
+    "market_prepricing_subtract": 0.10,
+    "value_trap_subtract": 0.10
   }
 }

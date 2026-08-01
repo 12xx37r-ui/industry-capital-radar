@@ -8,7 +8,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from typing import Any
 
-from src.http_utils import HttpError, get_json
+from src.http_utils import get_json
 from src.quality import clamp
 
 SEARCH_URL = "https://kosis.kr/openapi/statisticsSearch.do"
@@ -117,28 +117,42 @@ def group_series(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+def _compact(text: str) -> str:
+    return str(text).replace(" ", "").lower()
+
+
 def _keyword_score(text: str, keywords: list[str]) -> int:
-    compact = str(text).replace(" ", "").lower()
+    compact = _compact(text)
     score = 0
+    matched = 0
     for rank, keyword in enumerate(keywords):
-        key = keyword.replace(" ", "").lower()
+        key = _compact(keyword)
         if key and key in compact:
-            score += max(1, 20 - rank * 3)
-    if "전국" in text or "총지수" in text or "계" in text:
+            matched += 1
+            score += max(1, 24 - rank * 4)
+    if matched == len([k for k in keywords if k]):
+        score += 12
+    if any(token in text for token in ("전국", "총지수", "합계", " 계")):
         score += 3
     return score
 
 
-def choose_series(series: list[dict[str, Any]], keywords: list[str], exclude_keywords: list[str] | None = None) -> dict[str, Any] | None:
+def choose_series(
+    series: list[dict[str, Any]],
+    keywords: list[str],
+    exclude_keywords: list[str] | None = None,
+) -> dict[str, Any] | None:
     exclude_keywords = exclude_keywords or []
     candidates: list[tuple[int, int, dict[str, Any]]] = []
     for item in series:
         name = str(item.get("name", ""))
-        if any(x.replace(" ", "") in name.replace(" ", "") for x in exclude_keywords):
+        compact_name = _compact(name)
+        if any(_compact(x) in compact_name for x in exclude_keywords if x):
             continue
         score = _keyword_score(name, keywords)
         records = len(item.get("rows") or [])
-        if records >= 3:
+        # Never select a completely unrelated series merely because it has records.
+        if score > 0 and records >= 3:
             candidates.append((score, records, item))
     return max(candidates, key=lambda x: (x[0], x[1]))[2] if candidates else None
 
@@ -163,9 +177,9 @@ def series_signal(rows: list[dict[str, Any]], inverse: bool = False) -> dict[str
     sign = -1.0 if inverse else 1.0
     parts: list[tuple[float, float]] = []
     if growth is not None:
-        parts.append((50 + 50 * math.tanh(sign * 8 * growth), 0.65))
+        parts.append((50 + 50 * math.tanh(sign * 8 * max(-2.0, min(2.0, growth))), 0.65))
     if acceleration is not None:
-        parts.append((50 + 50 * math.tanh(sign * 10 * acceleration), 0.35))
+        parts.append((50 + 50 * math.tanh(sign * 10 * max(-2.0, min(2.0, acceleration))), 0.35))
     total = sum(w for _, w in parts)
     score = None if total <= 0 else clamp(sum(v * w for v, w in parts) / total)
     return {
@@ -184,8 +198,11 @@ def _weighted(values: list[tuple[float | None, float]]) -> float | None:
     return None if total <= 0 else round(clamp(sum(v * w for v, w in pairs) / total), 2)
 
 
-def _fetch_best_table(search_terms: list[str], keywords: list[str]) -> tuple[dict[str, Any] | None, list[dict[str, Any]], list[str]]:
-    errors: list[str] = []
+def _fetch_best_table(
+    search_terms: list[str],
+    keywords: list[str],
+) -> tuple[dict[str, Any] | None, list[dict[str, Any]], list[str]]:
+    diagnostics: list[str] = []
     seen: set[tuple[str, str]] = set()
     candidates: list[dict[str, Any]] = []
     for term in search_terms:
@@ -196,21 +213,25 @@ def _fetch_best_table(search_terms: list[str], keywords: list[str]) -> tuple[dic
                     seen.add(key)
                     candidates.append(row)
         except Exception as exc:
-            errors.append(f"search {term}: {exc}")
+            diagnostics.append(f"search {term}: {exc}")
 
     candidates.sort(key=lambda row: _keyword_score(str(row.get("TBL_NM", "")), keywords), reverse=True)
-    for table in candidates[:5]:
+    for table in candidates[:6]:
         for cycle in ("M", "Q", "Y"):
             try:
                 rows = parameter_data(str(table.get("ORG_ID")), str(table.get("TBL_ID")), cycle)
                 if len(rows) >= 3:
-                    return table, rows, errors
+                    return table, rows, diagnostics
             except Exception as exc:
-                errors.append(f"{table.get('TBL_ID')} {cycle}: {exc}")
-    return None, [], errors
+                diagnostics.append(f"{table.get('TBL_ID')} {cycle}: {exc}")
+    return None, [], diagnostics
 
 
-def map_industries(component_scores: dict[str, float | None], sensitivity_cfg: dict[str, Any], industry_ids: list[str]) -> dict[str, float | None]:
+def map_industries(
+    component_scores: dict[str, float | None],
+    sensitivity_cfg: dict[str, Any],
+    industry_ids: list[str],
+) -> dict[str, float | None]:
     profiles = sensitivity_cfg.get("profiles") or {}
     assignments = sensitivity_cfg.get("industry_profiles") or {}
     default_name = sensitivity_cfg.get("default", "balanced")
@@ -233,19 +254,23 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
     started = time.perf_counter()
     signals: dict[str, Any] = {}
     errors: list[str] = []
+    warnings: list[str] = []
 
     for signal_id, cfg in ((series_cfg.get("kosis") or {}).get("signals") or {}).items():
-        table, raw_rows, fetch_errors = _fetch_best_table(
+        table, raw_rows, diagnostics = _fetch_best_table(
             list(cfg.get("search_terms") or []), list(cfg.get("series_keywords") or [])
         )
-        errors.extend(f"{signal_id}: {x}" for x in fetch_errors)
         if not table or not raw_rows:
+            errors.extend(f"{signal_id}: {x}" for x in diagnostics)
             signals[signal_id] = {"status": "ERROR", "score": None, "message": "matching data not found"}
             continue
+        # Failed candidate tables are diagnostic warnings once a valid fallback succeeds.
+        warnings.extend(f"{signal_id}: {x}" for x in diagnostics[-6:])
         grouped = group_series(raw_rows)
+        excludes = list(cfg.get("exclude_keywords") or [])
         if signal_id == "shipments_inventory":
-            shipment = choose_series(grouped, ["출하지수", "출하", "제조업"], ["재고"])
-            inventory = choose_series(grouped, ["재고지수", "재고", "제조업"], ["출하"])
+            shipment = choose_series(grouped, ["출하지수", "출하", "제조업"], ["재고", *excludes])
+            inventory = choose_series(grouped, ["재고지수", "재고", "제조업"], ["출하", *excludes])
             shipment_metric = series_signal((shipment or {}).get("rows") or [])
             inventory_metric = series_signal((inventory or {}).get("rows") or [], inverse=True)
             score = _weighted([(shipment_metric.get("score"), 0.60), (inventory_metric.get("score"), 0.40)])
@@ -259,8 +284,11 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
                 "inventory_metric": inventory_metric,
             }
         else:
-            chosen = choose_series(grouped, list(cfg.get("series_keywords") or []))
-            metric = series_signal((chosen or {}).get("rows") or [])
+            chosen = choose_series(grouped, list(cfg.get("series_keywords") or []), excludes)
+            metric = series_signal(
+                (chosen or {}).get("rows") or [],
+                inverse=str(cfg.get("direction", "positive")) == "negative",
+            )
             signals[signal_id] = {
                 "status": "CONNECTED" if metric.get("score") is not None else "NO_DATA",
                 "table_id": table.get("TBL_ID"), "table_name": table.get("TBL_NM"),
@@ -285,6 +313,7 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
         "signals": signals,
         "industry_scores": industry_scores,
         "errors": errors[:50],
+        "warnings": warnings[:50],
     }
 
 

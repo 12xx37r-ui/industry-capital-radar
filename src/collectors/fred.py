@@ -4,7 +4,7 @@ from __future__ import annotations
 import math
 import os
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import Any
 
 from src.http_utils import get_json
@@ -32,14 +32,24 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def observations(series_id: str, limit: int = 420) -> list[dict[str, Any]]:
-    payload = get_json(BASE, {
-        "api_key": _key(),
-        "file_type": "json",
-        "series_id": series_id,
-        "sort_order": "asc",
-        "limit": str(limit),
-    }, timeout=30, retries=1)
+def observations(series_id: str, limit: int = 800) -> list[dict[str, Any]]:
+    """Fetch the newest observations, then return them in chronological order.
+
+    V0.4 requested ascending order with a hard limit, which selected the oldest
+    records. V0.5 requests descending order so the limited response is current.
+    """
+    payload = get_json(
+        BASE,
+        {
+            "api_key": _key(),
+            "file_type": "json",
+            "series_id": series_id,
+            "sort_order": "desc",
+            "limit": str(limit),
+        },
+        timeout=30,
+        retries=2,
+    )
     if payload.get("error_code"):
         raise FredApiError(f"FRED {series_id}: {payload.get('error_message')}")
     rows: list[dict[str, Any]] = []
@@ -51,7 +61,10 @@ def observations(series_id: str, limit: int = 420) -> list[dict[str, Any]]:
             value = float(raw)
         except (TypeError, ValueError):
             continue
-        rows.append({"date": str(item.get("date", "")), "value": value})
+        obs_date = str(item.get("date", ""))
+        if obs_date:
+            rows.append({"date": obs_date, "value": value})
+    rows.sort(key=lambda x: x["date"])
     return rows
 
 
@@ -85,11 +98,23 @@ def _tanh_score(value: float | None, scale: float = 1.0, inverse: bool = False) 
 
 
 def _mean_available(items: list[tuple[float | None, float]]) -> float | None:
-    pairs = [(float(v), float(w)) for v, w in items if v is not None]
+    pairs = [(float(v), float(w)) for v, w in items if v is not None and w > 0]
     total = sum(w for _, w in pairs)
     if total <= 0:
         return None
     return round(clamp(sum(v * w for v, w in pairs) / total), 2)
+
+
+def _freshness(latest: str | None, frequency: str | None) -> tuple[int | None, bool]:
+    if not latest:
+        return None, True
+    try:
+        age_days = (date.today() - date.fromisoformat(latest[:10])).days
+    except ValueError:
+        return None, True
+    frequency = str(frequency or "").lower()
+    threshold = 10 if frequency == "daily" else 21 if frequency == "weekly" else 75
+    return age_days, age_days > threshold
 
 
 def compute_regime(series: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
@@ -103,7 +128,9 @@ def compute_regime(series: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
     orders = series.get("DGORDER", [])
     walcl = series.get("WALCL", [])
 
-    rate_3m_change = _change(dgs2, min(63, max(1, len(dgs2) - 1))) if len(dgs2) > 1 else None
+    # About three months for daily rates; limited fallback for test fixtures.
+    rate_periods = min(63, max(1, len(dgs2) - 1)) if len(dgs2) > 1 else 1
+    rate_3m_change = _change(dgs2, rate_periods) if len(dgs2) > 1 else None
     rate_score = _tanh_score(rate_3m_change, scale=1.2, inverse=True)
 
     curve_latest = curve[-1]["value"] if curve else None
@@ -112,13 +139,8 @@ def compute_regime(series: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
     cpi_yoy = _yoy(cpi)
     cpi_prev_yoy = _pct(cpi[-4]["value"], cpi[-16]["value"]) if len(cpi) >= 16 else None
     core_yoy = _yoy(core)
-    inflation_level = None
-    if cpi_yoy is not None and core_yoy is not None:
-        inflation_level = (cpi_yoy + core_yoy) / 2.0
-    elif cpi_yoy is not None:
-        inflation_level = cpi_yoy
-    elif core_yoy is not None:
-        inflation_level = core_yoy
+    inflation_values = [x for x in (cpi_yoy, core_yoy) if x is not None]
+    inflation_level = sum(inflation_values) / len(inflation_values) if inflation_values else None
     inflation_gap = None if inflation_level is None else inflation_level - 0.02
     inflation_level_score = _tanh_score(inflation_gap, scale=10.0, inverse=True)
     disinflation = None if cpi_yoy is None or cpi_prev_yoy is None else cpi_prev_yoy - cpi_yoy
@@ -204,35 +226,50 @@ def collect(series_cfg: dict[str, Any], sensitivity_cfg: dict[str, Any], industr
     series_data: dict[str, list[dict[str, Any]]] = {}
     status: dict[str, Any] = {}
     errors: list[str] = []
+    stale_series: list[str] = []
     for series_id, meta in (series_cfg.get("series") or {}).items():
         try:
             rows = observations(series_id)
             series_data[series_id] = rows
+            latest = rows[-1]["date"] if rows else None
+            age_days, stale = _freshness(latest, meta.get("frequency"))
+            if stale and rows:
+                stale_series.append(series_id)
             status[series_id] = {
-                "status": "CONNECTED" if rows else "NO_DATA",
+                "status": "STALE" if stale and rows else "CONNECTED" if rows else "NO_DATA",
                 "name_ko": meta.get("name_ko"),
+                "frequency": meta.get("frequency"),
                 "records": len(rows),
-                "latest_observation_date": rows[-1]["date"] if rows else None,
+                "latest_observation_date": latest,
                 "latest_value": rows[-1]["value"] if rows else None,
+                "age_days": age_days,
             }
         except Exception as exc:
             errors.append(f"{series_id}: {exc}")
             status[series_id] = {"status": "ERROR", "name_ko": meta.get("name_ko"), "message": str(exc)}
     regime = compute_regime(series_data)
     mapped = map_industry_scores(regime, sensitivity_cfg, industry_ids)
-    successful = sum(1 for x in status.values() if x.get("status") == "CONNECTED")
+    successful = sum(1 for x in status.values() if x.get("status") in {"CONNECTED", "STALE"})
+    current = sum(1 for x in status.values() if x.get("status") == "CONNECTED")
     elapsed_ms = round((time.perf_counter() - started) * 1000)
-    overall_status = "CONNECTED" if successful == len(status) else "PARTIAL_SUCCESS" if successful else "ERROR"
+    if successful == 0:
+        overall_status = "ERROR"
+    elif current == len(status):
+        overall_status = "CONNECTED"
+    else:
+        overall_status = "PARTIAL_SUCCESS"
     return {
         "status": overall_status,
         "checked_at": checked_at,
         "response_time_ms": elapsed_ms,
         "mapped_to_score": bool(mapped) and successful > 0,
-        "needs_attention": overall_status != "CONNECTED",
+        "needs_attention": successful == 0 or bool(stale_series),
         "key_expiry_date": None,
         "renewal_status": "NOT_EXPOSED_BY_API",
         "successful_series": successful,
+        "current_series": current,
         "total_series": len(status),
+        "stale_series": stale_series,
         "series": status,
         "regime": regime,
         "industry_macro_scores": mapped,

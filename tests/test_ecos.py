@@ -1,6 +1,6 @@
 import unittest
 
-from src.collectors.ecos import discover_item, discover_table, series_signal
+from src.collectors.ecos import _aggregate_duplicate_periods, discover_item, discover_table, series_signal
 
 
 class EcosTests(unittest.TestCase):
@@ -20,6 +20,18 @@ class EcosTests(unittest.TestCase):
         rows = [{"time": f"2025{i:02d}", "value": 100 + i} for i in range(1, 13)]
         metric = series_signal(rows)
         self.assertGreater(metric["score"], 50)
+
+    def test_duplicate_periods_are_aggregated_before_growth(self):
+        raw = [
+            {"TIME": "202501", "DATA_VALUE": "10", "ITEM_NAME2": "서울"},
+            {"TIME": "202501", "DATA_VALUE": "20", "ITEM_NAME2": "부산"},
+            {"TIME": "202502", "DATA_VALUE": "11", "ITEM_NAME2": "서울"},
+            {"TIME": "202502", "DATA_VALUE": "21", "ITEM_NAME2": "부산"},
+        ]
+        rows, duplicates = _aggregate_duplicate_periods(raw)
+        self.assertEqual(duplicates, 2)
+        self.assertEqual(rows[0]["value"], 30)
+        self.assertEqual(rows[1]["value"], 32)
 
 
 if __name__ == "__main__":

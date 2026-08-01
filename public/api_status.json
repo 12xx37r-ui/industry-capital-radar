@@ -1,77 +1,10 @@
 {
-  "generated_at": "2026-08-01T00:32:32.877073+00:00",
-  "engine_version": "0.4.0",
-  "connected_sources": 4,
-  "total_sources": 5,
-  "mapped_sources": [
-    "fred",
-    "ecos",
-    "opendart",
-    "market_proxy"
-  ],
-  "needs_attention": [
-    "kosis"
-  ],
-  "sources": {
-    "fred": {
-      "status": "CONNECTED",
-      "checked_at": "2026-08-01T00:16:04.488721+00:00",
-      "response_time_ms": 3561,
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API",
-      "successful_series": 12,
-      "total_series": 12
-    },
-    "ecos": {
-      "status": "CONNECTED",
-      "checked_at": "2026-08-01T00:16:04.486537+00:00",
-      "response_time_ms": 14715,
-      "table_count": 834,
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API",
-      "successful_signals": 4,
-      "total_signals": 4
-    },
-    "kosis": {
-      "status": "ERROR",
-      "checked_at": "2026-08-01T00:16:04.487379+00:00",
-      "response_time_ms": 987911,
-      "mapped_to_score": false,
-      "needs_attention": true,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API",
-      "successful_signals": 0,
-      "total_signals": 4
-    },
-    "opendart": {
-      "status": "CONNECTED_CACHE",
-      "checked_at": "2026-08-01T00:32:32.400864+00:00",
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "refresh_mode": "CACHE_ONLY",
-      "cache_used": true,
-      "cache_generated_at": "2026-07-31T19:36:53.213849+00:00",
-      "cache_age_days": 0,
-      "companies_collected": 56,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_EXPOSED_BY_API"
-    },
-    "market_proxy": {
-      "status": "CONNECTED",
-      "checked_at": "2026-08-01T00:32:32.865598+00:00",
-      "response_time_ms": 465,
-      "successful_symbols": 56,
-      "total_symbols": 56,
-      "official": false,
-      "mapped_to_score": true,
-      "needs_attention": false,
-      "key_expiry_date": null,
-      "renewal_status": "NOT_APPLICABLE"
-    }
-  },
+  "generated_at": "2026-08-01T21:07:20.340868+00:00",
+  "engine_version": "0.5.0",
+  "connected_sources": 0,
+  "total_sources": 0,
+  "mapped_sources": [],
+  "needs_attention": [],
+  "sources": {},
   "renewal_note": "API가 만료일을 제공하지 않으면 갱신일은 UNKNOWN 또는 NOT_EXPOSED_BY_API로 표시합니다."
 }

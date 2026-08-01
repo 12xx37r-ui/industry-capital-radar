@@ -52,7 +52,7 @@ def get_bytes(
     if params:
         url = f"{url}?{urlencode(params)}"
     req_headers = {
-        "User-Agent": "industry-capital-radar/0.4.0 contact: github-actions",
+        "User-Agent": "industry-capital-radar/0.5.0 contact: github-actions",
         "Accept": "*/*",
     }
     if headers:

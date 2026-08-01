@@ -1,0 +1,7 @@
+{
+  "generated_at": "2026-08-01T21:07:20.340868+00:00",
+  "engine_version": "0.5.0",
+  "model_status": "EXPERIMENTAL_PRE_BOOM_SCORE_NOT_PROBABILITY",
+  "candidate_rule": "Tier A/B이며 실물경제 확인점수 50 이상인 산업",
+  "candidates": []
+}

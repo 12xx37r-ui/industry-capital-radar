@@ -20,8 +20,8 @@ def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         "industry_id", "as_of_date", "capital_level", "capital_velocity", "capital_acceleration",
         "orders_velocity", "backlog_acceleration", "capacity_tightness", "hiring_velocity",
         "innovation_velocity", "official_activity", "breadth", "persistence", "macro_fit",
-        "supply_chain_spillover", "market_attention", "price_momentum", "valuation_heat",
-        "valuation_attractiveness", "supply_overbuild_risk", "policy_dependency_risk",
+        "supply_chain_spillover", "supply_chain_breadth", "market_attention", "price_momentum", "valuation_heat",
+        "valuation_attractiveness", "valuation_data_confidence", "supply_overbuild_risk", "policy_dependency_risk",
         "source_coverage", "freshness_score", "source_reliability"
     ]
     path.parent.mkdir(parents=True, exist_ok=True)

@@ -5,30 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     body{font-family:Arial,sans-serif;margin:18px;background:#f6f7f9;color:#1f2937}
-    .card{background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-    table{width:100%;border-collapse:collapse;margin-top:10px}
-    th,td{padding:9px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:13px}
+    .card{background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);overflow:auto}
+    table{width:100%;border-collapse:collapse;margin-top:10px;min-width:920px}
+    th,td{padding:9px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:13px;white-space:nowrap}
     th{background:#f9fafb}.muted{color:#6b7280}.error{color:#b91c1c}.ok{color:#047857}.warn{color:#b45309}.bad{color:#b91c1c}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.api{border:1px solid #e5e7eb;border-radius:10px;padding:10px}
+    .tier{display:inline-block;padding:2px 7px;border-radius:999px;font-weight:700;background:#eef2ff}.yes{font-weight:700;color:#047857}.risk{color:#b91c1c}
   </style>
 </head>
 <body>
-  <div class="card"><h2>산업 자본이동 레이더</h2><div id="status" class="muted">데이터 불러오는 중…</div></div>
+  <div class="card"><h2>산업 자본이동 레이더 V0.5</h2><div id="status" class="muted">데이터 불러오는 중…</div></div>
   <div class="card"><h3>API 상태</h3><div id="apis" class="grid"></div></div>
+  <div class="card"><h3>다음 AI형 선행 후보</h3><div id="nextAi"></div></div>
   <div class="card"><h3>선투자 후보 TOP10</h3><div id="top10"></div></div>
   <div class="card"><h3>전체 산업 순위</h3><div id="content"></div></div>
 <script>
 function esc(v){return String(v ?? '').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));}
 function statusClass(s){s=String(s||'');return (s.startsWith('CONNECTED')||s==='PARTIAL_SUCCESS')?'ok':(s==='MISSING_KEY'||s.includes('ERROR'))?'bad':'warn';}
+function n(v){return v===null||v===undefined?'-':Number(v).toFixed(2).replace(/\.00$/,'');}
+function companies(x){return (x.beneficiary_companies||[]).slice(0,3).map(c=>`${esc(c.name)}${c.signal_state?' ('+esc(c.signal_state)+')':''}`).join(', ')||'-';}
+function candidateTable(rows){
+  return rows.length?'<table><thead><tr><th>순위</th><th>산업</th><th>등급</th><th>선행패턴</th><th>자금가속</th><th>실물확인</th><th>미인지괴리</th><th>선반영감점</th><th>수혜 후보</th></tr></thead><tbody>'+rows.map(x=>`<tr><td>${x.rank??'-'}</td><td>${esc(x.industry_name_ko)}</td><td><span class="tier">${esc(x.candidate_tier||'-')}</span></td><td>${n(x.pre_boom_pattern_score)}</td><td>${n(x.capital_acceleration_score)}</td><td>${n(x.real_economy_confirmation_score)}</td><td>${n(x.attention_gap_score)}</td><td class="${(x.market_prepricing_penalty_score||0)>=40?'risk':''}">${n(x.market_prepricing_penalty_score)}</td><td>${companies(x)}</td></tr>`).join('')+'</tbody></table>':'<p>현재 Tier A/B 후보가 없습니다.</p>';
+}
 function render(payload){
-  const data=payload.radar||{}, api=payload.api||{}, top=payload.top10||{};
-  document.getElementById('status').textContent=`상태: ${data.status} · 엔진: ${data.engine_version} · 생성: ${data.generated_at}`;
+  const data=payload.radar||{}, api=payload.api||{}, top=payload.top10||{}, nextAi=payload.nextAi||{};
+  document.getElementById('status').textContent=`상태: ${data.status} · 엔진: ${data.engine_version} · 품질게이트: ${data.quality_gate_passed?'통과':'미통과'} · 생성: ${data.generated_at}`;
   const sources=api.sources||{};
   document.getElementById('apis').innerHTML=Object.keys(sources).map(name=>{const x=sources[name]||{};return `<div class="api"><b>${esc(name)}</b><div class="${statusClass(x.status)}">${esc(x.status)}</div><div class="muted">확인: ${esc(x.checked_at||'-')}</div><div class="muted">점수 반영: ${x.mapped_to_score?'예':'아니오'}</div></div>`}).join('');
+  document.getElementById('nextAi').innerHTML=candidateTable(nextAi.candidates||[]);
   const tops=top.opportunities||[];
-  document.getElementById('top10').innerHTML=tops.length?'<table><thead><tr><th>순위</th><th>산업</th><th>단계</th><th>12개월</th><th>24개월</th><th>미반영</th><th>선투자</th><th>수혜 후보</th></tr></thead><tbody>'+tops.map(x=>`<tr><td>${x.rank}</td><td>${esc(x.industry_name_ko)}</td><td>${esc(x.stage)}</td><td>${x.boom_transition_12m_score??'-'}</td><td>${x.core_industry_shift_24m_score??'-'}</td><td>${x.underrecognition_score??'-'}</td><td>${x.lead_opportunity_score??'-'}</td><td>${(x.beneficiary_companies||[]).slice(0,3).map(c=>esc(c.name)).join(', ')||'-'}</td></tr>`).join('')+'</tbody></table>':'<p>표시할 후보가 없습니다.</p>';
+  document.getElementById('top10').innerHTML=tops.length?'<table><thead><tr><th>순위</th><th>산업</th><th>등급</th><th>단계</th><th>선행패턴</th><th>12개월</th><th>24개월</th><th>미반영</th><th>가치함정</th><th>수혜 후보</th></tr></thead><tbody>'+tops.map(x=>`<tr><td>${x.rank}</td><td>${esc(x.industry_name_ko)}</td><td><span class="tier">${esc(x.candidate_tier||'-')}</span></td><td>${esc(x.stage)}</td><td>${n(x.pre_boom_pattern_score)}</td><td>${n(x.boom_transition_12m_score)}</td><td>${n(x.core_industry_shift_24m_score)}</td><td>${n(x.underrecognition_score)}</td><td class="${(x.value_trap_risk_score||0)>=40?'risk':''}">${n(x.value_trap_risk_score)}</td><td>${companies(x)}</td></tr>`).join('')+'</tbody></table>':'<p>표시할 후보가 없습니다.</p>';
   const rows=data.industries||[];
-  document.getElementById('content').innerHTML=rows.length?'<table><thead><tr><th>순위</th><th>산업</th><th>단계</th><th>6개월</th><th>12개월</th><th>공식통계</th><th>공급망</th><th>가치</th><th>선투자</th></tr></thead><tbody>'+rows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.industry_name_ko)}</td><td>${esc(r.stage)}</td><td>${r.capital_inflow_6m_score??'-'}</td><td>${r.boom_transition_12m_score??'-'}</td><td>${r.official_activity_score??'-'}</td><td>${r.supply_chain_spillover_score??'-'}</td><td>${r.valuation_attractiveness_score??'-'}</td><td>${r.lead_opportunity_score??'-'}</td></tr>`).join('')+'</tbody></table>':'<p>표시할 산업 데이터가 없습니다.</p>';
+  document.getElementById('content').innerHTML=rows.length?'<table><thead><tr><th>순위</th><th>산업</th><th>등급</th><th>단계</th><th>선행패턴</th><th>자금가속</th><th>실물확인</th><th>공급망</th><th>시장열기</th><th>미인지괴리</th><th>선투자</th></tr></thead><tbody>'+rows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.industry_name_ko)}</td><td><span class="tier">${esc(r.candidate_tier||'-')}</span></td><td>${esc(r.stage)}</td><td>${n(r.pre_boom_pattern_score)}</td><td>${n(r.capital_acceleration_score)}</td><td>${n(r.real_economy_confirmation_score)}</td><td>${n(r.supply_chain_confirmation_score)}</td><td>${n(r.market_heat_score)}</td><td>${n(r.attention_gap_score)}</td><td>${n(r.lead_opportunity_score)}</td></tr>`).join('')+'</tbody></table>':'<p>표시할 산업 데이터가 없습니다.</p>';
 }
 function fail(err){document.getElementById('status').innerHTML='<span class="error">오류: '+esc(err.message||err)+'</span>';}
 google.script.run.withSuccessHandler(render).withFailureHandler(fail).getDashboardData();

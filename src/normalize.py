@@ -23,7 +23,7 @@ def median(values: Iterable[float | None]) -> float | None:
 def growth_score(value: float | None, scale: float = 1.5) -> float | None:
     if value is None:
         return None
-    return round(clamp(50 + 50 * math.tanh(scale * value)), 2)
+    return round(clamp(50 + 50 * math.tanh(scale * max(-3.0, min(3.0, value)))), 2)
 
 
 def ratio_score(value: float | None, midpoint: float = 0.06, width: float = 0.08) -> float | None:
@@ -42,18 +42,42 @@ def risk_score(value: float | None, scale: float = 2.0) -> float | None:
     return round(clamp(100 * math.tanh(scale * max(0.0, value))), 2)
 
 
-def valuation_attractiveness(pe: float | None, pb: float | None) -> float | None:
-    scores: list[tuple[float, float]] = []
+def valuation_data_confidence(pe: float | None, pb: float | None) -> float:
+    if pe is not None and pe > 0 and pb is not None and pb > 0:
+        return 100.0
     if pe is not None and pe > 0:
-        pe_score = 100.0 - max(0.0, pe - 12.0) * 2.8 - max(0.0, 5.0 - pe) * 5.0
-        scores.append((clamp(pe_score), 0.60))
+        return 75.0
     if pb is not None and pb > 0:
-        pb_score = 100.0 - max(0.0, pb - 1.5) * 18.0 - max(0.0, 0.45 - pb) * 35.0
-        scores.append((clamp(pb_score), 0.40))
-    if not scores:
+        return 60.0
+    return 0.0
+
+
+def valuation_attractiveness(pe: float | None, pb: float | None) -> float | None:
+    """Conservative approximate valuation score.
+
+    A single low P/B no longer produces an automatic 100. Missing P/E often
+    means negative or unavailable earnings, so one-multiple estimates are capped.
+    """
+    pe_score: float | None = None
+    pb_score: float | None = None
+    if pe is not None and pe > 0:
+        pe_score = clamp(100.0 - max(0.0, pe - 12.0) * 2.8 - max(0.0, 5.0 - pe) * 6.0)
+    if pb is not None and pb > 0:
+        pb_score = clamp(100.0 - max(0.0, pb - 1.5) * 18.0 - max(0.0, 0.70 - pb) * 55.0)
+    if pe_score is not None and pb_score is not None:
+        return round(0.60 * pe_score + 0.40 * pb_score, 2)
+    if pe_score is not None:
+        return round(min(85.0, pe_score), 2)
+    if pb_score is not None:
+        return round(min(82.0, pb_score), 2)
+    return None
+
+
+def _effective_valuation(score: float | None, confidence: float | None) -> float | None:
+    if score is None:
         return None
-    total = sum(w for _, w in scores)
-    return round(sum(v * w for v, w in scores) / total, 2)
+    conf = 0.0 if confidence is None else clamp(confidence)
+    return round(50.0 + (score - 50.0) * conf / 100.0, 2)
 
 
 def _company_period_metrics(company: dict[str, Any]) -> dict[str, Any]:
@@ -74,6 +98,8 @@ def _company_period_metrics(company: dict[str, Any]) -> dict[str, Any]:
     equity = a0.get("equity")
     pe = market_cap / net_income if market_cap is not None and net_income not in (None, 0) and net_income > 0 else None
     pb = market_cap / equity if market_cap is not None and equity not in (None, 0) and equity > 0 else None
+    valuation_confidence = valuation_data_confidence(pe, pb)
+    valuation = valuation_attractiveness(pe, pb)
 
     out = {
         "latest_year": y0,
@@ -92,7 +118,9 @@ def _company_period_metrics(company: dict[str, Any]) -> dict[str, Any]:
         "market_cap": market_cap,
         "pe": pe,
         "pb": pb,
-        "valuation_attractiveness": valuation_attractiveness(pe, pb),
+        "valuation_attractiveness": valuation,
+        "valuation_data_confidence": valuation_confidence,
+        "effective_valuation_attractiveness": _effective_valuation(valuation, valuation_confidence),
     }
     out["capex_acceleration"] = (
         out["capex_growth"] - out["capex_prev_growth"]
@@ -128,8 +156,9 @@ def build_industry_features(
         "capital_level", "capital_velocity", "capital_acceleration", "orders_velocity",
         "backlog_acceleration", "capacity_tightness", "hiring_velocity", "innovation_velocity",
         "official_activity", "breadth", "persistence", "macro_fit", "supply_chain_spillover",
-        "market_attention", "price_momentum", "valuation_heat", "valuation_attractiveness",
-        "supply_overbuild_risk", "policy_dependency_risk",
+        "supply_chain_breadth", "market_attention", "price_momentum", "valuation_heat",
+        "valuation_attractiveness", "valuation_data_confidence", "supply_overbuild_risk",
+        "policy_dependency_risk",
     ]
 
     for industry_id in industry_ids:
@@ -147,19 +176,27 @@ def build_industry_features(
         employee_growth = median(m.get("employee_growth") for m in metrics)
         return_6m = median(m.get("return_6m") for m in metrics)
         vol_acc = median(m.get("volume_acceleration") for m in metrics)
-        valuation_score = median(m.get("valuation_attractiveness") for m in metrics)
+        valuation_score = median(m.get("effective_valuation_attractiveness") for m in metrics)
+        valuation_confidence = median(m.get("valuation_data_confidence") for m in metrics)
         capacity = (rev_growth - inv_growth) if rev_growth is not None and inv_growth is not None else op_growth
 
         available_company_signals: list[bool] = []
         persistence_flags: list[bool] = []
         for m in metrics:
-            checks = [x for x in (m.get("capex_growth"), m.get("revenue_growth"), m.get("employee_growth"), m.get("orders_growth")) if x is not None]
+            checks = [
+                x for x in (
+                    m.get("capex_growth"), m.get("revenue_growth"),
+                    m.get("operating_income_growth"), m.get("employee_growth"),
+                    m.get("orders_growth"),
+                ) if x is not None
+            ]
             if checks:
-                available_company_signals.append(sum(1 for x in checks if x > 0) >= max(1, len(checks) // 2 + 1))
+                required = max(1, math.ceil(len(checks) * 0.60))
+                available_company_signals.append(sum(1 for x in checks if x > 0) >= required)
             if m.get("capex_growth") is not None and m.get("capex_prev_growth") is not None:
                 persistence_flags.append(m["capex_growth"] > 0 and m["capex_prev_growth"] > 0)
 
-        overbuild_components = []
+        overbuild_components: list[float] = []
         if capex_growth is not None and rev_growth is not None:
             overbuild_components.append(max(0.0, capex_growth - rev_growth))
         if inv_growth is not None and rev_growth is not None:
@@ -182,10 +219,16 @@ def build_industry_features(
             "persistence": breadth_score(persistence_flags),
             "macro_fit": macro_scores.get(industry_id),
             "supply_chain_spillover": None,
+            "supply_chain_breadth": None,
             "market_attention": growth_score(vol_acc, 1.0),
-            "price_momentum": growth_score((return_6m - benchmark_return) if return_6m is not None and benchmark_return is not None else None, 2.0),
+            "price_momentum": growth_score(
+                (return_6m - benchmark_return)
+                if return_6m is not None and benchmark_return is not None else None,
+                2.0,
+            ),
             "valuation_heat": None if valuation_score is None else round(100.0 - valuation_score, 2),
             "valuation_attractiveness": valuation_score,
+            "valuation_data_confidence": valuation_confidence,
             "supply_overbuild_risk": risk_score(overbuild_raw, 2.0),
             "policy_dependency_risk": None,
         }
@@ -198,18 +241,30 @@ def build_industry_features(
         row["source_reliability"] = 94.0 if official_connected else 86.0
         rows.append(row)
 
-        ranked = sorted(items, key=lambda cm: (cm[1].get("capex_growth") is not None, cm[1].get("capex_growth") or -999), reverse=True)
+        ranked = sorted(
+            items,
+            key=lambda cm: (cm[1].get("capex_growth") is not None, cm[1].get("capex_growth") or -999),
+            reverse=True,
+        )
         evidence[industry_id] = {
             "sample_company_count": len(items),
             "companies": [
                 {
-                    "name": c.get("name"), "stock_code": c.get("stock_code"),
-                    "capex_growth": m.get("capex_growth"), "revenue_growth": m.get("revenue_growth"),
+                    "name": c.get("name"),
+                    "stock_code": c.get("stock_code"),
+                    "capex_growth": m.get("capex_growth"),
+                    "capex_acceleration": m.get("capex_acceleration"),
+                    "revenue_growth": m.get("revenue_growth"),
                     "operating_income_growth": m.get("operating_income_growth"),
-                    "employee_growth": m.get("employee_growth"), "return_6m": m.get("return_6m"),
-                    "latest_price": m.get("latest_price"), "market_cap": m.get("market_cap"),
-                    "pe": m.get("pe"), "pb": m.get("pb"),
+                    "employee_growth": m.get("employee_growth"),
+                    "return_6m": m.get("return_6m"),
+                    "return_12m": m.get("return_12m"),
+                    "latest_price": m.get("latest_price"),
+                    "market_cap": m.get("market_cap"),
+                    "pe": m.get("pe"),
+                    "pb": m.get("pb"),
                     "valuation_attractiveness": m.get("valuation_attractiveness"),
+                    "valuation_data_confidence": m.get("valuation_data_confidence"),
                     "orders_growth": m.get("orders_growth"),
                     "orders_curr": (c.get("disclosures") or {}).get("orders_curr"),
                     "orders_prev": (c.get("disclosures") or {}).get("orders_prev"),
@@ -222,7 +277,7 @@ def build_industry_features(
                 "대표기업 표본 기반이며 산업 전체 모집단이 아닙니다.",
                 "OpenDART·KOSIS·ECOS·FRED와 보조 시장가격 신호를 결합합니다.",
                 "특허·정부예산·조달 원문은 후속 버전에서 별도 연결합니다.",
-                "기업 저평가는 DART 연차 순이익·자본과 최근 주가로 계산한 근사 P/E·P/B입니다."
+                "기업 저평가는 DART 연차 순이익·자본과 최근 주가로 계산한 근사치입니다.",
             ],
         }
     return rows, evidence

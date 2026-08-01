@@ -1,41 +1,91 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "default": "balanced",
   "profiles": {
     "growth_tech": {
       "fred": 0.45,
       "ecos": 0.25,
-      "kosis": 0.30,
-      "ecos_components": {"industrial_activity": 0.25, "equipment_investment": 0.35, "corporate_credit": 0.25, "exports": 0.15},
-      "kosis_components": {"manufacturing_production": 0.25, "shipments_inventory": 0.15, "equipment_investment": 0.35, "industry_employment": 0.25}
+      "kosis": 0.3,
+      "ecos_components": {
+        "industrial_activity": 0.25,
+        "equipment_investment": 0.35,
+        "corporate_credit": 0.25,
+        "exports": 0.15
+      },
+      "kosis_components": {
+        "manufacturing_production": 0.25,
+        "shipments_inventory": 0.15,
+        "equipment_investment": 0.35,
+        "industry_employment": 0.25
+      }
     },
     "manufacturing_capex": {
       "fred": 0.35,
-      "ecos": 0.30,
+      "ecos": 0.3,
       "kosis": 0.35,
-      "ecos_components": {"industrial_activity": 0.35, "equipment_investment": 0.35, "corporate_credit": 0.15, "exports": 0.15},
-      "kosis_components": {"manufacturing_production": 0.35, "shipments_inventory": 0.30, "equipment_investment": 0.25, "industry_employment": 0.10}
+      "ecos_components": {
+        "industrial_activity": 0.35,
+        "equipment_investment": 0.35,
+        "corporate_credit": 0.15,
+        "exports": 0.15
+      },
+      "kosis_components": {
+        "manufacturing_production": 0.35,
+        "shipments_inventory": 0.3,
+        "equipment_investment": 0.25,
+        "industry_employment": 0.1
+      }
     },
     "policy_infrastructure": {
-      "fred": 0.30,
+      "fred": 0.3,
       "ecos": 0.35,
       "kosis": 0.35,
-      "ecos_components": {"industrial_activity": 0.20, "equipment_investment": 0.25, "corporate_credit": 0.30, "exports": 0.25},
-      "kosis_components": {"manufacturing_production": 0.20, "shipments_inventory": 0.20, "equipment_investment": 0.35, "industry_employment": 0.25}
+      "ecos_components": {
+        "industrial_activity": 0.2,
+        "equipment_investment": 0.25,
+        "corporate_credit": 0.3,
+        "exports": 0.25
+      },
+      "kosis_components": {
+        "manufacturing_production": 0.2,
+        "shipments_inventory": 0.2,
+        "equipment_investment": 0.35,
+        "industry_employment": 0.25
+      }
     },
     "resource_cycle": {
       "fred": 0.35,
       "ecos": 0.35,
-      "kosis": 0.30,
-      "ecos_components": {"industrial_activity": 0.30, "equipment_investment": 0.15, "corporate_credit": 0.15, "exports": 0.40},
-      "kosis_components": {"manufacturing_production": 0.35, "shipments_inventory": 0.35, "equipment_investment": 0.15, "industry_employment": 0.15}
+      "kosis": 0.3,
+      "ecos_components": {
+        "industrial_activity": 0.3,
+        "equipment_investment": 0.15,
+        "corporate_credit": 0.15,
+        "exports": 0.4
+      },
+      "kosis_components": {
+        "manufacturing_production": 0.35,
+        "shipments_inventory": 0.35,
+        "equipment_investment": 0.15,
+        "industry_employment": 0.15
+      }
     },
     "balanced": {
-      "fred": 0.40,
-      "ecos": 0.30,
-      "kosis": 0.30,
-      "ecos_components": {"industrial_activity": 0.30, "equipment_investment": 0.25, "corporate_credit": 0.25, "exports": 0.20},
-      "kosis_components": {"manufacturing_production": 0.30, "shipments_inventory": 0.25, "equipment_investment": 0.25, "industry_employment": 0.20}
+      "fred": 0.4,
+      "ecos": 0.3,
+      "kosis": 0.3,
+      "ecos_components": {
+        "industrial_activity": 0.3,
+        "equipment_investment": 0.25,
+        "corporate_credit": 0.25,
+        "exports": 0.2
+      },
+      "kosis_components": {
+        "manufacturing_production": 0.3,
+        "shipments_inventory": 0.25,
+        "equipment_investment": 0.25,
+        "industry_employment": 0.2
+      }
     }
   },
   "industry_profiles": {

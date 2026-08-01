@@ -1,17 +1,20 @@
-# Industry Capital Radar V0.4.0
+# Industry Capital Radar V0.5.0
 
-시장 관심이 낮은 상태에서 기업 CAPEX·수주·고용·공식 산업통계·공급망 신호가 먼저 움직이는 산업과 상장 수혜 후보를 찾는 실험 엔진입니다.
+현재는 시장 관심이 낮지만 CAPEX·수주·고용·공식 산업통계·공급망에서 자금 유입이 먼저 가속되는 산업과 국내 상장 수혜 후보를 찾는 실험 엔진입니다.
 
-## V0.4.0
+## V0.5.0 핵심 변경
 
-- OpenDART: CAPEX·매출·이익·고용·수주 공시·발행주식수
-- FRED: 미국 금리·물가·고용·산업생산·유동성
-- ECOS: 한국 산업생산·설비투자·기업신용·수출 시계열 자동 탐색
-- KOSIS: 생산·출하·재고·설비투자·산업고용 통계 자동 탐색
-- 산업 공급망 전이 점수
-- 근사 P/E·P/B 기반 가격 매력 점수
-- 산업 선투자 TOP10 및 상장 수혜 후보 출력
-- API 연결·점수 반영 상태 출력
+- `pre_boom_pattern_score`: AI 대중화 이전과 유사한 선투자 패턴 점수
+- `capital_acceleration_score`: CAPEX·수주·공식통계 가속 확인
+- `attention_gap_score`: 실물자금 가속 대비 시장 관심의 괴리
+- 시장 선반영 감점 강화
+- 저P/B만으로 고득점하던 오류 완화 및 가치함정 위험 추가
+- 1차뿐 아니라 2차 공급망 전이 탐지
+- 기업별 실적 전환 확인·선반영·과잉투자 위험 표시
+- FRED 최신 관측치 수집 오류 수정
+- ECOS 동일 기간 다중 행 비교 오류 수정
+- KOSIS 산업고용 오선택 방지
+- 동일 V0.5 실행 간 점수 변화 추적
 
 ## GitHub Secrets
 
@@ -20,21 +23,22 @@
 - `KOSIS_API_KEY`
 - `FRED_API_KEY`
 
-## 첫 실행
+## 실행
 
 `Actions → Industry Capital Radar → Run workflow → monthly`
 
-## 출력
+## 주요 출력
 
-- `public/industry_radar.json`
-- `public/industry_detail.json`
-- `public/opportunity_top10.json`
-- `public/supply_chain_radar.json`
+- `public/next_ai_candidates.json`: Tier A/B 선행 산업과 수혜기업
+- `public/opportunity_top10.json`: 선투자 산업 TOP10
+- `public/industry_radar.json`: 전체 산업 점수
+- `public/industry_detail.json`: 산업별 근거
+- `public/supply_chain_radar.json`: 1·2차 공급망 전이
 - `public/engine_status.json`
 - `public/api_status.json`
 
 ## 주의
 
-- 점수는 확률이 아닙니다.
-- 기업 P/E·P/B는 OpenDART 연차자료와 최근 보조주가로 계산한 근사치입니다.
-- 시장가격은 비공식 보조 소스를 사용하므로 최종 투자 전 별도 확인이 필요합니다.
+- `pre_boom_pattern_score`는 백테스트로 보정된 확률이 아닙니다.
+- 대표기업 표본 기반이므로 산업 전체 모집단과 다를 수 있습니다.
+- P/E·P/B와 시장가격은 근사치·보조자료이며 최종 투자 판단 전 별도 확인이 필요합니다.

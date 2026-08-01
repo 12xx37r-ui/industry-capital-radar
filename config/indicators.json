@@ -1,28 +1,146 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "note": "각 원천지표를 산업별 0~100 정규화 특징값으로 변환한다. 0은 부정, 50은 중립, 100은 강한 긍정이다.",
   "features": [
-    {"id":"capital_level","group":"실물자본","description":"현재 CAPEX·시설투자 수준"},
-    {"id":"capital_velocity","group":"실물자본","description":"자본투입 증가 속도"},
-    {"id":"capital_acceleration","group":"실물자본","description":"자본투입 증가율의 가속"},
-    {"id":"orders_velocity","group":"수요검증","description":"신규주문·수주 증가 속도"},
-    {"id":"backlog_acceleration","group":"수요검증","description":"수주잔고 증가율의 가속"},
-    {"id":"capacity_tightness","group":"수요검증","description":"매출·이익·재고에서 나타나는 수요 긴장"},
-    {"id":"hiring_velocity","group":"인력","description":"산업 관련 고용 증가"},
-    {"id":"innovation_velocity","group":"기술","description":"특허·논문·상용화 활동 증가"},
-    {"id":"official_activity","group":"공식통계","description":"ECOS·KOSIS 산업생산·설비투자·고용·신용 신호"},
-    {"id":"breadth","group":"확산","description":"산업 내 참여기업 확산도"},
-    {"id":"persistence","group":"지속성","description":"신호가 여러 기간 이어진 정도"},
-    {"id":"macro_fit","group":"거시","description":"한국·미국 금리·유동성·경기 환경 적합도"},
-    {"id":"supply_chain_spillover","group":"공급망","description":"연결 산업에서 전달되는 수요 확산 신호"},
-    {"id":"market_attention","group":"시장반영","description":"거래량 관심도"},
-    {"id":"price_momentum","group":"시장반영","description":"관련 주가 상대강도"},
-    {"id":"valuation_heat","group":"시장반영","description":"근사 P/E·P/B 과열도"},
-    {"id":"valuation_attractiveness","group":"가치평가","description":"근사 P/E·P/B 가격 매력"},
-    {"id":"supply_overbuild_risk","group":"위험","description":"중복투자·공급과잉 위험"},
-    {"id":"policy_dependency_risk","group":"위험","description":"정책 중단 시 취약성"},
-    {"id":"source_coverage","group":"품질","description":"필수 원천데이터 확보율"},
-    {"id":"freshness_score","group":"품질","description":"최신성 점수"},
-    {"id":"source_reliability","group":"품질","description":"공식성·재현성·오류율 점수"}
+    {
+      "id": "capital_level",
+      "group": "실물자본",
+      "description": "현재 CAPEX·시설투자 수준"
+    },
+    {
+      "id": "capital_velocity",
+      "group": "실물자본",
+      "description": "자본투입 증가 속도"
+    },
+    {
+      "id": "capital_acceleration",
+      "group": "실물자본",
+      "description": "자본투입 증가율의 가속"
+    },
+    {
+      "id": "orders_velocity",
+      "group": "수요검증",
+      "description": "신규주문·수주 증가 속도"
+    },
+    {
+      "id": "backlog_acceleration",
+      "group": "수요검증",
+      "description": "수주잔고 증가율의 가속"
+    },
+    {
+      "id": "capacity_tightness",
+      "group": "수요검증",
+      "description": "매출·이익·재고에서 나타나는 수요 긴장"
+    },
+    {
+      "id": "hiring_velocity",
+      "group": "인력",
+      "description": "산업 관련 고용 증가"
+    },
+    {
+      "id": "innovation_velocity",
+      "group": "기술",
+      "description": "특허·논문·상용화 활동 증가"
+    },
+    {
+      "id": "official_activity",
+      "group": "공식통계",
+      "description": "ECOS·KOSIS 산업생산·설비투자·고용·신용 신호"
+    },
+    {
+      "id": "breadth",
+      "group": "확산",
+      "description": "산업 내 참여기업 확산도"
+    },
+    {
+      "id": "persistence",
+      "group": "지속성",
+      "description": "신호가 여러 기간 이어진 정도"
+    },
+    {
+      "id": "macro_fit",
+      "group": "거시",
+      "description": "한국·미국 금리·유동성·경기 환경 적합도"
+    },
+    {
+      "id": "supply_chain_spillover",
+      "group": "공급망",
+      "description": "연결 산업에서 전달되는 수요 확산 신호"
+    },
+    {
+      "id": "market_attention",
+      "group": "시장반영",
+      "description": "거래량 관심도"
+    },
+    {
+      "id": "price_momentum",
+      "group": "시장반영",
+      "description": "관련 주가 상대강도"
+    },
+    {
+      "id": "valuation_heat",
+      "group": "시장반영",
+      "description": "근사 P/E·P/B 과열도"
+    },
+    {
+      "id": "valuation_attractiveness",
+      "group": "가치평가",
+      "description": "근사 P/E·P/B 가격 매력"
+    },
+    {
+      "id": "supply_overbuild_risk",
+      "group": "위험",
+      "description": "중복투자·공급과잉 위험"
+    },
+    {
+      "id": "policy_dependency_risk",
+      "group": "위험",
+      "description": "정책 중단 시 취약성"
+    },
+    {
+      "id": "source_coverage",
+      "group": "품질",
+      "description": "필수 원천데이터 확보율"
+    },
+    {
+      "id": "freshness_score",
+      "group": "품질",
+      "description": "최신성 점수"
+    },
+    {
+      "id": "source_reliability",
+      "group": "품질",
+      "description": "공식성·재현성·오류율 점수"
+    },
+    {
+      "id": "supply_chain_breadth",
+      "group": "공급망",
+      "description": "1·2차 공급망에서 동시에 확인되는 확산 폭"
+    },
+    {
+      "id": "capital_acceleration_score",
+      "group": "선행패턴",
+      "description": "CAPEX·수주·공식통계가 함께 가속되는 정도"
+    },
+    {
+      "id": "attention_gap_score",
+      "group": "선행패턴",
+      "description": "실물자금 가속 대비 시장 관심이 낮은 괴리"
+    },
+    {
+      "id": "market_prepricing_penalty",
+      "group": "시장반영",
+      "description": "주가·거래 관심이 이미 선반영된 감점"
+    },
+    {
+      "id": "value_trap_risk_score",
+      "group": "위험",
+      "description": "싼 가격과 달리 수요·실적 확인이 부족한 가치함정 위험"
+    },
+    {
+      "id": "pre_boom_pattern_score",
+      "group": "최종",
+      "description": "AI 대중화 이전과 유사한 선투자 패턴 점수(확률 아님)"
+    }
   ]
 }
