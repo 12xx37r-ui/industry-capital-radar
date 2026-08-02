@@ -1,10 +1,82 @@
 {
-  "generated_at": "2026-08-01T21:07:20.340868+00:00",
+  "generated_at": "2026-08-02T08:12:30.552707+00:00",
   "engine_version": "0.5.0",
-  "connected_sources": 0,
-  "total_sources": 0,
-  "mapped_sources": [],
-  "needs_attention": [],
-  "sources": {},
+  "connected_sources": 4,
+  "total_sources": 5,
+  "mapped_sources": [
+    "fred",
+    "ecos",
+    "opendart",
+    "market_proxy"
+  ],
+  "needs_attention": [
+    "fred",
+    "kosis"
+  ],
+  "sources": {
+    "fred": {
+      "status": "PARTIAL_SUCCESS",
+      "checked_at": "2026-08-02T07:54:43.134874+00:00",
+      "response_time_ms": 2640,
+      "mapped_to_score": true,
+      "needs_attention": true,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API",
+      "successful_series": 12,
+      "current_series": 11,
+      "total_series": 12,
+      "stale_series": [
+        "BUSINV"
+      ]
+    },
+    "ecos": {
+      "status": "CONNECTED",
+      "checked_at": "2026-08-02T07:54:43.133041+00:00",
+      "response_time_ms": 12026,
+      "table_count": 834,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API",
+      "successful_signals": 4,
+      "total_signals": 4
+    },
+    "kosis": {
+      "status": "ERROR",
+      "checked_at": "2026-08-02T07:54:43.134008+00:00",
+      "response_time_ms": 984896,
+      "mapped_to_score": false,
+      "needs_attention": true,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API",
+      "successful_signals": 0,
+      "total_signals": 4
+    },
+    "opendart": {
+      "status": "CONNECTED",
+      "checked_at": "2026-08-02T08:12:30.005931+00:00",
+      "response_time_ms": 81974,
+      "listed_corporations": 3981,
+      "companies_collected": 56,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "refresh_mode": "FULL",
+      "cache_used": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_EXPOSED_BY_API"
+    },
+    "market_proxy": {
+      "status": "CONNECTED",
+      "checked_at": "2026-08-02T08:12:30.528911+00:00",
+      "response_time_ms": 523,
+      "successful_symbols": 56,
+      "total_symbols": 56,
+      "official": false,
+      "mapped_to_score": true,
+      "needs_attention": false,
+      "key_expiry_date": null,
+      "renewal_status": "NOT_APPLICABLE"
+    }
+  },
   "renewal_note": "API가 만료일을 제공하지 않으면 갱신일은 UNKNOWN 또는 NOT_EXPOSED_BY_API로 표시합니다."
 }

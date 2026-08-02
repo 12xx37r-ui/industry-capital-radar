@@ -1,21 +1,406 @@
 {
-  "generated_at": "2026-08-01T21:07:20.340868+00:00",
+  "generated_at": "2026-08-02T08:12:30.552707+00:00",
   "engine_version": "0.5.0",
-  "run_mode": "manual",
-  "run_status": "NO_DATA",
-  "rows_loaded": 0,
-  "rows_scored": 0,
-  "acceptable_quality_rows": 0,
+  "run_mode": "monthly",
+  "run_status": "SUCCESS",
+  "rows_loaded": 23,
+  "rows_scored": 23,
+  "acceptable_quality_rows": 23,
   "unknown_industries": [],
   "quality_gate_passed": false,
-  "source_integrity_gate_passed": true,
-  "attention_sources": [],
+  "source_integrity_gate_passed": false,
+  "attention_sources": [
+    "fred",
+    "kosis"
+  ],
   "history_comparison_available": false,
   "collection": {
-    "skipped": true,
+    "companies_collected": 56,
+    "industries_normalized": 23,
+    "source_status": {
+      "fred": {
+        "status": "PARTIAL_SUCCESS",
+        "checked_at": "2026-08-02T07:54:43.134874+00:00",
+        "response_time_ms": 2640,
+        "mapped_to_score": true,
+        "needs_attention": true,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API",
+        "successful_series": 12,
+        "current_series": 11,
+        "total_series": 12,
+        "stale_series": [
+          "BUSINV"
+        ],
+        "series": {
+          "FEDFUNDS": {
+            "status": "CONNECTED",
+            "name_ko": "연방기금금리",
+            "frequency": "monthly",
+            "records": 800,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 3.63,
+            "age_days": 62
+          },
+          "DGS2": {
+            "status": "CONNECTED",
+            "name_ko": "미국 2년 국채금리",
+            "frequency": "daily",
+            "records": 766,
+            "latest_observation_date": "2026-07-30",
+            "latest_value": 4.23,
+            "age_days": 3
+          },
+          "DGS10": {
+            "status": "CONNECTED",
+            "name_ko": "미국 10년 국채금리",
+            "frequency": "daily",
+            "records": 766,
+            "latest_observation_date": "2026-07-30",
+            "latest_value": 4.68,
+            "age_days": 3
+          },
+          "T10Y2Y": {
+            "status": "CONNECTED",
+            "name_ko": "미국 10년-2년 금리차",
+            "frequency": "daily",
+            "records": 766,
+            "latest_observation_date": "2026-07-31",
+            "latest_value": 0.47,
+            "age_days": 2
+          },
+          "CPIAUCSL": {
+            "status": "CONNECTED",
+            "name_ko": "미국 소비자물가",
+            "frequency": "monthly",
+            "records": 799,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 332.568,
+            "age_days": 62
+          },
+          "CPILFESL": {
+            "status": "CONNECTED",
+            "name_ko": "미국 근원 소비자물가",
+            "frequency": "monthly",
+            "records": 799,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 336.065,
+            "age_days": 62
+          },
+          "UNRATE": {
+            "status": "CONNECTED",
+            "name_ko": "미국 실업률",
+            "frequency": "monthly",
+            "records": 799,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 4.2,
+            "age_days": 62
+          },
+          "PAYEMS": {
+            "status": "CONNECTED",
+            "name_ko": "미국 비농업고용",
+            "frequency": "monthly",
+            "records": 800,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 158984.0,
+            "age_days": 62
+          },
+          "INDPRO": {
+            "status": "CONNECTED",
+            "name_ko": "미국 산업생산",
+            "frequency": "monthly",
+            "records": 800,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 102.6395,
+            "age_days": 62
+          },
+          "DGORDER": {
+            "status": "CONNECTED",
+            "name_ko": "미국 내구재 신규주문",
+            "frequency": "monthly",
+            "records": 413,
+            "latest_observation_date": "2026-06-01",
+            "latest_value": 334772.0,
+            "age_days": 62
+          },
+          "BUSINV": {
+            "status": "STALE",
+            "name_ko": "미국 기업재고",
+            "frequency": "monthly",
+            "records": 413,
+            "latest_observation_date": "2026-05-01",
+            "latest_value": 2736158.0,
+            "age_days": 93
+          },
+          "WALCL": {
+            "status": "CONNECTED",
+            "name_ko": "연준 총자산",
+            "frequency": "weekly",
+            "records": 800,
+            "latest_observation_date": "2026-07-29",
+            "latest_value": 6738190.0,
+            "age_days": 4
+          }
+        },
+        "regime": {
+          "growth_score": 60.47,
+          "rates_score": 44.72,
+          "liquidity_score": 52.28,
+          "inflation_score": 44.49,
+          "overall_score": 52.11,
+          "raw": {
+            "dgs2_3m_change_pp": 0.3100000000000005,
+            "yield_curve_10y2y": 0.47,
+            "cpi_yoy": 0.037265298484186804,
+            "core_cpi_yoy": 0.028058110757954502,
+            "unemployment_3m_change_pp": -0.09999999999999964,
+            "payroll_6m_change": 0.0034841446172491075,
+            "industrial_production_6m_change": 0.011285385061791775,
+            "durable_orders_6m_change": 0.04179347859912497,
+            "fed_assets_13w_change": 0.005707505279890057
+          }
+        },
+        "industry_macro_scores": {
+          "AI_COMPUTE": 51.72,
+          "AI_DATA_INFRA": 51.72,
+          "SEMICONDUCTOR_EQUIPMENT": 53.3,
+          "ADVANCED_PACKAGING": 53.3,
+          "DATACENTER_POWER_COOLING": 53.3,
+          "POWER_GRID": 55.5,
+          "NUCLEAR_SMR": 55.5,
+          "ENERGY_STORAGE": 53.3,
+          "ROBOTICS": 51.72,
+          "INDUSTRIAL_AUTOMATION": 53.3,
+          "AUTONOMOUS_SENSORS": 51.72,
+          "SPACE_SATELLITE": 55.5,
+          "DEFENSE_DRONES": 55.5,
+          "CYBERSECURITY": 51.72,
+          "BIO_MANUFACTURING": 51.72,
+          "MEDICAL_DEVICES": 51.72,
+          "QUANTUM_TECH": 51.72,
+          "ADVANCED_MATERIALS": 53.3,
+          "CRITICAL_MINERALS": 55.5,
+          "WATER_INFRA": 55.5,
+          "CLIMATE_ADAPTATION": 55.5,
+          "AGRITECH": 55.5,
+          "LOGISTICS_AUTOMATION": 53.3,
+          "CONSTRUCTION_TECH": 53.3
+        },
+        "errors": []
+      },
+      "ecos": {
+        "status": "CONNECTED",
+        "checked_at": "2026-08-02T07:54:43.133041+00:00",
+        "response_time_ms": 12026,
+        "table_count": 834,
+        "mapped_to_score": true,
+        "needs_attention": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API",
+        "successful_signals": 4,
+        "total_signals": 4,
+        "signals": {
+          "industrial_activity": {
+            "status": "CONNECTED",
+            "table_code": "901Y033",
+            "table_name": "8.1.4. 전산업생산지수(농림어업제외)",
+            "item_code": "AB00",
+            "item_name": "광공업",
+            "cycle": "M",
+            "duplicate_periods_aggregated": 49,
+            "score": 55.62,
+            "growth": 0.023460410557184952,
+            "acceleration": -0.0023238610371425494,
+            "records": 49,
+            "latest_time": "202606",
+            "latest_value": 244.3,
+            "change_winsorized": false
+          },
+          "equipment_investment": {
+            "status": "CONNECTED",
+            "table_code": "901Y066",
+            "table_name": "8.1.3. 설비투자지수",
+            "item_code": "I15A",
+            "item_name": "원지수",
+            "cycle": "M",
+            "duplicate_periods_aggregated": 0,
+            "score": 83.33,
+            "growth": 0.12872083668543866,
+            "acceleration": 0.050663594707988535,
+            "records": 49,
+            "latest_time": "202606",
+            "latest_value": 140.3,
+            "change_winsorized": false
+          },
+          "corporate_credit": {
+            "status": "CONNECTED",
+            "table_code": "141Y004",
+            "table_name": "1.2.3.4.3. 예금은행 지역별 기업대출(말잔)",
+            "item_code": "1A0000",
+            "item_name": "기업대출금",
+            "cycle": "M",
+            "duplicate_periods_aggregated": 49,
+            "score": 58.18,
+            "growth": 0.027004461858912032,
+            "acceleration": 0.007256252687613207,
+            "records": 49,
+            "latest_time": "202605",
+            "latest_value": 1487408.2,
+            "change_winsorized": false
+          },
+          "exports": {
+            "status": "CONNECTED",
+            "table_code": "901Y118",
+            "table_name": "3.2.1. 수출입 총괄",
+            "item_code": "T002",
+            "item_name": "수출금액",
+            "cycle": "M",
+            "duplicate_periods_aggregated": 0,
+            "score": 99.89,
+            "growth": 0.4697192452518373,
+            "acceleration": 0.30794066048309854,
+            "records": 49,
+            "latest_time": "202606",
+            "latest_value": 102165511.0,
+            "change_winsorized": false
+          }
+        },
+        "industry_scores": {
+          "AI_COMPUTE": 72.6,
+          "AI_DATA_INFRA": 72.6,
+          "SEMICONDUCTOR_EQUIPMENT": 72.34,
+          "ADVANCED_PACKAGING": 72.34,
+          "DATACENTER_POWER_COOLING": 72.34,
+          "POWER_GRID": 74.38,
+          "NUCLEAR_SMR": 74.38,
+          "ENERGY_STORAGE": 72.34,
+          "ROBOTICS": 72.6,
+          "INDUSTRIAL_AUTOMATION": 72.34,
+          "AUTONOMOUS_SENSORS": 72.6,
+          "SPACE_SATELLITE": 74.38,
+          "DEFENSE_DRONES": 74.38,
+          "CYBERSECURITY": 72.6,
+          "BIO_MANUFACTURING": 72.6,
+          "MEDICAL_DEVICES": 72.6,
+          "QUANTUM_TECH": 72.6,
+          "ADVANCED_MATERIALS": 72.34,
+          "CRITICAL_MINERALS": 77.87,
+          "WATER_INFRA": 74.38,
+          "CLIMATE_ADAPTATION": 74.38,
+          "AGRITECH": 74.38,
+          "LOGISTICS_AUTOMATION": 72.34,
+          "CONSTRUCTION_TECH": 72.34
+        },
+        "errors": [],
+        "warnings": [
+          "industrial_activity: 49개 기간의 다중 차원을 기간별로 집계",
+          "corporate_credit: 49개 기간의 다중 차원을 기간별로 집계"
+        ]
+      },
+      "kosis": {
+        "status": "ERROR",
+        "checked_at": "2026-08-02T07:54:43.134008+00:00",
+        "response_time_ms": 984896,
+        "mapped_to_score": false,
+        "needs_attention": true,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API",
+        "successful_signals": 0,
+        "total_signals": 4,
+        "signals": {
+          "manufacturing_production": {
+            "status": "ERROR",
+            "score": null,
+            "message": "matching data not found"
+          },
+          "shipments_inventory": {
+            "status": "ERROR",
+            "score": null,
+            "message": "matching data not found"
+          },
+          "equipment_investment": {
+            "status": "ERROR",
+            "score": null,
+            "message": "matching data not found"
+          },
+          "industry_employment": {
+            "status": "ERROR",
+            "score": null,
+            "message": "matching data not found"
+          }
+        },
+        "industry_scores": {
+          "AI_COMPUTE": null,
+          "AI_DATA_INFRA": null,
+          "SEMICONDUCTOR_EQUIPMENT": null,
+          "ADVANCED_PACKAGING": null,
+          "DATACENTER_POWER_COOLING": null,
+          "POWER_GRID": null,
+          "NUCLEAR_SMR": null,
+          "ENERGY_STORAGE": null,
+          "ROBOTICS": null,
+          "INDUSTRIAL_AUTOMATION": null,
+          "AUTONOMOUS_SENSORS": null,
+          "SPACE_SATELLITE": null,
+          "DEFENSE_DRONES": null,
+          "CYBERSECURITY": null,
+          "BIO_MANUFACTURING": null,
+          "MEDICAL_DEVICES": null,
+          "QUANTUM_TECH": null,
+          "ADVANCED_MATERIALS": null,
+          "CRITICAL_MINERALS": null,
+          "WATER_INFRA": null,
+          "CLIMATE_ADAPTATION": null,
+          "AGRITECH": null,
+          "LOGISTICS_AUTOMATION": null,
+          "CONSTRUCTION_TECH": null
+        },
+        "errors": [
+          "manufacturing_production: search 광공업생산지수: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EA%B4%91%EA%B3%B5%EC%97%85%EC%83%9D%EC%82%B0%EC%A7%80%EC%88%98&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError",
+          "manufacturing_production: search 제조업 생산지수: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EC%A0%9C%EC%A1%B0%EC%97%85+%EC%83%9D%EC%82%B0%EC%A7%80%EC%88%98&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError",
+          "shipments_inventory: search 제조업 출하 재고: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EC%A0%9C%EC%A1%B0%EC%97%85+%EC%B6%9C%ED%95%98+%EC%9E%AC%EA%B3%A0&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError",
+          "shipments_inventory: search 광공업 출하 재고: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EA%B4%91%EA%B3%B5%EC%97%85+%EC%B6%9C%ED%95%98+%EC%9E%AC%EA%B3%A0&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError",
+          "equipment_investment: search 설비투자지수: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EC%84%A4%EB%B9%84%ED%88%AC%EC%9E%90%EC%A7%80%EC%88%98&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError",
+          "industry_employment: search 산업별 취업자: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EC%82%B0%EC%97%85%EB%B3%84+%EC%B7%A8%EC%97%85%EC%9E%90&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError",
+          "industry_employment: search 산업별 고용: GET failed: https://kosis.kr/openapi/statisticsSearch.do?method=getList&apiKey=%2A%2A%2A&searchNm=%EC%82%B0%EC%97%85%EB%B3%84+%EA%B3%A0%EC%9A%A9&sort=RANK&startCount=1&resultCount=6&format=json&jsonVD=Y: URLError"
+        ],
+        "warnings": []
+      },
+      "opendart": {
+        "status": "CONNECTED",
+        "checked_at": "2026-08-02T08:12:30.005931+00:00",
+        "response_time_ms": 81974,
+        "listed_corporations": 3981,
+        "companies_collected": 56,
+        "mapped_to_score": true,
+        "needs_attention": false,
+        "refresh_mode": "FULL",
+        "cache_used": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_EXPOSED_BY_API"
+      },
+      "market_proxy": {
+        "status": "CONNECTED",
+        "checked_at": "2026-08-02T08:12:30.528911+00:00",
+        "response_time_ms": 523,
+        "successful_symbols": 56,
+        "total_symbols": 56,
+        "official": false,
+        "mapped_to_score": true,
+        "needs_attention": false,
+        "key_expiry_date": null,
+        "renewal_status": "NOT_APPLICABLE"
+      }
+    },
     "errors": [],
     "error_count": 0,
-    "source_status": {}
+    "elapsed_seconds": 1067.41,
+    "cache": {
+      "used": false,
+      "previous_generated_at": "2026-08-01T00:32:32.867825+00:00",
+      "previous_age_days": 1,
+      "dart_refresh": "FULL"
+    }
   },
   "outputs": [
     "industry_radar.json",
@@ -26,5 +411,5 @@
     "engine_status.json",
     "api_status.json"
   ],
-  "message": "실데이터 수집 또는 정규화 결과가 없습니다."
+  "message": "실물자금 가속·시장 미인지 괴리·2단계 공급망 확산 기반 선행 산업 점수 산출"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T00:32:32.867825+00:00",
+  "generated_at": "2026-08-02T08:12:30.531421+00:00",
   "companies": [
     {
       "stock_code": "000100",
@@ -242,7 +242,7 @@
       "disclosures": {
         "orders_curr": 8,
         "capex_curr": 1,
-        "orders_prev": 1,
+        "orders_prev": 0,
         "capex_prev": 1
       },
       "market": {
@@ -1248,7 +1248,7 @@
       "disclosures": {
         "orders_curr": 28,
         "capex_curr": 0,
-        "orders_prev": 22,
+        "orders_prev": 23,
         "capex_prev": 0
       },
       "market": {
@@ -2926,7 +2926,7 @@
       "disclosures": {
         "orders_curr": 4,
         "capex_curr": 0,
-        "orders_prev": 4,
+        "orders_prev": 5,
         "capex_prev": 1
       },
       "market": {
