@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-02T08:12:30.552707+00:00",
+  "generated_at": "2026-08-03T11:01:00.964430+00:00",
   "engine_version": "0.5.0",
-  "connected_sources": 4,
+  "connected_sources": 5,
   "total_sources": 5,
   "mapped_sources": [
     "fred",
     "ecos",
+    "kosis",
     "opendart",
     "market_proxy"
   ],
   "needs_attention": [
-    "fred",
-    "kosis"
+    "fred"
   ],
   "sources": {
     "fred": {
       "status": "PARTIAL_SUCCESS",
-      "checked_at": "2026-08-02T07:54:43.134874+00:00",
-      "response_time_ms": 2640,
+      "checked_at": "2026-08-03T10:59:46.382002+00:00",
+      "response_time_ms": 3752,
       "mapped_to_score": true,
       "needs_attention": true,
       "key_expiry_date": null,
@@ -31,8 +31,8 @@
     },
     "ecos": {
       "status": "CONNECTED",
-      "checked_at": "2026-08-02T07:54:43.133041+00:00",
-      "response_time_ms": 12026,
+      "checked_at": "2026-08-03T10:59:46.380393+00:00",
+      "response_time_ms": 15439,
       "table_count": 834,
       "mapped_to_score": true,
       "needs_attention": false,
@@ -42,33 +42,33 @@
       "total_signals": 4
     },
     "kosis": {
-      "status": "ERROR",
-      "checked_at": "2026-08-02T07:54:43.134008+00:00",
-      "response_time_ms": 984896,
-      "mapped_to_score": false,
-      "needs_attention": true,
+      "status": "CONNECTED",
+      "checked_at": "2026-08-03T10:59:46.381250+00:00",
+      "response_time_ms": 36056,
+      "mapped_to_score": true,
+      "needs_attention": false,
       "key_expiry_date": null,
       "renewal_status": "NOT_EXPOSED_BY_API",
-      "successful_signals": 0,
+      "successful_signals": 4,
       "total_signals": 4
     },
     "opendart": {
-      "status": "CONNECTED",
-      "checked_at": "2026-08-02T08:12:30.005931+00:00",
-      "response_time_ms": 81974,
-      "listed_corporations": 3981,
-      "companies_collected": 56,
+      "status": "CONNECTED_CACHE",
+      "checked_at": "2026-08-03T11:01:00.488695+00:00",
       "mapped_to_score": true,
       "needs_attention": false,
-      "refresh_mode": "FULL",
-      "cache_used": false,
+      "refresh_mode": "DISCLOSURES_ONLY",
+      "cache_used": true,
+      "cache_generated_at": "2026-08-02T08:12:30.531421+00:00",
+      "cache_age_days": 1,
+      "companies_collected": 56,
       "key_expiry_date": null,
       "renewal_status": "NOT_EXPOSED_BY_API"
     },
     "market_proxy": {
       "status": "CONNECTED",
-      "checked_at": "2026-08-02T08:12:30.528911+00:00",
-      "response_time_ms": 523,
+      "checked_at": "2026-08-03T11:01:00.952253+00:00",
+      "response_time_ms": 464,
       "successful_symbols": 56,
       "total_symbols": 56,
       "official": false,
