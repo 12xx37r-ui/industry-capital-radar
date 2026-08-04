@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-08-03T11:01:00.964430+00:00",
+  "generated_at": "2026-08-04T06:39:54.525592+00:00",
   "engine_version": "0.5.0",
   "method": "DIRECT_AND_SECOND_HOP_WITH_DECAY",
   "spillovers": {
     "AI_COMPUTE": null,
-    "AI_DATA_INFRA": 50.17,
-    "SEMICONDUCTOR_EQUIPMENT": 52.03,
-    "ADVANCED_PACKAGING": 50.17,
-    "DATACENTER_POWER_COOLING": 52.91,
-    "POWER_GRID": 51.14,
+    "AI_DATA_INFRA": 50.56,
+    "SEMICONDUCTOR_EQUIPMENT": 52.49,
+    "ADVANCED_PACKAGING": 50.56,
+    "DATACENTER_POWER_COOLING": 53.3,
+    "POWER_GRID": 51.45,
     "NUCLEAR_SMR": null,
-    "ENERGY_STORAGE": 52.38,
-    "ROBOTICS": 53.93,
-    "INDUSTRIAL_AUTOMATION": 59.06,
-    "AUTONOMOUS_SENSORS": 57.67,
+    "ENERGY_STORAGE": 52.66,
+    "ROBOTICS": 54.15,
+    "INDUSTRIAL_AUTOMATION": 59.2,
+    "AUTONOMOUS_SENSORS": 57.65,
     "SPACE_SATELLITE": null,
-    "DEFENSE_DRONES": 55.72,
-    "CYBERSECURITY": 63.58,
-    "BIO_MANUFACTURING": 83.53,
-    "MEDICAL_DEVICES": 59.37,
+    "DEFENSE_DRONES": 55.78,
+    "CYBERSECURITY": 63.85,
+    "BIO_MANUFACTURING": 83.73,
+    "MEDICAL_DEVICES": 59.6,
     "QUANTUM_TECH": null,
-    "ADVANCED_MATERIALS": 49.43,
+    "ADVANCED_MATERIALS": 49.71,
     "CRITICAL_MINERALS": null,
-    "WATER_INFRA": 48.52,
-    "CLIMATE_ADAPTATION": 48.34,
-    "LOGISTICS_AUTOMATION": 61.68,
+    "WATER_INFRA": 48.58,
+    "CLIMATE_ADAPTATION": 48.4,
+    "LOGISTICS_AUTOMATION": 61.94,
     "CONSTRUCTION_TECH": null
   },
   "breadth": {
@@ -59,10 +59,10 @@
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.75,
         "relation": "클라우드 인프라 수요",
-        "contribution": 37.63
+        "contribution": 37.92
       }
     ],
     "SEMICONDUCTOR_EQUIPMENT": [
@@ -70,19 +70,19 @@
         "source_industry_id": "ADVANCED_PACKAGING",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 52.79,
+        "source_trigger_score": 53.27,
         "weight": 0.5,
         "relation": "후공정 장비 수요",
-        "contribution": 26.39
+        "contribution": 26.64
       },
       {
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": "ADVANCED_PACKAGING",
         "hop": 2,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.2025,
         "relation": "패키징·검사 수요 → 후공정 장비 수요",
-        "contribution": 10.16
+        "contribution": 10.24
       }
     ],
     "ADVANCED_PACKAGING": [
@@ -90,10 +90,10 @@
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.9,
         "relation": "패키징·검사 수요",
-        "contribution": 45.15
+        "contribution": 45.5
       }
     ],
     "DATACENTER_POWER_COOLING": [
@@ -101,28 +101,28 @@
         "source_industry_id": "AI_DATA_INFRA",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 56.15,
+        "source_trigger_score": 56.54,
         "weight": 0.95,
         "relation": "데이터센터 증설",
-        "contribution": 53.34
+        "contribution": 53.71
       },
       {
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.8,
         "relation": "전력·냉각 수요",
-        "contribution": 40.14
+        "contribution": 40.45
       },
       {
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": "AI_DATA_INFRA",
         "hop": 2,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.3206,
         "relation": "클라우드 인프라 수요 → 데이터센터 증설",
-        "contribution": 16.09
+        "contribution": 16.21
       }
     ],
     "POWER_GRID": [
@@ -130,46 +130,46 @@
         "source_industry_id": "AI_DATA_INFRA",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 56.15,
+        "source_trigger_score": 56.54,
         "weight": 0.7,
         "relation": "전력망 증설",
-        "contribution": 39.3
+        "contribution": 39.58
       },
       {
         "source_industry_id": "NUCLEAR_SMR",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 50.76,
+        "source_trigger_score": 50.98,
         "weight": 0.65,
         "relation": "계통연계 설비",
-        "contribution": 33.0
+        "contribution": 33.14
       },
       {
         "source_industry_id": "ENERGY_STORAGE",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 44.09,
+        "source_trigger_score": 44.39,
         "weight": 0.55,
         "relation": "전력망 안정화",
-        "contribution": 24.25
+        "contribution": 24.41
       },
       {
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": "AI_DATA_INFRA",
         "hop": 2,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.2362,
         "relation": "클라우드 인프라 수요 → 전력망 증설",
-        "contribution": 11.85
+        "contribution": 11.94
       },
       {
         "source_industry_id": "ADVANCED_MATERIALS",
         "via_industry_id": "ENERGY_STORAGE",
         "hop": 2,
-        "source_trigger_score": 56.38,
+        "source_trigger_score": 56.68,
         "weight": 0.1609,
         "relation": "전지 소재 → 전력망 안정화",
-        "contribution": 9.07
+        "contribution": 9.12
       }
     ],
     "NUCLEAR_SMR": [],
@@ -178,55 +178,55 @@
         "source_industry_id": "ADVANCED_MATERIALS",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 56.38,
+        "source_trigger_score": 56.68,
         "weight": 0.65,
         "relation": "전지 소재",
-        "contribution": 36.65
+        "contribution": 36.84
       },
       {
         "source_industry_id": "CRITICAL_MINERALS",
         "via_industry_id": "ADVANCED_MATERIALS",
         "hop": 2,
-        "source_trigger_score": 56.75,
+        "source_trigger_score": 57.06,
         "weight": 0.2194,
         "relation": "핵심 원료 공급 → 전지 소재",
-        "contribution": 12.45
+        "contribution": 12.52
       },
       {
         "source_industry_id": "SPACE_SATELLITE",
         "via_industry_id": "ADVANCED_MATERIALS",
         "hop": 2,
-        "source_trigger_score": 55.72,
+        "source_trigger_score": 55.78,
         "weight": 0.1316,
         "relation": "우주항공 소재 → 전지 소재",
-        "contribution": 7.33
+        "contribution": 7.34
       },
       {
         "source_industry_id": "POWER_GRID",
         "via_industry_id": "ADVANCED_MATERIALS",
         "hop": 2,
-        "source_trigger_score": 52.57,
+        "source_trigger_score": 52.71,
         "weight": 0.1316,
         "relation": "전선·절연 소재 → 전지 소재",
-        "contribution": 6.92
+        "contribution": 6.94
       },
       {
         "source_industry_id": "ROBOTICS",
         "via_industry_id": "ADVANCED_MATERIALS",
         "hop": 2,
-        "source_trigger_score": 60.6,
+        "source_trigger_score": 60.7,
         "weight": 0.1024,
         "relation": "경량·정밀 소재 → 전지 소재",
-        "contribution": 6.2
+        "contribution": 6.21
       },
       {
         "source_industry_id": "SEMICONDUCTOR_EQUIPMENT",
         "via_industry_id": "ADVANCED_MATERIALS",
         "hop": 2,
-        "source_trigger_score": 22.12,
+        "source_trigger_score": 22.69,
         "weight": 0.1609,
         "relation": "공정소재 수요 → 전지 소재",
-        "contribution": 3.56
+        "contribution": 3.65
       }
     ],
     "ROBOTICS": [
@@ -234,19 +234,19 @@
         "source_industry_id": "AUTONOMOUS_SENSORS",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 53.77,
+        "source_trigger_score": 54.1,
         "weight": 0.65,
         "relation": "인지·제어 부품",
-        "contribution": 34.95
+        "contribution": 35.17
       },
       {
         "source_industry_id": "DEFENSE_DRONES",
         "via_industry_id": "AUTONOMOUS_SENSORS",
         "hop": 2,
-        "source_trigger_score": 54.49,
+        "source_trigger_score": 54.32,
         "weight": 0.1901,
         "relation": "센서·유도 체계 → 인지·제어 부품",
-        "contribution": 10.36
+        "contribution": 10.33
       }
     ],
     "INDUSTRIAL_AUTOMATION": [
@@ -254,19 +254,19 @@
         "source_industry_id": "ROBOTICS",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 60.6,
+        "source_trigger_score": 60.7,
         "weight": 0.85,
         "relation": "공장 자동화",
-        "contribution": 51.51
+        "contribution": 51.59
       },
       {
         "source_industry_id": "AUTONOMOUS_SENSORS",
         "via_industry_id": "ROBOTICS",
         "hop": 2,
-        "source_trigger_score": 53.77,
+        "source_trigger_score": 54.1,
         "weight": 0.2486,
         "relation": "인지·제어 부품 → 공장 자동화",
-        "contribution": 13.37
+        "contribution": 13.45
       }
     ],
     "AUTONOMOUS_SENSORS": [
@@ -274,28 +274,28 @@
         "source_industry_id": "ROBOTICS",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 60.6,
+        "source_trigger_score": 60.7,
         "weight": 0.8,
         "relation": "센서·제어 수요",
-        "contribution": 48.48
+        "contribution": 48.56
       },
       {
         "source_industry_id": "DEFENSE_DRONES",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 54.49,
+        "source_trigger_score": 54.32,
         "weight": 0.65,
         "relation": "센서·유도 체계",
-        "contribution": 35.42
+        "contribution": 35.31
       },
       {
         "source_industry_id": "SPACE_SATELLITE",
         "via_industry_id": "DEFENSE_DRONES",
         "hop": 2,
-        "source_trigger_score": 55.72,
+        "source_trigger_score": 55.78,
         "weight": 0.1463,
         "relation": "감시·통신 체계 → 센서·유도 체계",
-        "contribution": 8.15
+        "contribution": 8.16
       }
     ],
     "SPACE_SATELLITE": [],
@@ -304,10 +304,10 @@
         "source_industry_id": "SPACE_SATELLITE",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 55.72,
+        "source_trigger_score": 55.78,
         "weight": 0.5,
         "relation": "감시·통신 체계",
-        "contribution": 27.86
+        "contribution": 27.89
       }
     ],
     "CYBERSECURITY": [
@@ -315,28 +315,28 @@
         "source_industry_id": "QUANTUM_TECH",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 78.2,
+        "source_trigger_score": 78.27,
         "weight": 0.45,
         "relation": "양자보안 수요",
-        "contribution": 35.19
+        "contribution": 35.22
       },
       {
         "source_industry_id": "AI_DATA_INFRA",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 56.15,
+        "source_trigger_score": 56.54,
         "weight": 0.55,
         "relation": "보안 수요",
-        "contribution": 30.88
+        "contribution": 31.1
       },
       {
         "source_industry_id": "AI_COMPUTE",
         "via_industry_id": "AI_DATA_INFRA",
         "hop": 2,
-        "source_trigger_score": 50.17,
+        "source_trigger_score": 50.56,
         "weight": 0.1856,
         "relation": "클라우드 인프라 수요 → 보안 수요",
-        "contribution": 9.31
+        "contribution": 9.38
       }
     ],
     "BIO_MANUFACTURING": [
@@ -344,10 +344,10 @@
         "source_industry_id": "MEDICAL_DEVICES",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 83.53,
+        "source_trigger_score": 83.73,
         "weight": 0.3,
         "relation": "바이오 생산·진단 연계",
-        "contribution": 25.06
+        "contribution": 25.12
       }
     ],
     "MEDICAL_DEVICES": [
@@ -355,10 +355,10 @@
         "source_industry_id": "BIO_MANUFACTURING",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 59.37,
+        "source_trigger_score": 59.6,
         "weight": 0.35,
         "relation": "진단·제조 연계",
-        "contribution": 20.78
+        "contribution": 20.86
       }
     ],
     "QUANTUM_TECH": [],
@@ -367,73 +367,73 @@
         "source_industry_id": "CRITICAL_MINERALS",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 56.75,
+        "source_trigger_score": 57.06,
         "weight": 0.75,
         "relation": "핵심 원료 공급",
-        "contribution": 42.56
+        "contribution": 42.8
       },
       {
         "source_industry_id": "SPACE_SATELLITE",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 55.72,
+        "source_trigger_score": 55.78,
         "weight": 0.45,
         "relation": "우주항공 소재",
-        "contribution": 25.07
+        "contribution": 25.1
       },
       {
         "source_industry_id": "POWER_GRID",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 52.57,
+        "source_trigger_score": 52.71,
         "weight": 0.45,
         "relation": "전선·절연 소재",
-        "contribution": 23.66
+        "contribution": 23.72
       },
       {
         "source_industry_id": "ROBOTICS",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 60.6,
+        "source_trigger_score": 60.7,
         "weight": 0.35,
         "relation": "경량·정밀 소재",
-        "contribution": 21.21
+        "contribution": 21.24
       },
       {
         "source_industry_id": "SEMICONDUCTOR_EQUIPMENT",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 22.12,
+        "source_trigger_score": 22.69,
         "weight": 0.55,
         "relation": "공정소재 수요",
-        "contribution": 12.17
+        "contribution": 12.48
       },
       {
         "source_industry_id": "AI_DATA_INFRA",
         "via_industry_id": "POWER_GRID",
         "hop": 2,
-        "source_trigger_score": 56.15,
+        "source_trigger_score": 56.54,
         "weight": 0.1418,
         "relation": "전력망 증설 → 전선·절연 소재",
-        "contribution": 7.96
+        "contribution": 8.01
       },
       {
         "source_industry_id": "NUCLEAR_SMR",
         "via_industry_id": "POWER_GRID",
         "hop": 2,
-        "source_trigger_score": 50.76,
+        "source_trigger_score": 50.98,
         "weight": 0.1316,
         "relation": "계통연계 설비 → 전선·절연 소재",
-        "contribution": 6.68
+        "contribution": 6.71
       },
       {
         "source_industry_id": "ADVANCED_PACKAGING",
         "via_industry_id": "SEMICONDUCTOR_EQUIPMENT",
         "hop": 2,
-        "source_trigger_score": 52.79,
+        "source_trigger_score": 53.27,
         "weight": 0.1238,
         "relation": "후공정 장비 수요 → 공정소재 수요",
-        "contribution": 6.53
+        "contribution": 6.59
       }
     ],
     "CRITICAL_MINERALS": [],
@@ -451,10 +451,10 @@
         "source_industry_id": "CONSTRUCTION_TECH",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 48.65,
+        "source_trigger_score": 48.78,
         "weight": 0.4,
         "relation": "도시 인프라",
-        "contribution": 19.46
+        "contribution": 19.51
       }
     ],
     "CLIMATE_ADAPTATION": [
@@ -462,19 +462,19 @@
         "source_industry_id": "WATER_INFRA",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 48.28,
+        "source_trigger_score": 48.33,
         "weight": 0.75,
         "relation": "기후 적응 인프라",
-        "contribution": 36.21
+        "contribution": 36.25
       },
       {
         "source_industry_id": "CONSTRUCTION_TECH",
         "via_industry_id": "WATER_INFRA",
         "hop": 2,
-        "source_trigger_score": 48.65,
+        "source_trigger_score": 48.78,
         "weight": 0.135,
         "relation": "도시 인프라 → 기후 적응 인프라",
-        "contribution": 6.57
+        "contribution": 6.59
       }
     ],
     "LOGISTICS_AUTOMATION": [
@@ -482,28 +482,28 @@
         "source_industry_id": "INDUSTRIAL_AUTOMATION",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 68.6,
+        "source_trigger_score": 68.99,
         "weight": 0.7,
         "relation": "물류 공정 자동화",
-        "contribution": 48.02
+        "contribution": 48.3
       },
       {
         "source_industry_id": "CONSTRUCTION_TECH",
         "via_industry_id": null,
         "hop": 1,
-        "source_trigger_score": 48.65,
+        "source_trigger_score": 48.78,
         "weight": 0.35,
         "relation": "스마트 물류시설",
-        "contribution": 17.03
+        "contribution": 17.07
       },
       {
         "source_industry_id": "ROBOTICS",
         "via_industry_id": "INDUSTRIAL_AUTOMATION",
         "hop": 2,
-        "source_trigger_score": 60.6,
+        "source_trigger_score": 60.7,
         "weight": 0.2677,
         "relation": "공장 자동화 → 물류 공정 자동화",
-        "contribution": 16.23
+        "contribution": 16.25
       }
     ],
     "CONSTRUCTION_TECH": []
