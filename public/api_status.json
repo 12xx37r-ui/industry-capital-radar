@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T06:58:13.018252+00:00",
+  "generated_at": "2026-08-06T00:30:44.965003+00:00",
   "engine_version": "0.5.0",
   "connected_sources": 4,
   "total_sources": 5,
@@ -16,8 +16,8 @@
   "sources": {
     "fred": {
       "status": "PARTIAL_SUCCESS",
-      "checked_at": "2026-08-05T06:41:46.900219+00:00",
-      "response_time_ms": 4659,
+      "checked_at": "2026-08-06T00:14:18.518282+00:00",
+      "response_time_ms": 4730,
       "mapped_to_score": true,
       "needs_attention": true,
       "key_expiry_date": null,
@@ -31,8 +31,8 @@
     },
     "ecos": {
       "status": "CONNECTED",
-      "checked_at": "2026-08-05T06:41:46.902376+00:00",
-      "response_time_ms": 14030,
+      "checked_at": "2026-08-06T00:14:18.516601+00:00",
+      "response_time_ms": 13751,
       "table_count": 834,
       "mapped_to_score": true,
       "needs_attention": false,
@@ -43,8 +43,8 @@
     },
     "kosis": {
       "status": "ERROR",
-      "checked_at": "2026-08-05T06:41:46.903351+00:00",
-      "response_time_ms": 985230,
+      "checked_at": "2026-08-06T00:14:18.517493+00:00",
+      "response_time_ms": 985493,
       "mapped_to_score": false,
       "needs_attention": true,
       "key_expiry_date": null,
@@ -54,21 +54,21 @@
     },
     "opendart": {
       "status": "CONNECTED_CACHE",
-      "checked_at": "2026-08-05T06:58:12.135634+00:00",
+      "checked_at": "2026-08-06T00:30:44.012407+00:00",
       "mapped_to_score": true,
       "needs_attention": false,
       "refresh_mode": "CACHE_ONLY",
       "cache_used": true,
-      "cache_generated_at": "2026-08-04T06:39:54.515333+00:00",
-      "cache_age_days": 1,
+      "cache_generated_at": "2026-08-05T06:58:13.009005+00:00",
+      "cache_age_days": 0,
       "companies_collected": 56,
       "key_expiry_date": null,
       "renewal_status": "NOT_EXPOSED_BY_API"
     },
     "market_proxy": {
       "status": "CONNECTED",
-      "checked_at": "2026-08-05T06:58:13.006326+00:00",
-      "response_time_ms": 871,
+      "checked_at": "2026-08-06T00:30:44.952918+00:00",
+      "response_time_ms": 941,
       "successful_symbols": 56,
       "total_symbols": 56,
       "official": false,
