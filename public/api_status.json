@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-07T04:38:09.851539+00:00",
+  "generated_at": "2026-08-07T23:24:49.732650+00:00",
   "engine_version": "0.5.0",
-  "connected_sources": 5,
+  "connected_sources": 4,
   "total_sources": 5,
   "mapped_sources": [
     "fred",
     "ecos",
-    "kosis",
     "opendart",
     "market_proxy"
   ],
   "needs_attention": [
-    "fred"
+    "fred",
+    "kosis"
   ],
   "sources": {
     "fred": {
       "status": "PARTIAL_SUCCESS",
-      "checked_at": "2026-08-07T04:37:53.048020+00:00",
-      "response_time_ms": 3641,
+      "checked_at": "2026-08-07T23:08:26.274324+00:00",
+      "response_time_ms": 3309,
       "mapped_to_score": true,
       "needs_attention": true,
       "key_expiry_date": null,
@@ -31,8 +31,8 @@
     },
     "ecos": {
       "status": "CONNECTED",
-      "checked_at": "2026-08-07T04:37:53.046006+00:00",
-      "response_time_ms": 14577,
+      "checked_at": "2026-08-07T23:08:26.272195+00:00",
+      "response_time_ms": 12131,
       "table_count": 834,
       "mapped_to_score": true,
       "needs_attention": false,
@@ -42,33 +42,33 @@
       "total_signals": 4
     },
     "kosis": {
-      "status": "CONNECTED",
-      "checked_at": "2026-08-07T04:37:53.046967+00:00",
-      "response_time_ms": 16226,
-      "mapped_to_score": true,
-      "needs_attention": false,
+      "status": "ERROR",
+      "checked_at": "2026-08-07T23:08:26.273057+00:00",
+      "response_time_ms": 982877,
+      "mapped_to_score": false,
+      "needs_attention": true,
       "key_expiry_date": null,
       "renewal_status": "NOT_EXPOSED_BY_API",
-      "successful_signals": 4,
+      "successful_signals": 0,
       "total_signals": 4
     },
     "opendart": {
       "status": "CONNECTED_CACHE",
-      "checked_at": "2026-08-07T04:38:09.274543+00:00",
+      "checked_at": "2026-08-07T23:24:49.152225+00:00",
       "mapped_to_score": true,
       "needs_attention": false,
       "refresh_mode": "CACHE_ONLY",
       "cache_used": true,
-      "cache_generated_at": "2026-08-06T00:30:44.955331+00:00",
-      "cache_age_days": 1,
+      "cache_generated_at": "2026-08-07T04:38:09.841633+00:00",
+      "cache_age_days": 0,
       "companies_collected": 56,
       "key_expiry_date": null,
       "renewal_status": "NOT_EXPOSED_BY_API"
     },
     "market_proxy": {
       "status": "CONNECTED",
-      "checked_at": "2026-08-07T04:38:09.839159+00:00",
-      "response_time_ms": 565,
+      "checked_at": "2026-08-07T23:24:49.719941+00:00",
+      "response_time_ms": 568,
       "successful_symbols": 56,
       "total_symbols": 56,
       "official": false,
