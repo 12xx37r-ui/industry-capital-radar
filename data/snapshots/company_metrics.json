@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T00:30:44.955331+00:00",
+  "generated_at": "2026-08-07T04:38:09.841633+00:00",
   "companies": [
     {
       "stock_code": "000100",
@@ -56,11 +56,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.3039927404718693,
-        "return_12m": -0.38738019169329074,
-        "volume_acceleration": -0.05055388203284428,
-        "latest_ts": 1785974400.0,
-        "latest_price": 76700.0
+        "return_6m": -0.2666666666666667,
+        "return_12m": -0.35766423357664234,
+        "volume_acceleration": -0.07943143668983255,
+        "latest_ts": 1786060800.0,
+        "latest_price": 79200.0
       }
     },
     {
@@ -118,11 +118,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.8373983739837398,
-        "return_12m": 4.881040892193308,
-        "volume_acceleration": 0.33983408113583846,
-        "latest_ts": 1785974400.0,
-        "latest_price": 1582000.0
+        "return_6m": 0.561056105610561,
+        "return_12m": 4.26530612244898,
+        "volume_acceleration": 0.2891858464148398,
+        "latest_ts": 1786060800.0,
+        "latest_price": 1419000.0
       }
     },
     {
@@ -182,11 +182,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.053357865685372596,
-        "return_12m": 0.7348484848484849,
-        "volume_acceleration": -0.5677075440384938,
-        "latest_ts": 1785974400.0,
-        "latest_price": 114500.0
+        "return_6m": 0.0399610136452242,
+        "return_12m": 0.6117824773413898,
+        "volume_acceleration": -0.562857975824718,
+        "latest_ts": 1786060800.0,
+        "latest_price": 106700.0
       }
     },
     {
@@ -246,11 +246,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.36765957446808506,
-        "return_12m": -0.015241882041086785,
-        "volume_acceleration": -0.23999116811792087,
-        "latest_ts": 1785974400.0,
-        "latest_price": 148600.0
+        "return_6m": -0.3252796420581655,
+        "return_12m": 0.003994673768308976,
+        "volume_acceleration": -0.2426513172370015,
+        "latest_ts": 1786060800.0,
+        "latest_price": 150800.0
       }
     },
     {
@@ -309,11 +309,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.12774725274725274,
-        "return_12m": -0.052238805970149294,
-        "volume_acceleration": -0.29457069928337165,
-        "latest_ts": 1785974400.0,
-        "latest_price": 317500.0
+        "return_6m": -0.07050359712230214,
+        "return_12m": -0.03293413173652693,
+        "volume_acceleration": -0.3028936721817723,
+        "latest_ts": 1786060800.0,
+        "latest_price": 323000.0
       }
     },
     {
@@ -372,11 +372,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.505911636589919,
-        "return_12m": 2.644578313253012,
-        "volume_acceleration": 0.009815149031201287,
-        "latest_ts": 1785974400.0,
-        "latest_price": 242000.0
+        "return_6m": 0.44236760124610597,
+        "return_12m": 2.507575757575758,
+        "volume_acceleration": -0.0035506732571671806,
+        "latest_ts": 1786060800.0,
+        "latest_price": 231500.0
       }
     },
     {
@@ -436,11 +436,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.7119707266074229,
-        "return_12m": 0.6133004926108374,
-        "volume_acceleration": 1.0630043295615184,
-        "latest_ts": 1785974400.0,
-        "latest_price": 32750.0
+        "return_6m": 0.6755460841768779,
+        "return_12m": 0.56857855361596,
+        "volume_acceleration": 1.0347246359047988,
+        "latest_ts": 1786060800.0,
+        "latest_price": 31450.0
       }
     },
     {
@@ -498,11 +498,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.12628865979381443,
-        "return_12m": 1.3672806067172263,
+        "return_6m": 0.14102564102564097,
+        "return_12m": 1.3384130320546506,
         "volume_acceleration": -0.3060939720639113,
-        "latest_ts": 1785974400.0,
-        "latest_price": 437000.0
+        "latest_ts": 1786060800.0,
+        "latest_price": 445000.0
       }
     },
     {
@@ -562,11 +562,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": 0.90754039497307,
-        "return_12m": 2.794642857142857,
-        "volume_acceleration": -0.00588395721925139,
-        "latest_ts": 1785974400.0,
-        "latest_price": 212500.0
+        "return_6m": 0.7402826855123674,
+        "return_12m": 2.4083044982698962,
+        "volume_acceleration": -0.0449664817687111,
+        "latest_ts": 1786060800.0,
+        "latest_price": 197000.0
       }
     },
     {
@@ -625,11 +625,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": 1.379032258064516,
-        "return_12m": 2.831168831168831,
-        "volume_acceleration": 0.40385825263964104,
-        "latest_ts": 1785974400.0,
-        "latest_price": 590000.0
+        "return_6m": 1.2489795918367346,
+        "return_12m": 2.5434083601286175,
+        "volume_acceleration": 0.3145586603039543,
+        "latest_ts": 1786060800.0,
+        "latest_price": 551000.0
       }
     },
     {
@@ -687,11 +687,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.10284463894967177,
-        "return_12m": 0.68561872909699,
-        "volume_acceleration": 0.08410218730256802,
-        "latest_ts": 1785974400.0,
-        "latest_price": 504000.0
+        "return_6m": 0.0968819599109132,
+        "return_12m": 0.6638513513513513,
+        "volume_acceleration": 0.05952860582443109,
+        "latest_ts": 1786060800.0,
+        "latest_price": 492500.0
       }
     },
     {
@@ -749,11 +749,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.19692307692307698,
-        "return_12m": 0.14725274725274717,
-        "volume_acceleration": 0.01508812312413954,
-        "latest_ts": 1785974400.0,
-        "latest_price": 1044000.0
+        "return_6m": -0.17230769230769227,
+        "return_12m": 0.1434643995749203,
+        "volume_acceleration": 0.07674045991018441,
+        "latest_ts": 1786060800.0,
+        "latest_price": 1076000.0
       }
     },
     {
@@ -812,11 +812,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.28201438848920857,
-        "return_12m": 0.588235294117647,
-        "volume_acceleration": 0.1630601045287543,
-        "latest_ts": 1785974400.0,
-        "latest_price": 89100.0
+        "return_6m": 0.2068965517241379,
+        "return_12m": 0.5765765765765767,
+        "volume_acceleration": 0.16127402789907785,
+        "latest_ts": 1786060800.0,
+        "latest_price": 87500.0
       }
     },
     {
@@ -876,11 +876,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.5993640699523053,
-        "return_12m": 1.0160320641282565,
-        "volume_acceleration": 0.45259310986165846,
-        "latest_ts": 1785974400.0,
-        "latest_price": 50300.0
+        "return_6m": 0.5487012987012987,
+        "return_12m": 0.8705882352941177,
+        "volume_acceleration": 0.46411715821786537,
+        "latest_ts": 1786060800.0,
+        "latest_price": 47700.0
       }
     },
     {
@@ -939,11 +939,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.06060606060606055,
-        "return_12m": -0.06560283687943258,
-        "volume_acceleration": -0.17796107810864326,
-        "latest_ts": 1785974400.0,
-        "latest_price": 52700.0
+        "return_6m": -0.06326889279437609,
+        "return_12m": -0.054964539007092195,
+        "volume_acceleration": -0.2474614225155234,
+        "latest_ts": 1786060800.0,
+        "latest_price": 53300.0
       }
     },
     {
@@ -1001,11 +1001,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.17553191489361697,
-        "return_12m": 0.22239747634069396,
-        "volume_acceleration": -0.401716741514098,
-        "latest_ts": 1785974400.0,
-        "latest_price": 77500.0
+        "return_6m": -0.16887417218543044,
+        "return_12m": 0.15137614678899092,
+        "volume_acceleration": -0.42581163605741057,
+        "latest_ts": 1786060800.0,
+        "latest_price": 75300.0
       }
     },
     {
@@ -1063,11 +1063,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": 2.5850515463917527,
-        "return_12m": 3.7152542372881356,
-        "volume_acceleration": 0.6990137587227401,
-        "latest_ts": 1785974400.0,
-        "latest_price": 139100.0
+        "return_6m": 2.035066505441354,
+        "return_12m": 3.305317324185249,
+        "volume_acceleration": 0.6609895533421599,
+        "latest_ts": 1786060800.0,
+        "latest_price": 125500.0
       }
     },
     {
@@ -1125,11 +1125,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.09015256588072118,
-        "return_12m": 0.5508274231678487,
-        "volume_acceleration": 0.1546824719380293,
-        "latest_ts": 1785974400.0,
-        "latest_price": 328000.0
+        "return_6m": -0.15691489361702127,
+        "return_12m": 0.49881796690307323,
+        "volume_acceleration": 0.10845978331977091,
+        "latest_ts": 1786060800.0,
+        "latest_price": 317000.0
       }
     },
     {
@@ -1188,11 +1188,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": 0.01228501228501222,
-        "return_12m": 1.3925667828106851,
-        "volume_acceleration": -0.17846665858834077,
-        "latest_ts": 1785974400.0,
-        "latest_price": 206000.0
+        "return_6m": -0.09620853080568725,
+        "return_12m": 1.2541371158392436,
+        "volume_acceleration": -0.1987977167820255,
+        "latest_ts": 1786060800.0,
+        "latest_price": 190700.0
       }
     },
     {
@@ -1252,11 +1252,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 2.32621359223301,
-        "return_12m": 3.325757575757576,
-        "volume_acceleration": -0.6244300313079731,
-        "latest_ts": 1785974400.0,
-        "latest_price": 17130.0
+        "return_6m": 2.2293762575452716,
+        "return_12m": 3.099616858237548,
+        "volume_acceleration": -0.6157193864353936,
+        "latest_ts": 1786060800.0,
+        "latest_price": 16050.0
       }
     },
     {
@@ -1314,11 +1314,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.12319999999999998,
-        "return_12m": -0.016157989228007152,
-        "volume_acceleration": -0.3330283668477316,
-        "latest_ts": 1785974400.0,
-        "latest_price": 54800.0
+        "return_6m": -0.08653846153846156,
+        "return_12m": 0.04014598540145986,
+        "volume_acceleration": -0.34458305053010974,
+        "latest_ts": 1786060800.0,
+        "latest_price": 57000.0
       }
     },
     {
@@ -1377,11 +1377,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.12018946121965657,
-        "return_12m": 0.6117136659436009,
+        "return_6m": -0.07011289364230544,
+        "return_12m": 0.6900647948164147,
         "volume_acceleration": -0.3848817032867111,
-        "latest_ts": 1785974400.0,
-        "latest_price": 148600.0
+        "latest_ts": 1786060800.0,
+        "latest_price": 156500.0
       }
     },
     {
@@ -1439,11 +1439,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.19829059829059825,
-        "return_12m": -0.09108527131782951,
-        "volume_acceleration": -0.42223988777180266,
-        "latest_ts": 1785974400.0,
-        "latest_price": 46900.0
+        "return_6m": -0.1651785714285714,
+        "return_12m": -0.09223300970873782,
+        "volume_acceleration": -0.45017397227489464,
+        "latest_ts": 1786060800.0,
+        "latest_price": 46750.0
       }
     },
     {
@@ -1501,11 +1501,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.2528818443804035,
-        "return_12m": 0.196078431372549,
-        "volume_acceleration": -0.5001116124662539,
-        "latest_ts": 1785974400.0,
-        "latest_price": 103700.0
+        "return_6m": -0.2374429223744292,
+        "return_12m": 0.16783216783216792,
+        "volume_acceleration": -0.5099335094965991,
+        "latest_ts": 1786060800.0,
+        "latest_price": 100200.0
       }
     },
     {
@@ -1563,11 +1563,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.3200312989045383,
-        "return_12m": -0.2969255663430421,
-        "volume_acceleration": -0.537533346784137,
-        "latest_ts": 1785974400.0,
-        "latest_price": 8690.0
+        "return_6m": -0.3404423380726699,
+        "return_12m": -0.32113821138211385,
+        "volume_acceleration": -0.5468900620978769,
+        "latest_ts": 1786060800.0,
+        "latest_price": 8350.0
       }
     },
     {
@@ -1625,11 +1625,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.15156017830609214,
-        "return_12m": -0.12691131498470953,
-        "volume_acceleration": -0.16735181476406313,
-        "latest_ts": 1785974400.0,
-        "latest_price": 57100.0
+        "return_6m": -0.12312312312312312,
+        "return_12m": -0.11380880121396053,
+        "volume_acceleration": -0.18012293427744397,
+        "latest_ts": 1786060800.0,
+        "latest_price": 58400.0
       }
     },
     {
@@ -1688,11 +1688,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.3904494382022472,
-        "return_12m": -0.12676056338028174,
-        "volume_acceleration": -0.18415358199383525,
-        "latest_ts": 1785974400.0,
-        "latest_price": 21700.0
+        "return_6m": -0.36834319526627224,
+        "return_12m": -0.13034623217922603,
+        "volume_acceleration": -0.221947194719472,
+        "latest_ts": 1786060800.0,
+        "latest_price": 21350.0
       }
     },
     {
@@ -1750,11 +1750,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.28447339847991315,
-        "return_12m": 0.4096256684491979,
-        "volume_acceleration": 0.15213886251061215,
-        "latest_ts": 1785974400.0,
-        "latest_price": 65900.0
+        "return_6m": -0.3852691218130312,
+        "return_12m": 0.41521739130434776,
+        "volume_acceleration": 0.09878868865535972,
+        "latest_ts": 1786060800.0,
+        "latest_price": 65100.0
       }
     },
     {
@@ -1812,11 +1812,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.05965037019994823,
-        "return_12m": 0.1218298206499393,
-        "volume_acceleration": -0.060114175834723116,
-        "latest_ts": 1785974400.0,
-        "latest_price": 192100.0
+        "return_6m": -0.01749999999999996,
+        "return_12m": 0.1437083761905671,
+        "volume_acceleration": -0.035151029904093245,
+        "latest_ts": 1786060800.0,
+        "latest_price": 196500.0
       }
     },
     {
@@ -1874,11 +1874,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.539047619047619,
-        "return_12m": 0.36256323777403043,
+        "return_6m": 0.47663551401869153,
+        "return_12m": 0.21746575342465757,
         "volume_acceleration": -0.36469334736985093,
-        "latest_ts": 1785974400.0,
-        "latest_price": 808000.0
+        "latest_ts": 1786060800.0,
+        "latest_price": 711000.0
       }
     },
     {
@@ -1936,11 +1936,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.6041308089500861,
-        "return_12m": 1.502685284640172,
-        "volume_acceleration": -0.4679160686214203,
-        "latest_ts": 1785974400.0,
-        "latest_price": 46600.0
+        "return_6m": 0.6232876712328768,
+        "return_12m": 1.57328990228013,
+        "volume_acceleration": -0.4710167183537681,
+        "latest_ts": 1786060800.0,
+        "latest_price": 47400.0
       }
     },
     {
@@ -1998,11 +1998,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.4336219336219336,
-        "return_12m": -0.4899285250162443,
-        "volume_acceleration": -0.2898410382816037,
-        "latest_ts": 1785974400.0,
-        "latest_price": 78500.0
+        "return_6m": -0.4184661206254654,
+        "return_12m": -0.4858459512837393,
+        "volume_acceleration": -0.3018676741015024,
+        "latest_ts": 1786060800.0,
+        "latest_price": 78100.0
       }
     },
     {
@@ -2060,11 +2060,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.006302521008403339,
-        "return_12m": 0.7107142857142856,
-        "volume_acceleration": 0.4086903190036606,
-        "latest_ts": 1785974400.0,
-        "latest_price": 47900.0
+        "return_6m": -0.136,
+        "return_12m": 0.5970425138632163,
+        "volume_acceleration": 0.37457318234410186,
+        "latest_ts": 1786060800.0,
+        "latest_price": 43200.0
       }
     },
     {
@@ -2122,11 +2122,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.09623893805309736,
-        "return_12m": 1.987202925045704,
-        "volume_acceleration": 0.11087472383601993,
-        "latest_ts": 1785974400.0,
-        "latest_price": 81700.0
+        "return_6m": -0.11023622047244097,
+        "return_12m": 1.9080882352941178,
+        "volume_acceleration": 0.19275459014432905,
+        "latest_ts": 1786060800.0,
+        "latest_price": 79100.0
       }
     },
     {
@@ -2184,11 +2184,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.006488824801730408,
-        "return_12m": 1.3555555555555556,
-        "volume_acceleration": 0.09639602429014604,
-        "latest_ts": 1785974400.0,
-        "latest_price": 137800.0
+        "return_6m": -0.13536828135368284,
+        "return_12m": 1.2122241086587437,
+        "volume_acceleration": 0.027107231487426997,
+        "latest_ts": 1786060800.0,
+        "latest_price": 130300.0
       }
     },
     {
@@ -2246,11 +2246,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.5895564289724874,
-        "return_12m": 0.5960698689956332,
-        "volume_acceleration": -0.7100766551897635,
-        "latest_ts": 1785974400.0,
-        "latest_price": 73100.0
+        "return_6m": -0.6264631043256997,
+        "return_12m": 0.6043715846994535,
+        "volume_acceleration": -0.7134240884667518,
+        "latest_ts": 1786060800.0,
+        "latest_price": 73400.0
       }
     },
     {
@@ -2308,11 +2308,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.12457337883959041,
-        "return_12m": 0.204225352112676,
+        "return_6m": -0.11504424778761058,
+        "return_12m": 0.179245283018868,
         "volume_acceleration": -0.6750066223494835,
-        "latest_ts": 1785974400.0,
-        "latest_price": 25650.0
+        "latest_ts": 1786060800.0,
+        "latest_price": 25000.0
       }
     },
     {
@@ -2370,11 +2370,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.06481481481481477,
-        "return_12m": 0.5498721227621484,
-        "volume_acceleration": -0.2589082252080853,
-        "latest_ts": 1785974400.0,
-        "latest_price": 60600.0
+        "return_6m": -0.14179104477611937,
+        "return_12m": 0.4285714285714286,
+        "volume_acceleration": -0.2459761628880709,
+        "latest_ts": 1786060800.0,
+        "latest_price": 57500.0
       }
     },
     {
@@ -2432,11 +2432,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.2831050228310502,
-        "return_12m": 1.9254658385093166,
-        "volume_acceleration": -0.40545896549234184,
-        "latest_ts": 1785974400.0,
-        "latest_price": 235500.0
+        "return_6m": -0.34268833087149186,
+        "return_12m": 1.788220551378446,
+        "volume_acceleration": -0.40066094473363245,
+        "latest_ts": 1786060800.0,
+        "latest_price": 222500.0
       }
     },
     {
@@ -2494,11 +2494,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.03616636528028938,
-        "return_12m": -0.17936874518860657,
+        "return_6m": -0.03542234332425065,
+        "return_12m": -0.16966379984362778,
         "volume_acceleration": -0.24623467600700522,
-        "latest_ts": 1785974400.0,
-        "latest_price": 10660.0
+        "latest_ts": 1786060800.0,
+        "latest_price": 10620.0
       }
     },
     {
@@ -2557,11 +2557,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": 0.15738081562320505,
-        "return_12m": 0.11325966850828739,
-        "volume_acceleration": 1.1848683102008701,
-        "latest_ts": 1785974400.0,
-        "latest_price": 2015.0
+        "return_6m": 0.1409356725146198,
+        "return_12m": 0.10381895332390378,
+        "volume_acceleration": 1.1476772683324739,
+        "latest_ts": 1786060800.0,
+        "latest_price": 1951.0
       }
     },
     {
@@ -2619,11 +2619,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.228310502283105,
-        "return_12m": 0.37212449255751023,
-        "volume_acceleration": 0.3114211990292184,
-        "latest_ts": 1785974400.0,
-        "latest_price": 50700.0
+        "return_6m": -0.21159874608150475,
+        "return_12m": 0.3952843273231623,
+        "volume_acceleration": 0.3328991669537362,
+        "latest_ts": 1786060800.0,
+        "latest_price": 50300.0
       }
     },
     {
@@ -2681,11 +2681,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.1644144144144144,
-        "return_12m": -0.09287529648505988,
-        "volume_acceleration": -0.024815659059238326,
-        "latest_ts": 1785974400.0,
-        "latest_price": 1484000.0
+        "return_6m": -0.12836676217765042,
+        "return_12m": -0.09076732049771974,
+        "volume_acceleration": -0.04755312712004256,
+        "latest_ts": 1786060800.0,
+        "latest_price": 1521000.0
       }
     },
     {
@@ -2743,11 +2743,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.602493765586035,
-        "return_12m": -0.3461853978671042,
-        "volume_acceleration": -0.7367974086857227,
-        "latest_ts": 1785974400.0,
-        "latest_price": 7970.0
+        "return_6m": -0.6084158415841584,
+        "return_12m": -0.34247714048212796,
+        "volume_acceleration": -0.7530103371405455,
+        "latest_ts": 1786060800.0,
+        "latest_price": 7910.0
       }
     },
     {
@@ -2805,11 +2805,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.39814814814814814,
-        "return_12m": -0.2222222222222222,
-        "volume_acceleration": -0.06074212182653216,
-        "latest_ts": 1785974400.0,
-        "latest_price": 45500.0
+        "return_6m": -0.3963660834454913,
+        "return_12m": -0.23202054794520544,
+        "volume_acceleration": -0.09541244884772782,
+        "latest_ts": 1786060800.0,
+        "latest_price": 44850.0
       }
     },
     {
@@ -2867,11 +2867,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.5886178861788618,
-        "return_12m": -0.07410795974382434,
-        "volume_acceleration": -0.12952836233643594,
-        "latest_ts": 1785974400.0,
-        "latest_price": 101200.0
+        "return_6m": -0.5599137931034484,
+        "return_12m": -0.08839285714285716,
+        "volume_acceleration": -0.13430881559422636,
+        "latest_ts": 1786060800.0,
+        "latest_price": 102100.0
       }
     },
     {
@@ -2930,11 +2930,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.13489409141583053,
-        "return_12m": 0.6183524504692388,
-        "volume_acceleration": 0.07959620832836034,
-        "latest_ts": 1785974400.0,
-        "latest_price": 776000.0
+        "return_6m": -0.15860517435320587,
+        "return_12m": 0.5203252032520325,
+        "volume_acceleration": 0.032881630441141674,
+        "latest_ts": 1786060800.0,
+        "latest_price": 748000.0
       }
     },
     {
@@ -2993,11 +2993,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.22844827586206895,
-        "return_12m": 0.3041894353369763,
-        "volume_acceleration": -0.4343419275171345,
-        "latest_ts": 1785974400.0,
-        "latest_price": 71600.0
+        "return_6m": -0.26220806794055207,
+        "return_12m": 0.25678119349005435,
+        "volume_acceleration": -0.4446208507519763,
+        "latest_ts": 1786060800.0,
+        "latest_price": 69500.0
       }
     },
     {
@@ -3055,11 +3055,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.35,
-        "return_12m": 0.8432835820895523,
-        "volume_acceleration": -0.49240718068088496,
-        "latest_ts": 1785974400.0,
-        "latest_price": 494000.0
+        "return_6m": -0.38255494505494503,
+        "return_12m": 0.6898496240601504,
+        "volume_acceleration": -0.46743178710638555,
+        "latest_ts": 1786060800.0,
+        "latest_price": 449500.0
       }
     },
     {
@@ -3118,11 +3118,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.49344520188778185,
-        "return_12m": -0.21174402463299924,
+        "return_6m": -0.49006977992485234,
+        "return_12m": -0.21155410401974484,
         "volume_acceleration": -0.5387026358181776,
-        "latest_ts": 1785974400.0,
-        "latest_price": 9660.0
+        "latest_ts": 1786060800.0,
+        "latest_price": 9500.0
       }
     },
     {
@@ -3180,11 +3180,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": 0.17949725058915944,
-        "return_12m": 1.8356940509915014,
-        "volume_acceleration": 0.08411924219567046,
-        "latest_ts": 1785974400.0,
-        "latest_price": 3003000.0
+        "return_6m": 0.08259700345754895,
+        "return_12m": 1.5115864527629235,
+        "volume_acceleration": 0.07510440089945392,
+        "latest_ts": 1786060800.0,
+        "latest_price": 2818000.0
       }
     },
     {
@@ -3242,11 +3242,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.31359223300970873,
-        "return_12m": -0.25735294117647056,
-        "volume_acceleration": -0.278563339988676,
-        "latest_ts": 1785974400.0,
-        "latest_price": 35350.0
+        "return_6m": -0.2869822485207101,
+        "return_12m": -0.238145416227608,
+        "volume_acceleration": -0.29626623980940325,
+        "latest_ts": 1786060800.0,
+        "latest_price": 36150.0
       }
     },
     {
@@ -3304,11 +3304,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.172093023255814,
-        "return_12m": -0.182548794489093,
-        "volume_acceleration": -0.40519652918160576,
-        "latest_ts": 1785974400.0,
-        "latest_price": 7120.0
+        "return_6m": -0.11411042944785277,
+        "return_12m": -0.18325791855203621,
+        "volume_acceleration": -0.4121109872563492,
+        "latest_ts": 1786060800.0,
+        "latest_price": 7220.0
       }
     },
     {
@@ -3366,11 +3366,11 @@
         "capex_prev": 1
       },
       "market": {
-        "return_6m": -0.19447779111644659,
-        "return_12m": -0.002971768202080227,
-        "volume_acceleration": -0.06342284137559728,
-        "latest_ts": 1785974400.0,
-        "latest_price": 335500.0
+        "return_6m": -0.11809045226130654,
+        "return_12m": -0.04619565217391308,
+        "volume_acceleration": -0.08779156872887695,
+        "latest_ts": 1786060800.0,
+        "latest_price": 351000.0
       }
     },
     {
@@ -3428,11 +3428,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.17925591882750846,
-        "return_12m": 0.4530938123752495,
-        "volume_acceleration": 0.6238169864662577,
-        "latest_ts": 1785974400.0,
-        "latest_price": 36400.0
+        "return_6m": -0.27311827956989243,
+        "return_12m": 0.36016096579476864,
+        "volume_acceleration": 0.533995827523907,
+        "latest_ts": 1786060800.0,
+        "latest_price": 33800.0
       }
     },
     {
@@ -3490,11 +3490,11 @@
         "capex_prev": 0
       },
       "market": {
-        "return_6m": -0.40400667779632726,
-        "return_12m": 0.16857610474631746,
-        "volume_acceleration": 0.3530428279439901,
-        "latest_ts": 1785974400.0,
-        "latest_price": 71400.0
+        "return_6m": -0.39877300613496935,
+        "return_12m": 0.12091503267973858,
+        "volume_acceleration": 0.3308357396725792,
+        "latest_ts": 1786060800.0,
+        "latest_price": 68600.0
       }
     }
   ]
